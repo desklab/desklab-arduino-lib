@@ -1,0 +1,5 @@
+PhotometerMessung         KEYWORD2
+PhotometerAusgabe         KEYWORD2
+PhotometerBerechnung      KEYWORD2
+PhotometerSensorAuslesen  KEYWORD2
+StarteDisplay             KEYWORD2
