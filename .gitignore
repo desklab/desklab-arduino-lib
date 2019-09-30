@@ -25,3 +25,12 @@ client/node_modules
 .vscode
 
 .DS_Store
+
+platformio.ini
+.pio
+.clang_complete
+.gcc-flags.json
+.travis.yml
+test/
+lib/
+include/
