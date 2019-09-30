@@ -77,19 +77,29 @@ void StarteDisplay(){
   oleddisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
   oleddisplay.clearDisplay();
+
+  oleddisplay.drawBitmap(
+    (oleddisplay.width()  - LOGO_WIDTH ) / 2,
+    (oleddisplay.height() - LOGO_HEIGHT) / 2,
+    dl_Logo, LOGO_WIDTH, LOGO_HEIGHT, 1);
+  oleddisplay.display();
+  delay(1500);
+
+  oleddisplay.clearDisplay();
   oleddisplay.display();
 
   oleddisplay.setTextColor(WHITE, BLACK);
   oleddisplay.setCursor(0,0);
-  oleddisplay.setTextSize(2);
+  oleddisplay.setTextSize(1);
 
-  oleddisplay.println("  Starte");
-  oleddisplay.print(" Messung!");
+  oleddisplay.println("Arduino und Display");
+  oleddisplay.println("erfolgreich gestartet");
   oleddisplay.display();
 
-  delay(3000);
+  delay(2000);
 
   oleddisplay.clearDisplay();
+  oleddisplay.display();
 }
 
 
