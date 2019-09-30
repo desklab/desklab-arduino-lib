@@ -53,7 +53,7 @@ double PhotometerBerechnung(double sensorValue){
   if (sensorValue > 925){
     opticalDensity = opticalDensity-(pow(sensorValue-925,2)/80000);
   }
-  if (opticalDensity < 0 & opticalDensity > -0.01){
+  if ((opticalDensity < 0) & (opticalDensity > -0.01)){
     opticalDensity = 0.00;
   }
 
