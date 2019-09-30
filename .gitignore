@@ -34,3 +34,4 @@ platformio.ini
 test/
 lib/
 include/
+src/main.cpp
