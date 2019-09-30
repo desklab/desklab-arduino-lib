@@ -2,7 +2,7 @@
  * desklab.cpp
  * ===========
  *
- * Bibliothek zur Nutzung mit dem Experimentier-Set von desklab 
+ * Bibliothek zur Nutzung mit dem Experimentier-Set von desklab
  * (www.desk-lab.de).
  *
  * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt)
@@ -103,5 +103,15 @@ void PhotometerAusgabe(double opticalDensity){
   oleddisplay.println("");
   oleddisplay.setTextSize(2);
   oleddisplay.print(opticalDensity);
+  oleddisplay.display();
+}
+
+void TextAusgabe(String printMessage, int printSize){
+
+  oleddisplay.clearDisplay();
+  oleddisplay.setTextSize(printSize);
+  oleddisplay.setCursor(0,0);
+
+  oleddisplay.println(printMessage);
   oleddisplay.display();
 }

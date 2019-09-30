@@ -2,7 +2,7 @@
  * desklab.h
  * =========
  *
- * Bibliothek zur Nutzung mit dem Experimentier-Set von desklab 
+ * Bibliothek zur Nutzung mit dem Experimentier-Set von desklab
  * (www.desk-lab.de).
  *
  * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt)
@@ -55,5 +55,6 @@ double PhotometerBerechnung(double sensorValue);
 double PhotometerMessung(int sensorPin);
 void StarteDisplay();
 void PhotometerAusgabe(double opticalDensity);
+void TextAusgabe(String printMessage, int printSize);
 
 #endif
