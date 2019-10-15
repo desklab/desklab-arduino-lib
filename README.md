@@ -2,6 +2,10 @@
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices.
 
+**Dependencies**:
+ - `Adafruit_SSD1306`
+ - `Adafruit-GFX-Library`
+
 ## License
 
 The `desklab` library is licensed under the [MIT License](https://opensource.org/licenses/MIT):
