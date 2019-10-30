@@ -92,5 +92,7 @@ double PhotometerMessung(int sensorPin);
 void StarteDisplay();
 void PhotometerAusgabe(double opticalDensity);
 void TextAusgabe(String printMessage, int printSize);
+void Drehen(int drehen);
+Adafruit_SSD1306 Display();
 
 #endif

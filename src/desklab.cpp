@@ -125,3 +125,11 @@ void TextAusgabe(String printMessage, int printSize){
   oleddisplay.println(printMessage);
   oleddisplay.display();
 }
+
+void Drehen(int drehen) {
+  oleddisplay.setRotation(drehen);
+}
+
+Adafruit_SSD1306 Display() {
+  return oleddisplay;
+}
