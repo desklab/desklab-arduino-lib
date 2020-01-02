@@ -35,3 +35,6 @@ test/
 lib/
 include/
 src/main.cpp
+
+hex_generator.py
+build/
