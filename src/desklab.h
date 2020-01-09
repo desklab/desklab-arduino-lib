@@ -7,7 +7,7 @@
  *
  * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt)
  *
- * Copyright 2018-2019 desklab gUG <orga@desk-lab.de>
+ * Copyright 2018-2020 desklab gUG <orga@desk-lab.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files
