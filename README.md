@@ -2,11 +2,25 @@
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices.
 
-**Dependencies**:
+
+### Compatibility & Dependencies
+
+##### Arduino Library Dependencies
  - `Adafruit_SSD1306`
  - `Adafruit-GFX-Library`
 
-## Version History
+##### Hardware Compatibility
+  - `desklab Photometer V2`
+  - `desklab Photometer V3`
+
+##### Arduino IDE Compatibility
+  - `Arduino IDE 1.8.10`
+  - `Arduino IDE 1.8.9`
+  - `Arduino IDE 1.8.8`
+  - `Arduino IDE 1.8.7`
+  - `Arduino IDE 1.8.6`
+
+### Version History
 - ![Version](https://img.shields.io/badge/Version-1.1.6-yellow) ![Version](https://img.shields.io/badge/Status-work_in_progress-yellow)
   - Improved documentation.
   - Continous Integration via Travis and automated verification of example sketches.
@@ -24,9 +38,8 @@
   - Basic functions for the use of desklab Photometer devices.
 
 
-## Compatibility
 
-## License
+### License
 
 The `desklab` library is licensed under the [MIT License](https://opensource.org/licenses/MIT):
 
