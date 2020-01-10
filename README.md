@@ -2,7 +2,7 @@
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices.
 
-status: [![Build Status](https://travis-ci.org/ax-sc/desklab-arduino-lib.svg?branch=master)](https://travis-ci.org/ax-sc/desklab-arduino-lib)
+status: [![Build Status](https://travis-ci.org/desklab/desklab-arduino-lib.svg?branch=master)](https://travis-ci.org/desklab/desklab-arduino-lib)
 
 **Dependencies**:
  - `Adafruit_SSD1306`
