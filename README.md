@@ -6,6 +6,26 @@
  - `Adafruit_SSD1306`
  - `Adafruit-GFX-Library`
 
+## Version History
+- ![Version](https://img.shields.io/badge/Version-1.1.6-yellow) ![Version](https://img.shields.io/badge/Status-work_in_progress-yellow)
+  - Improved documentation.
+  - Continous Integration via Travis and automated verification of example sketches.
+
+
+- ![Version](https://img.shields.io/badge/Version-1.1.5-green) ![Version](https://img.shields.io/badge/Status-released_in_01.2020_(latest)-green)
+  - Definition of Dependencies in `library.properties` to enable user-friendly installation in Arduino IDE.
+
+
+- ![Version](https://img.shields.io/badge/Version-1.1.4-green) ![Version](https://img.shields.io/badge/Status-released_in_12.2019-green)
+  - New functions for Display Control.
+
+
+- ![Version](https://img.shields.io/badge/Version-1.1.4-green) ![Version](https://img.shields.io/badge/Status-released_in_12.2019-green)
+  - Basic functions for the use of desklab Photometer devices.
+
+
+## Compatibility
+
 ## License
 
 The `desklab` library is licensed under the [MIT License](https://opensource.org/licenses/MIT):
