@@ -30,7 +30,6 @@ platformio.ini
 .pio
 .clang_complete
 .gcc-flags.json
-.travis.yml
 test/
 lib/
 include/

@@ -1,0 +1,33 @@
+language: c
+
+before_install:
+  #firewall socket warnings
+  - sudo iptables -P INPUT DROP
+  - sudo iptables -P FORWARD DROP
+  - sudo iptables -P OUTPUT ACCEPT
+  - sudo iptables -A INPUT -i lo -j ACCEPT
+  - sudo iptables -A OUTPUT -o lo -j ACCEPT
+  - sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+  #install Arduino IDE
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
+  - sleep 3
+  - export DISPLAY=:1.0
+  - wget http://downloads.arduino.cc/arduino-1.8.10-linux64.tar.xz
+  - tar xf arduino-1.8.10-linux64.tar.xz
+  - sudo mv arduino-1.8.10 /usr/local/share/arduino
+  - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
+
+install:
+  #desklab library
+  - ln -s $PWD /usr/local/share/arduino/libraries/desklab
+
+  #install latest version of dependencies
+  - arduino --install-library "Adafruit GFX Library"
+  - arduino --install-library "Adafruit SSD1306"
+
+script:
+  #verify all examples on avr:uno board
+  - arduino --verify --board arduino:avr:uno $PWD/examples/PhotometerShort/PhotometerShort.ino
+  - arduino --verify --board arduino:avr:uno $PWD/examples/PhotometerAdvanced/PhotometerAdvanced.ino
+  - arduino --verify --board arduino:avr:uno $PWD/examples/PhotometerDetailed/PhotometerDetailed.ino
