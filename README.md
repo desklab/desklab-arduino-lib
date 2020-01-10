@@ -34,7 +34,7 @@
   - New functions for Display Control.
 
 
-- ![Version](https://img.shields.io/badge/Version-1.1.4-green) ![Version](https://img.shields.io/badge/Status-released_in_12.2019-green)
+- ![Version](https://img.shields.io/badge/Version-1.1.3-green) ![Version](https://img.shields.io/badge/Status-released_in_10.2019-green)
   - Basic functions for the use of desklab Photometer devices.
 
 
