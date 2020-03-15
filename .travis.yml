@@ -7,6 +7,8 @@ jobs:
   - env: ARDUINO_IDE_V=1.8.8
   - env: ARDUINO_IDE_V=1.8.9
   - env: ARDUINO_IDE_V=1.8.10
+  - env: ARDUINO_IDE_V=1.8.11
+  - env: ARDUINO_IDE_V=1.8.12
 
 before_install:
   #firewall socket warnings
