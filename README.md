@@ -1,5 +1,7 @@
-<center># desklab Arduino Library</center>
-<center>[![Build Status](https://travis-ci.org/desklab/desklab-arduino-lib.svg?branch=master)](https://travis-ci.org/desklab/desklab-arduino-lib)</center>
+<h1 align="center"> desklab Arduino Library </h1>
+<p align="center">
+<img align="center" src="https://travis-ci.org/desklab/desklab-arduino-lib.svg?branch=master">
+</p>
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices.
 
