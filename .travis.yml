@@ -35,6 +35,7 @@ install:
   #install latest version of dependencies
   - arduino --install-library "Adafruit GFX Library"
   - arduino --install-library "Adafruit SSD1306"
+  - arduino --install-library "Adafruit BusIO"
 
 script:
   #verify all examples on avr:uno board
