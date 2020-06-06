@@ -16,6 +16,8 @@
   - `desklab Photometer V3`
 
 ##### Arduino IDE Compatibility
+  - `Arduino IDE 1.8.12`
+  - `Arduino IDE 1.8.11`
   - `Arduino IDE 1.8.10`
   - `Arduino IDE 1.8.9`
   - `Arduino IDE 1.8.8`
