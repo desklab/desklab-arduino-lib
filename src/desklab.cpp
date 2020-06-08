@@ -95,8 +95,10 @@ void StarteDisplay(){
   oleddisplay.setCursor(0,0);
   oleddisplay.setTextSize(1);
 
-  oleddisplay.println("Arduino und Display");
-  oleddisplay.println("erfolgreich gestartet");
+  oleddisplay.println("Hinweis: ");
+  oleddisplay.println("Mikrocontroller und");
+  oleddisplay.println("Display erfolgreich");
+  oleddisplay.println("gestartet!");
   oleddisplay.display();
 
   delay(2000);
