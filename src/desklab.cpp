@@ -56,6 +56,9 @@ double PhotometerBerechnung(double sensorValue){
   if ((opticalDensity < 0) & (opticalDensity > -0.01)){
     opticalDensity = 0.00;
   }
+  if (opticalDensity < -0.05 || opticalDensity > 1.40){
+    opticalDensity = NAN;
+  }
 
   return opticalDensity;
 }
@@ -108,11 +111,17 @@ void PhotometerAusgabe(double opticalDensity){
   oleddisplay.clearDisplay();
   oleddisplay.setTextSize(1);
   oleddisplay.setCursor(0,0);
-
-  oleddisplay.println("Optische Dichte:");
-  oleddisplay.println("");
-  oleddisplay.setTextSize(2);
-  oleddisplay.print(opticalDensity);
+  if (!(isnan(opticalDensity))){
+    oleddisplay.println("Optische Dichte:");
+    oleddisplay.println("");
+    oleddisplay.setTextSize(2);
+    oleddisplay.print(opticalDensity);
+  } else {
+    oleddisplay.println("Warnung:");
+    oleddisplay.println("Wert nicht im");
+    oleddisplay.println("Messbereich oder");
+    oleddisplay.println("Kalibrierung falsch!");
+  }
   oleddisplay.display();
 }
 
