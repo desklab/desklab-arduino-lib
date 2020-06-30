@@ -26,6 +26,7 @@
 
 ### Version History
 - ![Version](https://img.shields.io/badge/Version-1.1.6-yellow) ![Version](https://img.shields.io/badge/Status-work_in_progress-yellow)
+  - add measuring-range-exceedance warning
   - Improved documentation.
   - Continous Integration via Travis and automated verification of example sketches.
 

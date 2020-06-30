@@ -37,3 +37,7 @@ src/main.cpp
 
 hex_generator.py
 build/
+
+firmware/
+etc/
+makefile
