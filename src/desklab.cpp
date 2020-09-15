@@ -56,7 +56,7 @@ double PhotometerBerechnung(double sensorValue){
   if ((opticalDensity < 0) & (opticalDensity > -0.01)){
     opticalDensity = 0.00;
   }
-  if (opticalDensity < -0.05 || opticalDensity > 1.40){
+  if (opticalDensity < -0.05 || opticalDensity > 1.20){
     opticalDensity = NAN;
   }
 
