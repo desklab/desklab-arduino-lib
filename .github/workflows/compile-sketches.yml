@@ -15,4 +15,6 @@ jobs:
           - name: Adafruit SSD1306
           - name: Adafruit GFX Library
         sketch-paths: |
-          - /examples
+          - examples/PhotometerShort
+          - examples/PhotometerDetailed
+          - examples/PhotometerAdvanced
