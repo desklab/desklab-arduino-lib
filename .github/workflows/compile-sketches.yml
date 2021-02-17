@@ -8,13 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - uses: arduino/compile-sketches@main
       with:
         fqbn: 'arduino:avr:uno'
         libraries: |
           - name: Adafruit SSD1306
           - name: Adafruit GFX Library
-        sketch-paths: |
-          - examples\PhotometerShort
-          - examples\PhotometerDetailed
-          - examples\PhotometerAdvanced
