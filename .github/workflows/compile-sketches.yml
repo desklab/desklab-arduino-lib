@@ -14,3 +14,5 @@ jobs:
         libraries: |
           - name: Adafruit SSD1306
           - name: Adafruit GFX Library
+        sketch-paths: |
+          - /examples
