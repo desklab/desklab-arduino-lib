@@ -1,6 +1,5 @@
 <h1 align="center"> desklab Arduino Library </h1>
 <p align="center">
-<img align="center" src="https://travis-ci.org/desklab/desklab-arduino-lib.svg?branch=master">
 <img align="center" src="https://www.ardu-badge.com/badge/desklab.svg?">
 </p>
 
@@ -9,14 +8,15 @@
 ### Compatibility & Dependencies
 
 ##### Arduino Library Dependencies
- - `Adafruit_SSD1306`
- - `Adafruit-GFX-Library`
+ - `Adafruit SSD1306`
+ - `Adafruit GFX Library`
 
 ##### Hardware Compatibility
   - `desklab Photometer V2`
   - `desklab Photometer V3`
 
 ##### Arduino IDE Compatibility
+  - `Arduino IDE 1.8.13`
   - `Arduino IDE 1.8.12`
   - `Arduino IDE 1.8.11`
   - `Arduino IDE 1.8.10`
@@ -49,7 +49,7 @@
 
 The `desklab` library is licensed under the [MIT License](https://opensource.org/licenses/MIT):
 
-Copyright 2018-2020 desklab gUG <orga@desk-lab.de>  
+Copyright 2018-2021 desklab gUG <orga@desk-lab.de>  
 
 Permission is hereby granted, free of charge, to any person obtaining a  
 copy of this software and associated documentation files  
