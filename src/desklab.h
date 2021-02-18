@@ -2,12 +2,11 @@
  * desklab.h
  * =========
  *
- * Bibliothek zur Nutzung mit dem Experimentier-Set von desklab
- * (www.desk-lab.de).
+ * Bibliothek zur Nutzung mit Geräten von desklab (www.desk-lab.de).
  *
- * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt)
+ * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt).
  *
- * Copyright 2018-2020 desklab gUG <orga@desk-lab.de>
+ * Copyright 2018-2021 desklab gUG <orga@desk-lab.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files
