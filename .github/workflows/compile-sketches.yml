@@ -1,0 +1,18 @@
+name: compile-sketches
+
+on: [push]
+
+jobs:
+  compile:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: arduino/compile-sketches@main
+      with:
+        fqbn: 'arduino:avr:uno'
+        libraries: |
+          - source-path: ./
+          - name: Adafruit SSD1306
+          - name: Adafruit GFX Library
