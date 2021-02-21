@@ -3,7 +3,7 @@
 ### v1.1.x 
   - Add measuring-range-exceedance warning.
   - Improved documentation.
-  - Continous Integration via Github Actions for linting and automated verification of example sketches.
+  - Continous Integration via Github Actions for linting, unittests and compilation of example sketches.
 
 ### v1.1.5 (2020-01-02)
   - Definition of dependencies in `library.properties` to enable user-friendly installation in Arduino IDE.
