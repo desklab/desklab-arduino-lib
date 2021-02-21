@@ -73,7 +73,7 @@ double PhotometerMessung(int sensorPin){
   return opticalDensity;
 }
 
-
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void StarteDisplay(){
 
   oleddisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -143,3 +143,5 @@ void Drehen(int drehen) {
 Adafruit_SSD1306 Display() {
   return oleddisplay;
 }
+
+#endif

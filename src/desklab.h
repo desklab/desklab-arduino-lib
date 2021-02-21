@@ -31,7 +31,9 @@
 #ifndef desklab
 #define desklab
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 #include <Adafruit_SSD1306.h>
+
 
 #define OLED_RESET 4
 
@@ -85,13 +87,18 @@ const unsigned char dl_Logo [] PROGMEM= {
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
 
+#endif
+
 double PhotometerSensorAuslesen(int sensorPin);
 double PhotometerBerechnung(double sensorValue);
 double PhotometerMessung(int sensorPin);
+
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void StarteDisplay();
 void PhotometerAusgabe(double opticalDensity);
 void TextAusgabe(String printMessage, int printSize);
 void Drehen(int drehen);
 Adafruit_SSD1306 Display();
+#endif
 
 #endif
