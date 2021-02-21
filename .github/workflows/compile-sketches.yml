@@ -1,9 +1,9 @@
-name: compile-sketches
+name: compile
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  compile:
+  compile-examples:
 
     runs-on: ubuntu-latest
 
@@ -14,5 +14,6 @@ jobs:
         fqbn: 'arduino:avr:uno'
         libraries: |
           - source-path: ./
+          - name: Adafruit BusIO
           - name: Adafruit SSD1306
           - name: Adafruit GFX Library
