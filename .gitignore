@@ -25,19 +25,3 @@ client/node_modules
 .vscode
 
 .DS_Store
-
-platformio.ini
-.pio
-.clang_complete
-.gcc-flags.json
-test/
-lib/
-include/
-src/main.cpp
-
-hex_generator.py
-build/
-
-firmware/
-etc/
-makefile
