@@ -1,0 +1,32 @@
+platforms:
+  uno-unittest:
+    board: arduino:avr:uno
+    package: arduino:avr
+    gcc:
+      features:
+      defines:
+        - __AVR_ATmega328P__
+        - ARDUINO_CI_UNITTEST_ACTIVE
+      warnings:
+      flags:
+
+compile:
+  # library dependencies
+  libraries:
+    - "Adafruit BusIO"
+    - "Adafruit GFX Library"
+    - "Adafruit SSD1306"
+
+  # platforms for testing
+  platforms:
+    - uno
+    - mega2560  
+
+unittest:
+
+  # library dependencies
+  libraries:
+
+  # platforms for testing
+  platforms:
+    - uno-unittest
