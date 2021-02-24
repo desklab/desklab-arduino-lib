@@ -3,18 +3,49 @@
 <img align="center" src="https://www.ardu-badge.com/badge/desklab.svg?">
 </p>
 
-`desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices. It is availabe via the Arduino Library Manager and can be used with the Arduino IDE or any other preferred toolchain to build software for many boards based on Atmel-AVR-Microcontrollers but is originally designed to be used with desklab devices and their specific hardware.
+`desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices. It is availabe via the Arduino Library Manager and easy to use with the Arduino IDE. Originally designed to be used with desklab devices and their specific hardware it could also be used in any other preferred toolchain to build software for many boards based on Atmel-AVR-Microcontrollers.
 
 ### Compatibility & Dependencies
 
 ##### Arduino Library Dependencies
  - `Adafruit SSD1306`
  - `Adafruit GFX Library`
+ - `Adafruit BusIO`
 
 ##### Hardware Compatibility
   - `desklab Photometer V2`
   - `desklab Photometer V3`
 
+### Development & Contribution
+Contributions in the form of reporting issues or submitting pull requests are welcome! Please use the available tools as described here to ensure your changes of the code could be merged. As this library addresses a special group of users (students/teachers) and must retain compatibility to the devices developed by desklab (some of which may not be public yet), there may be some additional requirements, which can not be covered by automated tests. Therefore you should not hesitate to contact us via <orga@desk-lab.de> or by opening an issue, if you are planning to contribute to this project, such that we could discuss the best way to go forward. Submitted code changes are understood to be under the same MIT License that covers the project. 
+
+##### Arduino Lint
+Install `arduino-lint` by following the instructions in the [official arduino-lint documentation](https://arduino.github.io/arduino-lint/latest/installation/). Please use the linter with the same options as our CI workflow:
+
+```bash
+# Launch linting 
+arduino-lint --library-manager update --compliance strict
+```
+
+##### Unit-Tests & compilation of examples
+A set of unit-tests is located in the `/test`-folder. If you are adding some logic to the library which could be unit-tested, make sure to cover this with some additional tests. To be able to launch the tests locally you have to install the `arduino-ci` ruby gem by:
+
+```bash
+# Install test requirements: 
+gem install bundler
+bundler config set --local path vendor/bundle  # optional
+bundler install
+```
+
+While we are using the `arduino/compile-sketches`-action in our CI workflow, you could also start the compilation of all examples with the same command as launching the tests. If you only want to run the tests, you can add the option `--skip-examples-compilation``:
+
+```bash
+# Run the tests and compile examples
+bundle exec arduino_ci.rb
+
+# Run the tests 
+bundle exec arduino_ci.rb --skip-examples-compilation
+```
 
 ### License
 
