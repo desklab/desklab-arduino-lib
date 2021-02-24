@@ -37,7 +37,7 @@ bundler config set --local path vendor/bundle  # optional
 bundler install
 ```
 
-While we are using the `arduino/compile-sketches`-action in our CI workflow, you could also start the compilation of all examples with the same command as launching the tests. If you only want to run the tests, you can add the option `--skip-examples-compilation``:
+While we are using the `arduino/compile-sketches`-action in our CI workflow, you could also start the compilation of all examples with the same command as launching the tests. If you only want to run the tests, you can add the option `--skip-examples-compilation`:
 
 ```bash
 # Run the tests and compile examples
