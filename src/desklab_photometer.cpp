@@ -192,14 +192,3 @@ void photometer::print(char data){
     // TODO: print char to serial
   }
 }
-
-void photometer::print(String data){
-  if (this->_displayoutput){
-    // TODO: print String to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print String to serial
-  }
-}

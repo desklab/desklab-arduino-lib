@@ -70,10 +70,6 @@ void core::print(char data){
   // TODO:
 }
 
-void core::print(String data){
-  // TODO:
-}
-
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void StarteDisplay(){
 

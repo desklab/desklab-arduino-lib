@@ -110,7 +110,6 @@ class core {
         void print(double data);
         void print(float data);
         void print(char data);
-        void print(String data);
 
     private:
         bool _serialoutput;

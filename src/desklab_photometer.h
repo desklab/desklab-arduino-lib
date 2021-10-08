@@ -66,7 +66,6 @@ class photometer {
         void print(double data);
         void print(float data);
         void print(char data);
-        void print(String data);
 
     private:
         int _pin;
