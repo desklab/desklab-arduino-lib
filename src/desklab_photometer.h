@@ -83,7 +83,7 @@ class photometer {
 
 // DEPRECATED METHOD ALIASES
 #define PhotometerSensorAuslesen photometerReadRaw
-#define PhotometerBerechnung PhotometerConversion
+#define PhotometerBerechnung photometerConversion
 #define PhotometerMessung photometerMeasureOD
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
