@@ -29,6 +29,11 @@
 #ifndef desklab
 #define desklab
 
+// VERSION INFORMATION
+#define DESKLAB_LIBRARY_VERSION_MAJOR 1
+#define DESKLAB_LIBRARY_VERSION_MINOR 1
+#define DESKLAB_LIBRARY_VERSION_PATCH 5
+
 // DISPLAY CODE (not included in Unittests)
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 #include <Adafruit_SSD1306.h>
@@ -91,13 +96,34 @@ const unsigned char dl_Logo [] PROGMEM= {
 
 
 
-double PhotometerSensorAuslesen(int sensorPin);
-double PhotometerBerechnung(double sensorValue);
-double PhotometerMessung(int sensorPin);
+class core {
+    public:
+        core();
 
+        void enableDisplayOutput();
+        void disableDisplayOutput();
+        void enableSerialOutput();
+        void disableSerialOutput();    
+
+        void print(bool data);
+        void print(int data);
+        void print(double data);
+        void print(float data);
+        void print(char data);
+        void print(String data);
+
+    private:
+        bool _serialoutput;
+        bool _displayoutput;
+};
+
+
+#include  <desklab_photometer.h>
+
+
+//DEPRECATED
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void StarteDisplay();
-void PhotometerAusgabe(double opticalDensity);
 void TextAusgabe(String printMessage, int printSize);
 void Drehen(int drehen);
 Adafruit_SSD1306 Display();

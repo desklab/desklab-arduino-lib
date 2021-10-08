@@ -29,46 +29,49 @@
 #include <desklab.h>
 #include <Arduino.h>
 
-double PhotometerSensorAuslesen(int SensorPin){
-  double sensorValue = 0;
-  double meanSensorValue = 0;
-
-  for (int i = 1; i<51; i++){
-    sensorValue = sensorValue+ (analogRead(SensorPin));
-    delay(5);
-  }
-  meanSensorValue = sensorValue/50;
-
-  return meanSensorValue;
+core::core(){
+  this->_serialoutput = false;
+  this->_displayoutput = true;
 }
 
-
-double PhotometerBerechnung(double sensorValue){
-  double opticalDensity = 0;
-
-  opticalDensity = 1.42909711 - 0.00258627252 * sensorValue + 1.12076970 / 1000000 * pow(sensorValue,2);
-  if (sensorValue > 925){
-    opticalDensity = opticalDensity-(pow(sensorValue-925,2)/80000);
-  }
-  if ((opticalDensity < 0) & (opticalDensity > -0.01)){
-    opticalDensity = 0.00;
-  }
-  if (opticalDensity < -0.05 || opticalDensity > 1.20){
-    opticalDensity = NAN;
-  }
-
-  return opticalDensity;
+void core::enableDisplayOutput(){
+  _displayoutput = true;
 }
 
+void core::disableDisplayOutput(){
+  _displayoutput = false;
+}
 
-double PhotometerMessung(int sensorPin){
-  double sensorValue = 0;
-  double opticalDensity = 0;
+void core::enableSerialOutput(){
+  _serialoutput = true;
+}
 
-  sensorValue = PhotometerSensorAuslesen(sensorPin);
-  opticalDensity = PhotometerBerechnung(sensorValue);
+void core::disableSerialOutput(){
+  _serialoutput = false;
+}  
 
-  return opticalDensity;
+void core::print(bool data){
+  // TODO:
+}
+
+void core::print(int data){
+  // TODO:
+}
+
+void core::print(double data){
+  // TODO:
+}
+
+void core::print(float data){
+  // TODO:
+}
+
+void core::print(char data){
+  // TODO:
+}
+
+void core::print(String data){
+  // TODO:
 }
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
@@ -104,25 +107,6 @@ void StarteDisplay(){
   oleddisplay.display();
 }
 
-
-void PhotometerAusgabe(double opticalDensity){
-
-  oleddisplay.clearDisplay();
-  oleddisplay.setTextSize(1);
-  oleddisplay.setCursor(0,0);
-  if (!(isnan(opticalDensity))){
-    oleddisplay.println("Optische Dichte:");
-    oleddisplay.println("");
-    oleddisplay.setTextSize(2);
-    oleddisplay.print(opticalDensity);
-  } else {
-    oleddisplay.println("Warnung:");
-    oleddisplay.println("Wert nicht im");
-    oleddisplay.println("Messbereich oder");
-    oleddisplay.println("Kalibrierung falsch!");
-  }
-  oleddisplay.display();
-}
 
 void TextAusgabe(String printMessage, int printSize){
 
