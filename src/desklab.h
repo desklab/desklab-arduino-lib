@@ -1,12 +1,10 @@
-/*
- * desklab.h
- * =========
+/* This file is part of the desklab-arduino-library implementing methods 
+ * for the use of desklab (www.desk-lab.de) devices. It is availabe via 
+ * the Arduino Library Manager.
  *
- * Bibliothek zur Nutzung mit Geräten von desklab (www.desk-lab.de).
+ * See https://github.com/desklab/desklab-arduino-lib for more information.
  *
- * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt).
- *
- * Copyright 2018-2021 desklab gUG <orga@desk-lab.de>
+ * Copyright 2018-2021 desklab gUG (haftungsbeschränkt) <orga@desk-lab.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files
@@ -31,6 +29,7 @@
 #ifndef desklab
 #define desklab
 
+// DISPLAY CODE (not included in Unittests)
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 #include <Adafruit_SSD1306.h>
 
@@ -88,6 +87,9 @@ const unsigned char dl_Logo [] PROGMEM= {
 #endif
 
 #endif
+// END OF DISPLAY CODE (not included in Unittests)
+
+
 
 double PhotometerSensorAuslesen(int sensorPin);
 double PhotometerBerechnung(double sensorValue);
