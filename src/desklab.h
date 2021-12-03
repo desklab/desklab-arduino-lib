@@ -36,12 +36,9 @@
 
 // DISPLAY CODE (not included in Unittests)
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-#include <Adafruit_SSD1306.h>
-
+#include <ssd1306.h> 
 
 #define OLED_RESET 4
-
-static Adafruit_SSD1306 oleddisplay(OLED_RESET);
 
 #define NUMFLAKES 10
 #define XPOS 0
@@ -49,9 +46,8 @@ static Adafruit_SSD1306 oleddisplay(OLED_RESET);
 #define DELTAY 2
 
 #define LOGO_WIDTH 128
-#define LOGO_HEIGHT 32
 
-const unsigned char dl_Logo [] PROGMEM= {
+const unsigned char dl_Logo [] PROGMEM = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -87,10 +83,6 @@ const unsigned char dl_Logo [] PROGMEM= {
 };
 
 
-#if (SSD1306_LCDHEIGHT != 32)
-#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-#endif
-
 #endif
 // END OF DISPLAY CODE (not included in Unittests)
 
@@ -119,13 +111,5 @@ class core {
 
 #include  <desklab_photometer.h>
 
-
-//DEPRECATED
-#ifndef ARDUINO_CI_UNITTEST_ACTIVE
-void StarteDisplay();
-void TextAusgabe(String printMessage, int printSize);
-void Drehen(int drehen);
-Adafruit_SSD1306 Display();
-#endif
 
 #endif
