@@ -29,9 +29,9 @@ void loop() {
   
     // [EN] Print the OD to the display.
     // [DE] Ausgabe der OD auf dem Display.
-    photometerPrint(OD);
+    photometerPrintOD(OD);
   
     // [EN] Wait for 200ms.
-    // [DE] Warte 200ms.
+    // [DE] Warten für 200ms.
     delay(200);
 } 

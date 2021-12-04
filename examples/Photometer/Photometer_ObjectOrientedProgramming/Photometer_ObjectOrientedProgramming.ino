@@ -26,11 +26,15 @@ void setup() {
 }
 
 void loop() {      
-    // [EN] Measure the OD and update the display.
-    // [DE] Messung der OD und Aktualisierung des Displays.
+    // [EN] Measure the OD
+    // [DE] Messung der OD
     Photometer.measureOD();
 
+    // [EN] Update the Display with the last measured OD
+    // [DE] Aktualisieren des Displays mit der letzen gemessenen OD
+    Photometer.printOD();
+
     // [EN] Wait for 200ms.
-    // [DE] Warte 200ms.
+    // [DE] Warten für 200ms.
     delay(200);
 } 

@@ -27,14 +27,24 @@
 */
 
 #include <Arduino.h>
+#include <ssd1306.h>
 #include <desklab_photometer.h>
 
 void photometerSetupDisplay(){
-  // TODO: Setup I2C Connection to display.
+  SSD1306_INIT();
 }
 
-void photometerPrint(double OD){
-  // TODO: Print OD to display.
+void photometerSetupSerial(){
+  Serial.begin(9600);
+}
+
+void photometerPrintOD(double OD){
+  unsigned char od[sizeof(double)];
+  memcpy(od, &OD, sizeof(double));
+  SSD1306_BUFFER_CLEAR();
+  SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 0x01, 0x01);
+  SSD1306_WRITE_STRING(0,12, od, 0x01, 0x01);
+  SSD1306_DISPLAY_UPDATE(); 
 }
 
 double photometerReadRaw(int Pin){
@@ -80,6 +90,7 @@ double photometerConversion(double analogSensorValue, double calibration_param_A
 double photometerMeasureOD(int Pin){
   int sensorRaw = photometerReadRaw(Pin);
   double OD = photometerConversion(sensorRaw);
+
   return OD;
 }
 
@@ -87,7 +98,7 @@ double photometerMeasureOD(int Pin){
 photometer::photometer(int pin){
   this->_pin = pin;
   
-  this->_serialoutput = false;
+  this->_serialoutput = true;
   this->_displayoutput = true;
 
   this->_calibration_A = PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A;
@@ -98,6 +109,7 @@ photometer::photometer(int pin){
   this->_od = NAN;
 
   photometerSetupDisplay();
+  photometerSetupSerial();
 }
 
 void photometer::measureOD(){
@@ -138,57 +150,13 @@ void photometer::disableSerialOutput(){
   this->_serialoutput = false;
 }    
 
-void photometer::print(bool data){
+void photometer::printOD(){
   if (this->_displayoutput){
-    // TODO: print bool to display
+    photometerPrintOD(this->_od);
   }
 
   if (this->_serialoutput)
   {
-    // TODO: print bool to serial
-  }
-}
-
-void photometer::print(int data){
-  if (this->_displayoutput){
-    // TODO: print int to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print int to serial
-  }
-}
-
-void photometer::print(double data){
-  if (this->_displayoutput){
-    // TODO: print double to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print double to serial
-  }
-}
-
-void photometer::print(float data){
-  if (this->_displayoutput){
-    // TODO: print float to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print float to serial
-  }
-}
-
-void photometer::print(char data){
-  if (this->_displayoutput){
-    // TODO: print char to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print char to serial
+    Serial.println(this->_od);
   }
 }

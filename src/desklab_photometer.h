@@ -37,7 +37,9 @@ const double PHOTOMETER_CALIBRATION_LOWER_LIMIT = -0.05;
 const int PHOTOMETER_CALIBRATION_ZERO_CUTOFF = 925;
 
 void photometerSetupDisplay();
-void photometerPrint(double OD);
+void photometerSetupSerial();
+
+void photometerPrintOD(double OD);
 
 double photometerReadRaw(int Pin);
 double photometerConversion(double analogSensorValue);
@@ -61,11 +63,7 @@ class photometer {
         double getSensorValue();
         double getOD();
 
-        void print(bool data);
-        void print(int data);
-        void print(double data);
-        void print(float data);
-        void print(char data);
+        void printOD();
 
     private:
         int _pin;
