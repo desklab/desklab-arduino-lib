@@ -36,7 +36,7 @@
 
 // DISPLAY CODE (not included in Unittests)
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-#include <SSD1306.h> 
+#include <ssd1306.h> 
 
 #endif
 // END OF DISPLAY CODE (not included in Unittests)

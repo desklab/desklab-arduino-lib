@@ -1,6 +1,6 @@
-#include "Arduino.h"
-#include "Wire.h"
-#include "SSD1306.h"
+#include <Arduino.h>
+#include <Wire.h>
+#include <ssd1306.h>
 
 SSD1306_t SSD1306 = {
   .MASK_X_LOW = 0,
