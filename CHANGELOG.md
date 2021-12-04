@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### v1.2.0
+  - Replace dependency on all Adafruit Display Drivers by custom driver.
+
 ### v1.1.x 
   - Add measuring-range-exceedance warning.
   - Improved documentation.

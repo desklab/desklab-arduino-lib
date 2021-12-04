@@ -1,157 +1,264 @@
-#include <Arduino.h>
-#include <ssd1306.h>
-#include <Wire.h>
+#include "Arduino.h"
+#include "Wire.h"
+#include "SSD1306.h"
 
+SSD1306_t SSD1306 = {
+  .MASK_X_LOW = 0,
+  .MASK_Y_LOW = 0,
+  .MASK_X_HIGH = SSD1306_WIDTH,
+  .MASK_Y_HIGH = SSD1306_HEIGHT,
+  .INVERTED = 0
+};
 
-int I2C_establish(){
-    delay(50); 
-    Wire.begin();
-    return 0;
-}
+unsigned char SSD1306_DATA_BUFFER[SSD1306_BUFFER_DATA_MAX];
 
-int I2C_write(unsigned char *buf, unsigned int len)
-{
+void SSD1306_I2C_WRITE(unsigned char *PACKAGE, uint8_t len) {
   Wire.beginTransmission(SSD1306_ADDR);
-  Wire.write(buf, len);
+  Wire.write(PACKAGE, len);
   Wire.endTransmission();
-
-  return 0;
-}
- 
-void SSD1306_writeData(unsigned char data){
-    unsigned char buf[2] = {0};
-    int ret;
-
-    buf[0] = 0x40; // Control byte specifying that the following byte contains data
-    buf[1] = data;
-  
-    ret = I2C_write(buf, 2);
 }
 
-void SSD1306_writeCommand(unsigned char cmd){
-    unsigned char buf[2] = {0};
-    int ret;
-
-    buf[0] = 0x00; // Control byte specifying that the following byte contains a command
-    buf[1] = cmd;
-  
-    ret = I2C_write(buf, 2);
+void SSD1306_CMD_WRITE(uint8_t command) {
+  unsigned char PACKAGE[2];
+  PACKAGE[0] = SSD1306_CONTROL_CMD;
+  PACKAGE[1] = command;
+  SSD1306_I2C_WRITE(PACKAGE, 2);
 }
 
-void SSD1306_SetCursor(uint8_t page, uint8_t segment )
-{
-  /* Move the Cursor to specified position only if it is in range */
-  if((page <= SSD1306_MAX_PAGE) && (segment < SSD1306_MAX_SEG))
-  {
-    int SSD1306_LineNum   = page;             // Save the specified line number
-    int SSD1306_CursorPos = segment;          // Save the specified cursor position
+void SSD1306_CMD_WRITE(uint8_t command, uint8_t data) {
+  unsigned char PACKAGE[3];
+  PACKAGE[0] = SSD1306_CONTROL_CMD;
+  PACKAGE[1] = command;
+  PACKAGE[2] = data;
+  SSD1306_I2C_WRITE(PACKAGE, 3);
+}
 
-    SSD1306_writeCommand(0x21);              // cmd for the column start and end address
-    SSD1306_writeCommand(segment);           // column start addr
-    SSD1306_writeCommand(SSD1306_MAX_SEG-1); // column end addr
+void SSD1306_CMD_WRITE(uint8_t command, uint8_t data1, uint8_t data2) {
+  unsigned char PACKAGE[4];
+  PACKAGE[0] = SSD1306_CONTROL_CMD;
+  PACKAGE[1] = command;
+  PACKAGE[2] = data1;
+  PACKAGE[3] = data2;
+  SSD1306_I2C_WRITE(PACKAGE, 4);
+}
 
-    SSD1306_writeCommand(0x22);              // cmd for the page start and end address
-    SSD1306_writeCommand(page);              // page start addr
-    SSD1306_writeCommand(SSD1306_MAX_PAGE);  // page end addr
+void SSD1306_I2C_SETUP(){
+  delay(10); 
+  Wire.begin();
+}
+
+void SSD1306_DATA_WRITE() {
+  unsigned char PACKAGE[2];
+  PACKAGE[0] = SSD1306_CONTROL_DATA;
+  for(uint16_t i = 0; i < SSD1306_BUFFER_DATA_MAX; i++) {    
+    PACKAGE[1] = SSD1306_DATA_BUFFER[i];
+    SSD1306_I2C_WRITE(PACKAGE, 2);
   }
 }
 
-void SSD1306_PrintOSZI(unsigned int c){
-  uint8_t data_byte;
+void SSD1306_INIT() {
+  SSD1306_I2C_SETUP();                         // Establish I2C Connection to Display
 
-  for (uint8_t i = 0; i < SSD1306_FontSize; i++) {  
-    data_byte= SSD1306_OSZI_FONT[c][i]; // Get the data to be displayed from LookUptable
+  SSD1306_CMD_WRITE(0xAE);                     // Display off
+  SSD1306_CMD_WRITE(0xD5, 0x80);               // OSC
+  SSD1306_CMD_WRITE(0x81, 0x80);               // Brightness [0~255]
+  SSD1306_CMD_WRITE(0x20, 0x00);               // Memory Address Mode [horizontal=0, vertical=1, page(default)=2]
+  SSD1306_CMD_WRITE(0xD3, 0x00);               // Display Offset [0~63]
+  SSD1306_CMD_WRITE(0x40);                     // Display start line [0x40~0x7F]
+  SSD1306_CMD_WRITE(0xA8, SSD1306_HEIGHT-1);   // Multiplex number (activated rows) [height-1, default=63]
+  SSD1306_CMD_WRITE(0xDA, 0x02);               // Reduce to half of height (as we use a 32px display)
+  SSD1306_CMD_WRITE(0xA1);                     // Segment (Column) Mode [normal=0xA0, inverse=0xA1]
+  SSD1306_CMD_WRITE(0xC8);                     // Common (Row) Mode [normal=0xC0, inverse=0xC8]
+  SSD1306_CMD_WRITE(0xA6);                     // Display Mode [normal=0xA6, inverse=0xA7]
+  SSD1306_CMD_WRITE(0x2E);                     // Disable Scroll
+  SSD1306_CMD_WRITE(0x8D, 0x14);               // Charge Pump [On=0x14, Off=0x10]
+  SSD1306_CMD_WRITE(0xAF);                     // Display on
 
-    SSD1306_writeData(data_byte);  // write data to the OLED
-    //SSD1306_PosSeg++;
-    
-  }
+  SSD1306_BUFFER_CLEAR();                      // Clear Data Buffer
 
-  SSD1306_writeData(0x00);         // Display the data
-  
+  SSD1306_CMD_WRITE(0x21,0);
+  SSD1306_CMD_WRITE(0x22,0,3); 
+  SSD1306_DATA_WRITE();                        // Write Data Buffer to SSD1306
+
+  SSD1306_CMD_WRITE(0x21,0,127);
+  SSD1306_CMD_WRITE(0x22,4,7);
+  SSD1306_DATA_WRITE();                        // Write Data Buffer to SSD1306
 }
 
-void SSD1306_InvertDisplay(bool invert) {
-  if(invert) {
-    SSD1306_writeCommand(0xA7); // Invert the display
+void SSD1306_DISPLAY_UPDATE() {
+  SSD1306_CMD_WRITE(0x21, 0, SSD1306_WIDTH-1);       // Segment (column) start at 0 to 127
+  SSD1306_CMD_WRITE(0x22, 0, (SSD1306_HEIGHT/8)-1);  // Page (rows) start at 0 to 3
+  SSD1306_DATA_WRITE();                              // Write Data Buffer to SSD1306
+}
+
+void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color) {
+  for(uint16_t i = 0; i<SSD1306_BUFFER_DATA_MAX; i++) {
+    SSD1306_DATA_BUFFER[i] = color;
+  }
+}
+
+void SSD1306_BUFFER_CLEAR() {
+  SSD1306_BUFFER_FILL(SSD1306_BLACK);
+}
+
+void SSD1306_INVERT() {
+  SSD1306.INVERTED = !SSD1306.INVERTED;
+}
+
+void SSD1306_SET_MASK(int16_t x1, int16_t y1, int16_t x2, int16_t y2) {
+  SSD1306.MASK_X_LOW = (x1>=0 && x1<SSD1306_WIDTH) ? x1 : 0;
+  SSD1306.MASK_Y_LOW = (y1>=0 && y1<SSD1306_HEIGHT) ? y1 : 0;
+  SSD1306.MASK_X_HIGH = (x2>=0 && x2<SSD1306_WIDTH) ? x2 : SSD1306_WIDTH-1;
+  SSD1306.MASK_Y_HIGH = (y2>=0 && y2<SSD1306_HEIGHT) ? y2 : SSD1306_HEIGHT-1;
+}
+
+void SSD1306_WRITE_PIXEL(int16_t x, int16_t y, SSD1306_COLOR_t color) {
+  if (x < SSD1306.MASK_X_LOW ||
+      y < SSD1306.MASK_Y_LOW ||
+      x >= SSD1306.MASK_X_HIGH ||
+      y >= SSD1306.MASK_Y_HIGH) {
+    // Error
+    return;
+  }
+
+  if (SSD1306.INVERTED) {
+    color = (SSD1306_COLOR_t)!color;
+  }
+
+  if(color == SSD1306_WHITE) {
+    SSD1306_DATA_BUFFER[1+ x + (y >> 3) * SSD1306_WIDTH] |= (1 << (y % 8));
   } else {
-    SSD1306_writeCommand(0xA6); // Normal display
+    SSD1306_DATA_BUFFER[1+ x + (y >> 3) * SSD1306_WIDTH] &= ~(1 << (y % 8));
   }
 }
 
-void SSD1306_SetBrightness(uint8_t brightnessValue)
-{
-    SSD1306_writeCommand(0x81);            // SET Contrast 
-    SSD1306_writeCommand(brightnessValue); // Contrast value (default value = 0x7F)
+void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = FONT_7_10_WIDTH;
+  uint8_t h = FONT_7_10_HEIGHT;
+  int16_t x0, y0;
+  uint16_t b;
+  
+  // Translate font to screen buffer
+  for (y0 = 0; y0 < h; y0++) {      
+      b = pgm_read_word_near(&Font7x10[0] + ((ch - 32) * h + y0));
+      for (x0 = 0; x0 < w; x0++) {
+          if ((b << x0) & 0x8000) {
+            SSD1306_WRITE_PIXEL(x + x0, y + y0, (SSD1306_COLOR_t) color);
+          }
+          else if (mode == SSD1306_OVERRIDE) {
+            SSD1306_WRITE_PIXEL(x + x0, y + y0, (SSD1306_COLOR_t)!color);
+          }
+      }
+  }
 }
- 
-int SSD1306_DisplayInit(void)
-{
-    // Establish I2C Connection to the SSD_1306 / OLED Display
-    I2C_establish();
 
-    // Commands to initialize the SSD_1306 / OLED Display
-    SSD1306_writeCommand(0xAE); // Display OFF
-    
-    SSD1306_writeCommand(0xD5); // SET Display Clock Divide Ratio and Oscillator Frequency
-    SSD1306_writeCommand(0x80); // Default Setting for Display Clock Divide Ratio and Oscillator Frequency that is recommended
-    
-    SSD1306_writeCommand(0xA8); // SET Multiplex Ratio
-    SSD1306_writeCommand(0x3F); // 64 COM lines
+void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = FONT_7_10_WIDTH;
+  uint8_t h = FONT_7_10_HEIGHT;
+  int16_t l = strlen(str);
 
-    SSD1306_writeCommand(0xD3); // SET display offset
-    SSD1306_writeCommand(0x00); // 0 offset
-    
-    SSD1306_writeCommand(0x40); // SET first line as the start line of the display
-    SSD1306_writeCommand(0x8D); // Charge pump
-    SSD1306_writeCommand(0x14); // Enable charge dump during display on
+  if (
+      (x + l*w < SSD1306.MASK_X_LOW) ||
+      (SSD1306.MASK_X_HIGH < x) ||
+      (y + h < SSD1306.MASK_Y_LOW) ||
+      (SSD1306.MASK_Y_HIGH < y)
+  ){
+    return;
+  }
 
-    SSD1306_writeCommand(0x20); // SET memory addressing mode
-    SSD1306_writeCommand(0x00); // Horizontal addressing mode
+  int16_t fx = (SSD1306.MASK_X_LOW - x) / w;
+  int16_t rx = (x - SSD1306.MASK_X_HIGH) / h;
+  char* estr = str + l;
+  int16_t n = 0;
 
-    //SSD1306_writeCommand(0xA1); // SET segment remap
-                                // column address 127 mapped to segment 0
+  // cut off characters which are out of masking box
+  if (fx > 0) {
+      str += fx;
+      x += fx*w;
+  }
 
-    SSD1306_writeCommand(0xC8); // SET com output scan direction 
-                                // scan from com63 to com 0
-    
-    SSD1306_writeCommand(0xDA); // SET com pins hardware configuration
-    SSD1306_writeCommand(0x12); // Alternative com pin configuration, disable com left/right remap
-    
-    SSD1306_writeCommand(0x81); // SET Contrast control
-    SSD1306_writeCommand(0x80); // SET Contrast to 128
+  if (rx > 0) {
+    estr -= rx;
+  }
 
-    SSD1306_writeCommand(0xD9); // SET pre-charge period
-    SSD1306_writeCommand(0xF1); // Phase 1 period of 15 DCLK, Phase 2 period of 1 DCLK
-
-    SSD1306_writeCommand(0xDB); // SET Vcomh deselect level
-    SSD1306_writeCommand(0x20); // Vcomh deselect level ~ 0.77 VCC
-
-    SSD1306_writeCommand(0xA4); // Entire display ON, resume to RAM content display
-
-    SSD1306_writeCommand(0xA6); // SET Display to Normal Mode
-
-    SSD1306_writeCommand(0x2E); // Deactivate scroll
-
-    SSD1306_writeCommand(0xAF); // Display ON
-    
-    
-    SSD1306_Fill(0x00); // Clear the display
-
-    return 0;
-}
- 
-void SSD1306_Fill(unsigned char data)
-{
-  unsigned int total  = 128 * 8;  
-
-  for(unsigned int i = 0; i < total; i++)
+  // write until null-byte or the first cutoff char
+  while (*str && str < estr)
   {
-      SSD1306_writeData(data);
+      SSD1306_WRITE_CHAR(x + n*w, y, *str, color, mode);
+      n++;
+      str++;
   }
 }
- 
-// ================================================================
-// TEMPORARY FUNCTIONS FOR TESTING TODO: remove before release
-// ================================================================
 
+void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color) {
+  int16_t dx, dy, sx, sy, err, e2, i, temp;
+
+  x0 = (x0 >= SSD1306_WIDTH) ? (SSD1306_WIDTH - 1) : x0;
+  x1 = (x1 >= SSD1306_WIDTH) ? (SSD1306_WIDTH - 1) : x1;
+  y0 = (y0 >= SSD1306_HEIGHT) ? (SSD1306_HEIGHT - 1) : y0;
+  y1 = (y1 >= SSD1306_HEIGHT) ? (SSD1306_HEIGHT - 1) : y1;
+  
+  dx = (x0 < x1) ? (x1 - x0) : (x0 - x1);
+  dy = (y0 < y1) ? (y1 - y0) : (y0 - y1);
+  sx = (x0 < x1) ? 1 : -1;
+  sy = (y0 < y1) ? 1 : -1;
+  err = ((dx > dy) ? dx : -dy) / 2;
+  
+  // Vertical line
+  if (dx == 0) {
+    if (y1 < y0) {
+      temp = y1;
+      y1 = y0;
+      y0 = temp;
+    }
+
+    if (x1 < x0) {
+      temp = x1;
+      x1 = x0;
+      x0 = temp;
+    }
+
+    for (i = y0; i <= y1; i++) {
+      SSD1306_WRITE_PIXEL(x0, i, color);
+    }
+
+    return;
+  }
+
+  // Horizontal line
+  if (dy == 0) {
+    if (y1 < y0) {
+      temp = y1;
+      y1 = y0;
+      y0 = temp;
+    }
+
+    if (x1 < x0) {
+      temp = x1;
+      x1 = x0;
+      x0 = temp;
+    }
+
+    for (i = x0; i <= x1; i++) {
+      SSD1306_WRITE_PIXEL(i, y0, color);
+    }
+
+    return;
+  }
+
+  while (1) {
+    SSD1306_WRITE_PIXEL(x0, y0, color);
+    if (x0 == x1 && y0 == y1) {
+      break;
+    }
+    e2 = err;
+    if (e2 > -dx) {
+      err -= dy;
+      x0 += sx;
+    }
+    if (e2 < dy) {
+      err += dx;
+      y0 += sy;
+    }
+  }
+}

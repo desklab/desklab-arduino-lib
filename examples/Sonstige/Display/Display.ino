@@ -16,6 +16,6 @@ void setup()   {
 void loop() {         
     //int t = round(millis()/1000);
     //Microcontroller.print(t);
-    testOLED();
+
     delay(200);
 } 

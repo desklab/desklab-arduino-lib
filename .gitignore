@@ -19,7 +19,7 @@
 *.iml
 *.ipr
 *.iws
-coverage/
+dev/
 client/node_modules
 
 .vscode
