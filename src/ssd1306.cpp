@@ -77,6 +77,7 @@ void SSD1306_INIT() {
   SSD1306_CMD_WRITE(0xAF);                     // Display on
 
   SSD1306_BUFFER_CLEAR();                      // Clear Data Buffer
+  SSD1306_DISPLAY_UPDATE(); 
 
   SSD1306_CMD_WRITE(0x21,0);
   SSD1306_CMD_WRITE(0x22,0,3); 
@@ -94,6 +95,30 @@ void SSD1306_DISPLAY_UPDATE() {
 }
 
 #endif
+
+uint8_t SSD1306_GET_FONT_HEIGHT(uint8_t s){
+  if (s == 1){
+    return FONT_7_10_HEIGHT;
+  }
+  if (s == 2){
+    return FONT_11_18_HEIGHT;
+  }
+  if (s == 3){
+    return FONT_16_26_HEIGHT;
+  }
+}
+
+uint8_t SSD1306_GET_FONT_WIDTH(uint8_t s){
+  if (s == 1){
+    return FONT_7_10_WIDTH;
+  }
+  if (s == 2){
+    return FONT_11_18_WIDTH;
+  }
+  if (s == 3){
+    return FONT_16_26_WIDTH;
+  }
+}
 
 void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color) {
   for(uint16_t i = 0; i<SSD1306_BUFFER_DATA_MAX; i++) {
@@ -136,15 +161,26 @@ void SSD1306_WRITE_PIXEL(int16_t x, int16_t y, SSD1306_COLOR_t color) {
   }
 }
 
-void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = FONT_7_10_WIDTH;
-  uint8_t h = FONT_7_10_HEIGHT;
+void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
+
   int16_t x0, y0;
   uint16_t b;
   
   // Translate font to screen buffer
-  for (y0 = 0; y0 < h; y0++) {      
-      b = pgm_read_word_near(&Font7x10[0] + ((ch - 32) * h + y0));
+  for (y0 = 0; y0 < h; y0++) {
+
+      if (s == 1){
+        b = pgm_read_word_near(&Font7x10[0] + ((ch - 32) * h + y0));
+      }
+      if (s == 2){
+        b = pgm_read_word_near(&Font11x18[0] + ((ch - 32) * h + y0));
+      }
+      if (s == 3){
+        b = pgm_read_word_near(&Font16x26[0] + ((ch - 32) * h + y0));
+      }
+
       for (x0 = 0; x0 < w; x0++) {
           if ((b << x0) & 0x8000) {
             SSD1306_WRITE_PIXEL(x + x0, y + y0, (SSD1306_COLOR_t) color);
@@ -156,9 +192,9 @@ void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, SSD1306_COLOR_t color, SS
   }
 }
 
-void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = FONT_7_10_WIDTH;
-  uint8_t h = FONT_7_10_HEIGHT;
+void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
   int16_t l = strlen(str);
 
   if (
@@ -188,15 +224,15 @@ void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color
   // write until null-byte or the first cutoff char
   while (*str && str < estr)
   {
-      SSD1306_WRITE_CHAR(x + n*w, y, *str, color, mode);
+      SSD1306_WRITE_CHAR(x + n*w, y, *str, s, color, mode);
       n++;
       str++;
   }
 }
 
-void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = FONT_7_10_WIDTH;
-  uint8_t h = FONT_7_10_HEIGHT;
+void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
 
   char buf [4];
   dtostrf(d, 0, 2, buf);
@@ -204,15 +240,15 @@ void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, SSD1306_COLOR_t color,
   int n = 0;
   while (n < 4)
   {
-      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], color, mode);
+      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], s, color, mode);
       n++;
   }
 
 }
 
-void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = FONT_7_10_WIDTH;
-  uint8_t h = FONT_7_10_HEIGHT;
+void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
 
   char buf [5];
   sprintf (buf, "%03i", i);
@@ -220,14 +256,14 @@ void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD13
   int n = 0;
   while (n < i)
   {
-      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], color, mode);
+      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], s, color, mode);
       n++;
   }
 }
 
-void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = FONT_7_10_WIDTH;
-  uint8_t h = FONT_7_10_HEIGHT;
+void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
   char buf;
 
   if (b){
@@ -236,7 +272,7 @@ void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, SSD1306_COLOR_t color, SSD
     buf = 'F';
   }
 
-  SSD1306_WRITE_CHAR(x, y, buf, color, mode);
+  SSD1306_WRITE_CHAR(x, y, buf, s, color, mode);
 }
 
 void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color) {

@@ -42,12 +42,12 @@ void photometerPrintOD(double od){
   SSD1306_BUFFER_CLEAR();
 
   if (isnan(od)){
-    SSD1306_WRITE_STRING(0,0, "Warnung:", 0x01, 0x01);
-    SSD1306_WRITE_STRING(0,12, "Wert nicht im Messbereich", 0x01, 0x01);
-    SSD1306_WRITE_STRING(0,24, "oder Kalibrierung falsch!", 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,0, "Warnung:", 1, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,12, "Wert nicht im Messbereich", 1, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,24, "oder Kalibrierung falsch!", 1, 0x01, 0x01);
   } else {
-    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 0x01, 0x01);
-    SSD1306_WRITE_DOUBLE(0,12, od, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 1, 0x01, 0x01);
+    SSD1306_WRITE_DOUBLE(0,12, od, 2, 0x01, 0x01);
   }
 
   SSD1306_DISPLAY_UPDATE(); 
