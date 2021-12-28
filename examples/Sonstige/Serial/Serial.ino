@@ -9,13 +9,13 @@
 
 desklab::core Microcontroller;
 
-void setup()   {
+void setup() {
     Microcontroller.enableSerialOutput();
 }
 
-void loop() {         
+void loop() {
     int t = round(millis()/1000);
     Microcontroller.print(t);
 
     delay(200);
-} 
+}

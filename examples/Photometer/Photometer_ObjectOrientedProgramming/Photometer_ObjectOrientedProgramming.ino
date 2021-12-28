@@ -25,7 +25,7 @@ desklab::photometer Photometer(SensorPin);
 void setup() {
 }
 
-void loop() {      
+void loop() {
     // [EN] Measure the OD
     // [DE] Messung der OD
     Photometer.measureOD();
@@ -37,4 +37,4 @@ void loop() {
     // [EN] Wait for 200ms.
     // [DE] Warten für 200ms.
     delay(200);
-} 
+}

@@ -16,14 +16,14 @@
 // des Pins, an dem der Sensor angeschlossen ist.
 int SensorPin = A0;
 
-void setup() { 
+void setup() {
     // [EN] Start the display.
-    // [DE] Starten des Displays.     
-    photometerSetupDisplay();     
+    // [DE] Starten des Displays.
+    photometerSetupDisplay();
 }
 
 void loop() {
-    // [EN] Measure the OD.         
+    // [EN] Measure the OD.
     // [DE] Messung der OD.
     double OD = photometerMeasureOD(SensorPin);
   
@@ -34,4 +34,4 @@ void loop() {
     // [EN] Wait for 200ms.
     // [DE] Warten für 200ms.
     delay(200);
-} 
+}
