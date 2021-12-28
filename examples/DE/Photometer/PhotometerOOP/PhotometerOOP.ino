@@ -7,7 +7,7 @@ int SensorPin = A0;
 
 // Initialisieren des Objekts 'Photometer' aus der
 // Klasse 'photometer' (definiert in der desklab Bibliothek)
-desklab::photometer Photometer(SensorPin);
+desklab::Photometer Photometer(SensorPin);
 
 void setup() {
 }

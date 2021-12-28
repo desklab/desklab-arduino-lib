@@ -29,46 +29,46 @@
 #include <desklab.h>
 #include <Arduino.h>
 
-core::core(){
+Core::Core(){
   this->_serialoutput = false;
   this->_displayoutput = true;
 }
 
-void core::enableDisplayOutput(){
+void Core::enableDisplayOutput(){
   _displayoutput = true;
 }
 
-void core::disableDisplayOutput(){
+void Core::disableDisplayOutput(){
   _displayoutput = false;
 }
 
-void core::enableSerialOutput(){
+void Core::enableSerialOutput(){
   _serialoutput = true;
 }
 
-void core::disableSerialOutput(){
+void Core::disableSerialOutput(){
   _serialoutput = false;
 }  
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
-void core::print(bool data){
+void Core::print(bool data){
   // TODO:
 }
 
-void core::print(int data){
+void Core::print(int data){
   // TODO:
 }
 
-void core::print(double data){
+void Core::print(double data){
   // TODO:
 }
 
-void core::print(float data){
+void Core::print(float data){
   // TODO:
 }
 
-void core::print(char data){
+void Core::print(char data){
   // TODO:
 }
 

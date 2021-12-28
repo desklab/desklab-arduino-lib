@@ -1,6 +1,6 @@
 #include <desklab.h>
 
-desklab::core Microcontroller;
+desklab::Core Microcontroller;
 
 void setup() {
     //Microcontroller.enableDisplayOutput();

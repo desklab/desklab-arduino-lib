@@ -26,8 +26,8 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 */
 
-#ifndef desklab_photometer
-#define desklab_photometer
+#ifndef DLH_PHOTOMETER
+#define DLH_PHOTOMETER
 
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A = 1.42909711;
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B = -0.00258627252;
@@ -46,7 +46,7 @@ double photometerConversion(double analogSensorValue);
 double photometerConversion(double analogSensorValue, double calibration_param_A, double calibration_param_B, double calibration_param_C);
 double photometerMeasureOD(int Pin);
 
-class photometer {
+class Photometer {
     public:
         photometer(int pin);
 

@@ -28,7 +28,7 @@
 
 #include <Arduino.h>
 #include <ssd1306.h>
-#include <desklab_photometer.h>
+#include <photometer.h>
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
@@ -105,7 +105,7 @@ double photometerMeasureOD(int Pin){
 }
 
 
-photometer::photometer(int pin){
+Photometer::Photometer(int pin){
   this->_pin = pin;
   
   this->_serialoutput = true;
@@ -126,47 +126,47 @@ photometer::photometer(int pin){
   #endif
 }
 
-void photometer::measureOD(){
+void Photometer::measureOD(){
   this->_od = photometerMeasureOD(this->_pin);
 }
 
-void photometer::readSensor(){
+void Photometer::readSensor(){
   this->_sensorvalue = photometerReadRaw(this->_pin);
 }
 
-double photometer::getSensorValue(){
+double Photometer::getSensorValue(){
   return this->_sensorvalue;
 }
 
-double photometer::getOD(){
+double Photometer::getOD(){
   return this->_od;
 }
 
-void photometer::setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C){
+void Photometer::setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C){
   this->_calibration_A = calibration_param_A;
   this->_calibration_B = calibration_param_B;
   this->_calibration_C = calibration_param_C;
 }
 
-void photometer::enableDisplayOutput(){
+void Photometer::enableDisplayOutput(){
   this->_displayoutput = true;
 }
 
-void photometer::disableDisplayOutput(){
+void Photometer::disableDisplayOutput(){
   this->_displayoutput = false;
 }
 
-void photometer::enableSerialOutput(){
+void Photometer::enableSerialOutput(){
   this->_serialoutput = true;
 }
 
-void photometer::disableSerialOutput(){
+void Photometer::disableSerialOutput(){
   this->_serialoutput = false;
 }    
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
-void photometer::printOD(){
+void Photometer::printOD(){
   if (this->_displayoutput){
     photometerPrintOD(this->_od);
   }

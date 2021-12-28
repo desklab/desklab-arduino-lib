@@ -36,9 +36,9 @@
 
 #include <ssd1306.h> 
 
-class core {
+class Core {
     public:
-        core();
+        Core();
 
         void enableDisplayOutput();
         void disableDisplayOutput();
