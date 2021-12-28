@@ -346,12 +346,13 @@ void SSD1306_DATA_WRITE();
 
 void SSD1306_DISPLAY_UPDATE();
 
+void SSD1306_INVERT();
+
 #endif
 
 void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color);
 void SSD1306_BUFFER_CLEAR();
 
-void SSD1306_INVERT();
 void SSD1306_SET_MASK(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
 
 void SSD1306_WRITE_PIXEL(int16_t x, int16_t y, SSD1306_COLOR_t color);

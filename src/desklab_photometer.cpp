@@ -30,6 +30,8 @@
 #include <ssd1306.h>
 #include <desklab_photometer.h>
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void photometerSetupDisplay(){
   SSD1306_INIT();
 }
@@ -52,6 +54,8 @@ void photometerPrintOD(double od){
 
   SSD1306_DISPLAY_UPDATE(); 
 }
+
+#endif
 
 double photometerReadRaw(int Pin){
   double sensorValue = 0;
@@ -114,8 +118,12 @@ photometer::photometer(int pin){
   this->_sensorvalue = NAN;
   this->_od = NAN;
 
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
   photometerSetupDisplay();
   photometerSetupSerial();
+
+  #endif
 }
 
 void photometer::measureOD(){
@@ -156,6 +164,8 @@ void photometer::disableSerialOutput(){
   this->_serialoutput = false;
 }    
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void photometer::printOD(){
   if (this->_displayoutput){
     photometerPrintOD(this->_od);
@@ -166,3 +176,5 @@ void photometer::printOD(){
     Serial.println(this->_od);
   }
 }
+
+#endif

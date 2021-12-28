@@ -43,13 +43,15 @@ class core {
         void enableDisplayOutput();
         void disableDisplayOutput();
         void enableSerialOutput();
-        void disableSerialOutput();    
+        void disableSerialOutput(); 
 
+        #ifndef ARDUINO_CI_UNITTEST_ACTIVE
         void print(bool data);
         void print(int data);
         void print(double data);
         void print(float data);
         void print(char data);
+        #endif
 
     private:
         bool _serialoutput;

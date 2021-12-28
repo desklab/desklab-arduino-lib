@@ -50,6 +50,8 @@ void core::disableSerialOutput(){
   _serialoutput = false;
 }  
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void core::print(bool data){
   // TODO:
 }
@@ -69,3 +71,5 @@ void core::print(float data){
 void core::print(char data){
   // TODO:
 }
+
+#endif

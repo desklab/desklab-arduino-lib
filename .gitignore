@@ -25,3 +25,7 @@ client/node_modules
 .vscode
 
 .DS_Store
+
+vendor/
+Gemfile.lock
+.bundle
