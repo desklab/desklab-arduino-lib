@@ -29,97 +29,47 @@
 #include <desklab.h>
 #include <Arduino.h>
 
-core::core(){
+Core::Core(){
   this->_serialoutput = false;
   this->_displayoutput = true;
 }
 
-void core::enableDisplayOutput(){
+void Core::enableDisplayOutput(){
   _displayoutput = true;
 }
 
-void core::disableDisplayOutput(){
+void Core::disableDisplayOutput(){
   _displayoutput = false;
 }
 
-void core::enableSerialOutput(){
+void Core::enableSerialOutput(){
   _serialoutput = true;
 }
 
-void core::disableSerialOutput(){
+void Core::disableSerialOutput(){
   _serialoutput = false;
 }  
 
-void core::print(bool data){
-  // TODO:
-}
-
-void core::print(int data){
-  // TODO:
-}
-
-void core::print(double data){
-  // TODO:
-}
-
-void core::print(float data){
-  // TODO:
-}
-
-void core::print(char data){
-  // TODO:
-}
-
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-void StarteDisplay(){
 
-  oleddisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
-  oleddisplay.clearDisplay();
-
-  oleddisplay.drawBitmap(
-    (oleddisplay.width()  - LOGO_WIDTH ) / 2,
-    (oleddisplay.height() - LOGO_HEIGHT) / 2,
-    dl_Logo, LOGO_WIDTH, LOGO_HEIGHT, 1);
-  oleddisplay.display();
-  delay(1500);
-
-  oleddisplay.clearDisplay();
-  oleddisplay.display();
-
-  oleddisplay.setTextColor(WHITE, BLACK);
-  oleddisplay.setCursor(0,0);
-  oleddisplay.setTextSize(1);
-
-  oleddisplay.println("Hinweis: ");
-  oleddisplay.println("Mikrocontroller und");
-  oleddisplay.println("Display erfolgreich");
-  oleddisplay.println("gestartet!");
-  oleddisplay.display();
-
-  delay(2000);
-
-  oleddisplay.clearDisplay();
-  oleddisplay.display();
+void Core::print(bool data){
+  // TODO:
 }
 
-
-void TextAusgabe(String printMessage, int printSize){
-
-  oleddisplay.clearDisplay();
-  oleddisplay.setTextSize(printSize);
-  oleddisplay.setCursor(0,0);
-
-  oleddisplay.println(printMessage);
-  oleddisplay.display();
+void Core::print(int data){
+  // TODO:
 }
 
-void Drehen(int drehen) {
-  oleddisplay.setRotation(drehen);
+void Core::print(double data){
+  // TODO:
 }
 
-Adafruit_SSD1306 Display() {
-  return oleddisplay;
+void Core::print(float data){
+  // TODO:
+}
+
+void Core::print(char data){
+  // TODO:
 }
 
 #endif

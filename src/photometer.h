@@ -26,8 +26,8 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 */
 
-#ifndef desklab_photometer
-#define desklab_photometer
+#ifndef DLH_PHOTOMETER
+#define DLH_PHOTOMETER
 
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A = 1.42909711;
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B = -0.00258627252;
@@ -37,16 +37,18 @@ const double PHOTOMETER_CALIBRATION_LOWER_LIMIT = -0.05;
 const int PHOTOMETER_CALIBRATION_ZERO_CUTOFF = 925;
 
 void photometerSetupDisplay();
-void photometerPrint(double OD);
+void photometerSetupSerial();
+
+void photometerPrintOD(double od);
 
 double photometerReadRaw(int Pin);
 double photometerConversion(double analogSensorValue);
 double photometerConversion(double analogSensorValue, double calibration_param_A, double calibration_param_B, double calibration_param_C);
 double photometerMeasureOD(int Pin);
 
-class photometer {
+class Photometer {
     public:
-        photometer(int pin);
+        Photometer(int pin);
 
         void setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C);
 
@@ -61,11 +63,7 @@ class photometer {
         double getSensorValue();
         double getOD();
 
-        void print(bool data);
-        void print(int data);
-        void print(double data);
-        void print(float data);
-        void print(char data);
+        void printOD();
 
     private:
         int _pin;

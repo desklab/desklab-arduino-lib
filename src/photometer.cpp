@@ -27,15 +27,35 @@
 */
 
 #include <Arduino.h>
-#include <desklab_photometer.h>
+#include <ssd1306.h>
+#include <photometer.h>
+
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void photometerSetupDisplay(){
-  // TODO: Setup I2C Connection to display.
+  SSD1306_INIT();
 }
 
-void photometerPrint(double OD){
-  // TODO: Print OD to display.
+void photometerSetupSerial(){
+  Serial.begin(9600);
 }
+
+void photometerPrintOD(double od){
+  SSD1306_BUFFER_CLEAR();
+
+  if (isnan(od)){
+    SSD1306_WRITE_STRING(0,0, "Warnung:", 1, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,12, "Wert nicht im", 1, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,24, "Messbereich", 1, 0x01, 0x01);
+  } else {
+    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 1, 0x01, 0x01);
+    SSD1306_WRITE_DOUBLE(0,12, od, 2, 0x01, 0x01);
+  }
+
+  SSD1306_DISPLAY_UPDATE(); 
+}
+
+#endif
 
 double photometerReadRaw(int Pin){
   double sensorValue = 0;
@@ -80,14 +100,15 @@ double photometerConversion(double analogSensorValue, double calibration_param_A
 double photometerMeasureOD(int Pin){
   int sensorRaw = photometerReadRaw(Pin);
   double OD = photometerConversion(sensorRaw);
+
   return OD;
 }
 
 
-photometer::photometer(int pin){
+Photometer::Photometer(int pin){
   this->_pin = pin;
   
-  this->_serialoutput = false;
+  this->_serialoutput = true;
   this->_displayoutput = true;
 
   this->_calibration_A = PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A;
@@ -97,98 +118,63 @@ photometer::photometer(int pin){
   this->_sensorvalue = NAN;
   this->_od = NAN;
 
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
   photometerSetupDisplay();
+  photometerSetupSerial();
+
+  #endif
 }
 
-void photometer::measureOD(){
+void Photometer::measureOD(){
   this->_od = photometerMeasureOD(this->_pin);
 }
 
-void photometer::readSensor(){
+void Photometer::readSensor(){
   this->_sensorvalue = photometerReadRaw(this->_pin);
 }
 
-double photometer::getSensorValue(){
+double Photometer::getSensorValue(){
   return this->_sensorvalue;
 }
 
-double photometer::getOD(){
+double Photometer::getOD(){
   return this->_od;
 }
 
-void photometer::setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C){
+void Photometer::setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C){
   this->_calibration_A = calibration_param_A;
   this->_calibration_B = calibration_param_B;
   this->_calibration_C = calibration_param_C;
 }
 
-void photometer::enableDisplayOutput(){
+void Photometer::enableDisplayOutput(){
   this->_displayoutput = true;
 }
 
-void photometer::disableDisplayOutput(){
+void Photometer::disableDisplayOutput(){
   this->_displayoutput = false;
 }
 
-void photometer::enableSerialOutput(){
+void Photometer::enableSerialOutput(){
   this->_serialoutput = true;
 }
 
-void photometer::disableSerialOutput(){
+void Photometer::disableSerialOutput(){
   this->_serialoutput = false;
 }    
 
-void photometer::print(bool data){
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
+void Photometer::printOD(){
   if (this->_displayoutput){
-    // TODO: print bool to display
+    photometerPrintOD(this->_od);
   }
 
   if (this->_serialoutput)
   {
-    // TODO: print bool to serial
+    Serial.println(this->_od);
   }
 }
 
-void photometer::print(int data){
-  if (this->_displayoutput){
-    // TODO: print int to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print int to serial
-  }
-}
-
-void photometer::print(double data){
-  if (this->_displayoutput){
-    // TODO: print double to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print double to serial
-  }
-}
-
-void photometer::print(float data){
-  if (this->_displayoutput){
-    // TODO: print float to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print float to serial
-  }
-}
-
-void photometer::print(char data){
-  if (this->_displayoutput){
-    // TODO: print char to display
-  }
-
-  if (this->_serialoutput)
-  {
-    // TODO: print char to serial
-  }
-}
+#endif
