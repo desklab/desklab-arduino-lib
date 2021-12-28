@@ -1,5 +1,5 @@
-core 	KEYWORD1
-photometer	KEYWORD1
+Core 	KEYWORD1
+Photometer	KEYWORD1
 PhotometerMessung	KEYWORD2
 PhotometerAusgabe	KEYWORD2
 PhotometerBerechnung	KEYWORD2
