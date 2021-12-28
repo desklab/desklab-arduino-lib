@@ -46,11 +46,10 @@ class Core {
         void disableSerialOutput(); 
 
         #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-        void print(bool data);
-        void print(int data);
-        void print(double data);
-        void print(float data);
-        void print(char data);
+        void print(bool b);
+        void print(int i);
+        void print(double d);
+        void print(char c);
         #endif
 
     private:

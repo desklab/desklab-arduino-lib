@@ -52,24 +52,20 @@ void Core::disableSerialOutput(){
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
-void Core::print(bool data){
-  // TODO:
+void Core::print(bool b){
+  SSD1306_WRITE_BOOL(0, 0, b, 1, 0x01, 0x01);
 }
 
-void Core::print(int data){
-  // TODO:
+void Core::print(int i){
+  SSD1306_WRITE_INT(0, 0, i, 1, 0x01, 0x01);
 }
 
-void Core::print(double data){
-  // TODO:
+void Core::print(double d){
+  SSD1306_WRITE_DOUBLE(0, 0, d, 1, 0x01, 0x01);
 }
 
-void Core::print(float data){
-  // TODO:
-}
-
-void Core::print(char data){
-  // TODO:
+void Core::print(char c){
+  SSD1306_WRITE_CHAR(0, 0, c, 1, 0x01, 0x01);
 }
 
 #endif
