@@ -59,7 +59,7 @@ class core {
 };
 
 
-#include  <desklab_photometer.h>
+#include  <photometer.h>
 
 
 #endif
