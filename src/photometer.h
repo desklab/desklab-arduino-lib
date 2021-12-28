@@ -48,7 +48,7 @@ double photometerMeasureOD(int Pin);
 
 class Photometer {
     public:
-        photometer(int pin);
+        Photometer(int pin);
 
         void setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C);
 
