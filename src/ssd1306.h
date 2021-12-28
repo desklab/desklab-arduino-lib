@@ -360,6 +360,7 @@ void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, SSD1306_COLOR_t color, SS
 void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
+void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 
 //  Export members
 extern SSD1306_t SSD1306;

@@ -225,6 +225,19 @@ void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD13
   }
 }
 
+void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = FONT_7_10_WIDTH;
+  uint8_t h = FONT_7_10_HEIGHT;
+  char buf;
+
+  if (b){
+    buf = 'T';
+  } else {
+    buf = 'F';
+  }
+
+  SSD1306_WRITE_CHAR(x, y, buf, color, mode);
+}
 
 void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color) {
   int16_t dx, dy, sx, sy, err, e2, i, temp;
