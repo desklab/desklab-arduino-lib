@@ -34,12 +34,7 @@
 #define DESKLAB_LIBRARY_VERSION_MINOR 2
 #define DESKLAB_LIBRARY_VERSION_PATCH 0
 
-// DISPLAY CODE (not included in Unittests)
-#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 #include <ssd1306.h> 
-
-#endif
-// END OF DISPLAY CODE (not included in Unittests)
 
 class core {
     public:

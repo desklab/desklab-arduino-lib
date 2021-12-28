@@ -38,12 +38,18 @@ void photometerSetupSerial(){
   Serial.begin(9600);
 }
 
-void photometerPrintOD(double OD){
-  unsigned char od[sizeof(double)];
-  memcpy(od, &OD, sizeof(double));
+void photometerPrintOD(double od){
   SSD1306_BUFFER_CLEAR();
-  SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 0x01, 0x01);
-  SSD1306_WRITE_STRING(0,12, od, 0x01, 0x01);
+
+  if (isnan(od)){
+    SSD1306_WRITE_STRING(0,0, "Warnung:", 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,12, "Wert nicht im Messbereich", 0x01, 0x01);
+    SSD1306_WRITE_STRING(0,24, "oder Kalibrierung falsch!", 0x01, 0x01);
+  } else {
+    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 0x01, 0x01);
+    SSD1306_WRITE_DOUBLE(0,12, od, 0x01, 0x01);
+  }
+
   SSD1306_DISPLAY_UPDATE(); 
 }
 

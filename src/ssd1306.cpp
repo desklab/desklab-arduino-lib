@@ -12,6 +12,8 @@ SSD1306_t SSD1306 = {
 
 unsigned char SSD1306_DATA_BUFFER[SSD1306_BUFFER_DATA_MAX];
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void SSD1306_I2C_WRITE(unsigned char *PACKAGE, uint8_t len) {
   Wire.beginTransmission(SSD1306_ADDR);
   Wire.write(PACKAGE, len);
@@ -90,6 +92,8 @@ void SSD1306_DISPLAY_UPDATE() {
   SSD1306_CMD_WRITE(0x22, 0, (SSD1306_HEIGHT/8)-1);  // Page (rows) start at 0 to 3
   SSD1306_DATA_WRITE();                              // Write Data Buffer to SSD1306
 }
+
+#endif
 
 void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color) {
   for(uint16_t i = 0; i<SSD1306_BUFFER_DATA_MAX; i++) {
@@ -189,6 +193,38 @@ void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color
       str++;
   }
 }
+
+void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = FONT_7_10_WIDTH;
+  uint8_t h = FONT_7_10_HEIGHT;
+
+  char buf [4];
+  dtostrf(d, 0, 2, buf);
+
+  int n = 0;
+  while (n < 4)
+  {
+      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], color, mode);
+      n++;
+  }
+
+}
+
+void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+  uint8_t w = FONT_7_10_WIDTH;
+  uint8_t h = FONT_7_10_HEIGHT;
+
+  char buf [5];
+  sprintf (buf, "%03i", i);
+
+  int n = 0;
+  while (n < i)
+  {
+      SSD1306_WRITE_CHAR(x + n*w, y, buf[n], color, mode);
+      n++;
+  }
+}
+
 
 void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color) {
   int16_t dx, dy, sx, sy, err, e2, i, temp;

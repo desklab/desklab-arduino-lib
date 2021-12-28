@@ -39,7 +39,7 @@ const int PHOTOMETER_CALIBRATION_ZERO_CUTOFF = 925;
 void photometerSetupDisplay();
 void photometerSetupSerial();
 
-void photometerPrintOD(double OD);
+void photometerPrintOD(double od);
 
 double photometerReadRaw(int Pin);
 double photometerConversion(double analogSensorValue);

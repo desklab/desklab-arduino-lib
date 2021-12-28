@@ -334,6 +334,8 @@ const uint16_t Font16x26 [] PROGMEM = {
 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3F07,0x7FC7,0x73E7,0xF1FF,0xF07E,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000, // ~
 };
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void SSD1306_INIT();
 
 void SSD1306_CMD_WRITE(uint8_t command);
@@ -343,6 +345,8 @@ void SSD1306_CMD_WRITE(uint8_t command, uint8_t data1, uint8_t data2);
 void SSD1306_DATA_WRITE();
 
 void SSD1306_DISPLAY_UPDATE();
+
+#endif
 
 void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color);
 void SSD1306_BUFFER_CLEAR();
@@ -354,6 +358,8 @@ void SSD1306_WRITE_PIXEL(int16_t x, int16_t y, SSD1306_COLOR_t color);
 void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color);
 void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
+void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
+void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 
 //  Export members
 extern SSD1306_t SSD1306;
