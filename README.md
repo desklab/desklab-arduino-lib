@@ -7,14 +7,7 @@
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices. It is availabe via the Arduino Library Manager and easy to use with the Arduino IDE. Originally designed to be used with desklab devices and their specific hardware it could also be used in any other preferred toolchain to build software for many boards based on Atmel-AVR-Microcontrollers.
 
-### Compatibility & Dependencies
-
-##### Arduino Library Dependencies
- - `Adafruit SSD1306`
- - `Adafruit GFX Library`
- - `Adafruit BusIO`
-
-##### Hardware Compatibility
+#### Hardware Compatibility
   - `desklab Photometer V2`
   - `desklab Photometer V3`
 
