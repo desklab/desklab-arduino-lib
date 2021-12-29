@@ -33,11 +33,11 @@
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void photometerSetupDisplay(){
-  SSD1306_INIT();
+  setupDisplay();
 }
 
 void photometerSetupSerial(){
-  Serial.begin(9600);
+  setupSerial();
 }
 
 void photometerPrintOD(double od){
@@ -117,12 +117,12 @@ Photometer::Photometer(int pin){
 
   this->_sensorvalue = NAN;
   this->_od = NAN;
+}
 
+void Photometer::begin(){
   #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-
-  photometerSetupDisplay();
-  photometerSetupSerial();
-
+  setupDisplay();
+  setupSerial();
   #endif
 }
 

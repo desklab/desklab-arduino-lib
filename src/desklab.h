@@ -36,9 +36,13 @@
 
 #include <ssd1306.h> 
 
+void setupDisplay();
+void setupSerial();
+
 class Core {
     public:
         Core();
+        void begin();
 
         void enableDisplayOutput();
         void disableDisplayOutput();

@@ -4,6 +4,7 @@ desklab::Core Microcontroller;
 
 void setup() {
     Microcontroller.enableSerialOutput();
+    Microcontroller.begin();
 }
 
 void loop() {

@@ -10,6 +10,8 @@ int SensorPin = A0;
 desklab::Photometer Photometer(SensorPin);
 
 void setup() {
+    // Initialise the display/the serial connection
+    Photometer.begin();
 }
 
 void loop() {

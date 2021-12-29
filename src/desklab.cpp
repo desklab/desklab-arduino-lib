@@ -29,9 +29,28 @@
 #include <desklab.h>
 #include <Arduino.h>
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
+void setupDisplay(){
+  SSD1306_INIT();
+}
+
+void setupSerial(){
+  Serial.begin(9600);
+}
+
+#endif
+
 Core::Core(){
   this->_serialoutput = false;
   this->_displayoutput = true;
+}
+
+void Core::begin(){
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+  setupDisplay();
+  setupSerial();
+  #endif
 }
 
 void Core::enableDisplayOutput(){
@@ -53,19 +72,27 @@ void Core::disableSerialOutput(){
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void Core::print(bool b){
+  SSD1306_BUFFER_CLEAR();
   SSD1306_WRITE_BOOL(0, 0, b, 1, 0x01, 0x01);
+  SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(int i){
+  SSD1306_BUFFER_CLEAR();
   SSD1306_WRITE_INT(0, 0, i, 1, 0x01, 0x01);
+  SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(double d){
+  SSD1306_BUFFER_CLEAR();
   SSD1306_WRITE_DOUBLE(0, 0, d, 1, 0x01, 0x01);
+  SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(char c){
+  SSD1306_BUFFER_CLEAR();
   SSD1306_WRITE_CHAR(0, 0, c, 1, 0x01, 0x01);
+  SSD1306_DISPLAY_UPDATE();
 }
 
 #endif

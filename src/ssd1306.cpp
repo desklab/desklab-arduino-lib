@@ -253,11 +253,11 @@ void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t c
   uint8_t w = SSD1306_GET_FONT_WIDTH(s);
   uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
 
-  char buf [5];
+  char buf [4]; //TODO: Make size dependent of i
   sprintf (buf, "%03i", i);
 
   int n = 0;
-  while (n < i)
+  while (n < 4) // size dependence needed (see above)
   {
       SSD1306_WRITE_CHAR(x + n*w, y, buf[n], s, color, mode);
       n++;

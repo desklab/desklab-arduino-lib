@@ -29,6 +29,8 @@
 #ifndef DLH_PHOTOMETER
 #define DLH_PHOTOMETER
 
+#include <desklab.h>
+
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A = 1.42909711;
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B = -0.00258627252;
 const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_C = 1.12076970/1000000;
@@ -49,6 +51,7 @@ double photometerMeasureOD(int Pin);
 class Photometer {
     public:
         Photometer(int pin);
+        void begin();
 
         void setCalibration(double calibration_param_A, double calibration_param_B, double calibration_param_C);
 
