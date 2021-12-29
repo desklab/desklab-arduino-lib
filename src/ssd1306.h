@@ -358,7 +358,7 @@ void SSD1306_SET_MASK(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
 void SSD1306_WRITE_PIXEL(int16_t x, int16_t y, SSD1306_COLOR_t color);
 void SSD1306_WRITE_LINE(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color);
 void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
-void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
+void SSD1306_WRITE_STRING(int16_t x, int16_t y, const char* str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);
 void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode);

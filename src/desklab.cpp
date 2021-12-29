@@ -89,34 +89,34 @@ void Core::disableSerialOutput(){
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void Core::print(bool b){
-  SSD1306_MODE_t m = 0x00;
-  SSD1306_COLOR_t c = 0x01;
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;
   SSD1306_BUFFER_CLEAR();
-  SSD1306_WRITE_BOOL(0, 0, b, 1, c, m);
+  SSD1306_WRITE_BOOL(0, 0, b, 1, col, mode);
   SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(int i){
-  SSD1306_MODE_t m = 0x00;
-  SSD1306_COLOR_t c = 0x01;
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
   SSD1306_BUFFER_CLEAR();
-  SSD1306_WRITE_INT(0, 0, i, 1, c, m);
+  SSD1306_WRITE_INT(0, 0, i, 1, col, mode);
   SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(double d){
-  SSD1306_MODE_t m = 0x00;
-  SSD1306_COLOR_t c = 0x01;
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
   SSD1306_BUFFER_CLEAR();
-  SSD1306_WRITE_DOUBLE(0, 0, d, 1, c, m);
+  SSD1306_WRITE_DOUBLE(0, 0, d, 1, col, mode);
   SSD1306_DISPLAY_UPDATE();
 }
 
 void Core::print(char c){
-  SSD1306_MODE_t m = 0x00;
-  SSD1306_COLOR_t c = 0x01;
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
   SSD1306_BUFFER_CLEAR();
-  SSD1306_WRITE_CHAR(0, 0, c, 1, c, m);
+  SSD1306_WRITE_CHAR(0, 0, c, 1, col, mode);
   SSD1306_DISPLAY_UPDATE();
 }
 

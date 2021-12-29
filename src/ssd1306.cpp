@@ -106,6 +106,7 @@ uint8_t SSD1306_GET_FONT_HEIGHT(uint8_t s){
   if (s == 3){
     return FONT_16_26_HEIGHT;
   }
+  return 0;
 }
 
 uint8_t SSD1306_GET_FONT_WIDTH(uint8_t s){
@@ -118,6 +119,7 @@ uint8_t SSD1306_GET_FONT_WIDTH(uint8_t s){
   if (s == 3){
     return FONT_16_26_WIDTH;
   }
+  return 0;
 }
 
 void SSD1306_BUFFER_FILL(SSD1306_COLOR_t color) {
@@ -192,7 +194,7 @@ void SSD1306_WRITE_CHAR(int16_t x, int16_t y, char ch, uint8_t s, SSD1306_COLOR_
   }
 }
 
-void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
+void SSD1306_WRITE_STRING(int16_t x, int16_t y, const char* str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
   uint8_t w = SSD1306_GET_FONT_WIDTH(s);
   uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
   int16_t l = strlen(str);
@@ -208,7 +210,7 @@ void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, uint8_t s, SSD1306_CO
 
   int16_t fx = (SSD1306.MASK_X_LOW - x) / w;
   int16_t rx = (x - SSD1306.MASK_X_HIGH) / h;
-  char* estr = str + l;
+  const char* estr = str + l;
   int16_t n = 0;
 
   // cut off characters which are out of masking box
