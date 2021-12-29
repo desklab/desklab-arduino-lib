@@ -134,7 +134,11 @@ void Photometer::readSensor(){
   this->_sensorvalue = photometerReadRaw(this->_pin);
 }
 
-double Photometer::getSensorValue(){
+void Photometer::convertSensorvalueToOD(){
+  this->_od = photometerConversion(this->_sensorvalue, this->_calibration_A, this->_calibration_B, this->_calibration_C);
+}
+
+double Photometer::getSensorvalue(){
   return this->_sensorvalue;
 }
 

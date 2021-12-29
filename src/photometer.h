@@ -62,8 +62,9 @@ class Photometer {
 
         void measureOD();
         void readSensor();
+        void convertSensorvalueToOD()
 
-        double getSensorValue();
+        double getSensorvalue();
         double getOD();
 
         void printOD();
