@@ -41,15 +41,18 @@ void photometerSetupSerial(){
 }
 
 void photometerPrintOD(double od){
+  SSD1306_MODE_t m = 0x00;
+  SSD1306_COLOR_t c = 0x01;
+  
   SSD1306_BUFFER_CLEAR();
 
   if (isnan(od)){
-    SSD1306_WRITE_STRING(0,0, "Warnung:", 1, 0x01, 0x01);
-    SSD1306_WRITE_STRING(0,12, "Wert nicht im", 1, 0x01, 0x01);
-    SSD1306_WRITE_STRING(0,24, "Messbereich", 1, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0, 0, "Warnung:", 1, c, m);
+    SSD1306_WRITE_STRING(0, 12, "Wert nicht im", 1, c, m);
+    SSD1306_WRITE_STRING(0, 24, "Messbereich", 1, c, m);
   } else {
-    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 1, 0x01, 0x01);
-    SSD1306_WRITE_DOUBLE(0,12, od, 2, 0x01, 0x01);
+    SSD1306_WRITE_STRING(0, 0, "Optische Dichte:", 1, c, m);
+    SSD1306_WRITE_DOUBLE(0, 12, od, 2, c, m);
   }
 
   SSD1306_DISPLAY_UPDATE(); 

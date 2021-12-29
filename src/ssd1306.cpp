@@ -232,7 +232,7 @@ void SSD1306_WRITE_STRING(int16_t x, int16_t y, char* str, uint8_t s, SSD1306_CO
 
 void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
   uint8_t w = SSD1306_GET_FONT_WIDTH(s);
-  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
+  //uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
 
   char buf [4];
   
@@ -251,7 +251,7 @@ void SSD1306_WRITE_DOUBLE(int16_t x, int16_t y, double d, uint8_t s, SSD1306_COL
 
 void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
   uint8_t w = SSD1306_GET_FONT_WIDTH(s);
-  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
+  //uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
 
   char buf [4]; //TODO: Make size dependent of i
   sprintf (buf, "%03i", i);
@@ -265,8 +265,8 @@ void SSD1306_WRITE_INT(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t c
 }
 
 void SSD1306_WRITE_BOOL(int16_t x, int16_t y, bool b, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode) {
-  uint8_t w = SSD1306_GET_FONT_WIDTH(s);
-  uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
+  //uint8_t w = SSD1306_GET_FONT_WIDTH(s);
+  //uint8_t h = SSD1306_GET_FONT_HEIGHT(s);
   char buf;
 
   if (b){
