@@ -39,6 +39,13 @@ void setupSerial(){
   Serial.begin(9600);
 }
 
+void unsetDisplay(){
+}
+
+void unsetSerial(){
+  Serial.end();
+}
+
 #endif
 
 Core::Core(){
@@ -46,10 +53,20 @@ Core::Core(){
   this->_displayoutput = true;
 }
 
+Core::~Core(){
+}
+
 void Core::begin(){
   #ifndef ARDUINO_CI_UNITTEST_ACTIVE
   setupDisplay();
   setupSerial();
+  #endif
+}
+
+void Core::end(){
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+  unsetDisplay();
+  unsetSerial();
   #endif
 }
 

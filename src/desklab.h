@@ -39,10 +39,16 @@
 void setupDisplay();
 void setupSerial();
 
+void unsetDisplay();
+void unsetSerial();
+
 class Core {
     public:
         Core();
+        ~Core();
+
         void begin();
+        void end();
 
         void enableDisplayOutput();
         void disableDisplayOutput();

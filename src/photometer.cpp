@@ -119,10 +119,20 @@ Photometer::Photometer(int pin){
   this->_od = NAN;
 }
 
+Photometer::~Photometer(){
+}
+
 void Photometer::begin(){
   #ifndef ARDUINO_CI_UNITTEST_ACTIVE
   setupDisplay();
   setupSerial();
+  #endif
+}
+
+void Photometer::end(){
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+  unsetDisplay();
+  unsetSerial();
   #endif
 }
 
