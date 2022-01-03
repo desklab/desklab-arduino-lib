@@ -159,7 +159,6 @@ char decode(byte8_t b)
 byte8_t encode(char c){
     byte8_t b = {8,{false,false,false,false,false,false,false,false}};
     int i = c;
-    Serial.println(i);
     for(int n = 6; n>=0; n--){
         if(i >= round(pow(2,n))){
             int r = i - round(pow(2,n));
