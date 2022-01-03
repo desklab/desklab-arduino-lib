@@ -52,6 +52,8 @@ void sendBit(bool bit);
 void sendStartCode();
 void sendEndCode();
 void sendByte(byte8_t send);
+byte8_t encode(char c);
+byte8_t parity(byte8_t b);
 
 
 #endif

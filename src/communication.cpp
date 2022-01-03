@@ -150,6 +150,40 @@ char decode(byte8_t b)
     return c;
 }
 
+byte8_t encode(char c){
+    byte8_t b = {8,{false,false,false,false,false,false,false,false}};
+    int i = c;
+    Serial.println(i);
+    for(int n = 6; n>=0; n--){
+        if(i >= round(pow(2,n))){
+            int r = i - round(pow(2,n));
+            i = r;
+            b.bits[6-n] = true;
+            if(i == 0){
+                return b;
+            }
+        }
+    }
+}
+
+byte8_t parity(byte8_t b){
+    uint8_t highBits = 0;
+
+    for(uint8_t i = 0; i < (b.l-1); i++){
+        if(b.bits[i]){
+            highBits++;            
+        }
+    }
+
+    if((highBits % 2) == 0){
+        b.bits[b.l-1] = false;
+    } else {
+        b.bits[b.l-1] = true;
+    }
+
+    return b;
+}
+
 void display(char c){
     int i = c;
     if(i != 0){
