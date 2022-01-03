@@ -17,6 +17,8 @@ bool processed = false;
 int dPin = 0;
 int cPin = 0;
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void setupINConnection(int dataPin, int clockPin){
     attachInterrupt(digitalPinToInterrupt(clockPin), read, RISING);    
     dPin = dataPin;
@@ -48,6 +50,8 @@ void setupOUTConnection(int dataPin, int clockPin){
     delay(100);
 }
 
+#endif
+
 void read() {
     locked = true;
     for (size_t i = 0; i < 31; i++)
@@ -63,15 +67,15 @@ void read() {
 bool availableByte(){
     bool flag = true;
     if (!locked) {
-        Serial.print("Buffer: ");
-        for (size_t i = 0; i<32; i++){
-            if (buffer[i]){
-                Serial.print("1");
-            } else {
-                Serial.print("0");
-            }
-        }
-        Serial.println("");
+        //Serial.print("Buffer: ");
+        //for (size_t i = 0; i<32; i++){
+        //    if (buffer[i]){
+        //        Serial.print("1");
+        //    } else {
+        //        Serial.print("0");
+        //    }
+        //}
+        //Serial.println("");
         
         for (size_t i = 0; i<8; i++){
             if (buffer[i] != startcode[i]){
@@ -101,15 +105,16 @@ byte8_t readByte(){
         in.bits[i] = buffer[8+(2*i)];
     }
     
-    Serial.print("received data: ");
-    for (size_t i = 0; i<8; i++){
-        if (in.bits[i]){
-            Serial.print("1");
-        } else {
-            Serial.print("0");
-        }
-    }
-    Serial.println("");
+    //Serial.print("received data: ");
+    //for (size_t i = 0; i<8; i++){
+    //    if (in.bits[i]){
+    //        Serial.print("1");
+    //    } else {
+    //        Serial.print("0");
+    //    }
+    //}
+    //Serial.println("");
+
     processed = true;
     return in;
 }
@@ -142,10 +147,11 @@ char decode(byte8_t b)
     }
 
     char c = i;
-    if(i != 0){
-        Serial.print("decoded to: ");
-        Serial.println(c);
-    }
+    
+    //if(i != 0){
+    //    Serial.print("decoded to: ");
+    //    Serial.println(c);
+    //}
 
     return c;
 }
@@ -184,6 +190,8 @@ byte8_t parity(byte8_t b){
     return b;
 }
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void display(char c){
     int i = c;
     if(i != 0){
@@ -196,6 +204,8 @@ void display(char c){
         SSD1306_DISPLAY_UPDATE();
     }
 }
+
+#endif
 
 
 int tc = 100;         // [ms] one (internal) clock cycle (400->0.1/s, 40-> 1/s, 4->10/s)
@@ -297,19 +307,19 @@ void sendEndCode() { // 0101000 [fast]
 }
 
 void sendByte(byte8_t send) {
-    Serial.print("sending data: ");
+    //Serial.print("sending data: ");
     sendStartCode();
     for (int i = 0; i<send.l; i++)
     {
-        if (send.bits[i]){
-            Serial.print("1");
-        } else {
-            Serial.print("0");
-        }
+        //if (send.bits[i]){
+        //    Serial.print("1");
+        //} else {
+        //    Serial.print("0");
+        //}
         sendBit(send.bits[i]);
     }
     sendEndCode();
-    Serial.println("");
+    //Serial.println("");
     delay(tb);
 
 }

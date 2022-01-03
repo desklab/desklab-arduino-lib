@@ -34,15 +34,20 @@ typedef struct {
     bool bits[8];
 }byte8_t;
 
-
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void setupINConnection(int dataPin, int clockPin);
 void setupOUTConnection(int dataPin, int clockPin);
+#endif
+
 void read();
 bool availableByte();
 byte8_t readByte();
 bool check(byte8_t b);
 char decode(byte8_t b);
+
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void display(char c);
+#endif
 
 void sendHighDataBit();
 void sendLowDataBit();
