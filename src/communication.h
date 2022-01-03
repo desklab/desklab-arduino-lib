@@ -26,50 +26,32 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 */
 
-#ifndef desklab
-#define desklab
+#ifndef DLH_COMMUNICATION
+#define DLH_COMMUNICATION
 
-// VERSION INFORMATION
-#define DESKLAB_LIBRARY_VERSION_MAJOR 1
-#define DESKLAB_LIBRARY_VERSION_MINOR 2
-#define DESKLAB_LIBRARY_VERSION_PATCH 0
-
-#include <ssd1306.h> 
-
-void setupDisplay();
-void setupSerial();
-
-void unsetDisplay();
-void unsetSerial();
-
-class Core {
-    public:
-        Core();
-        ~Core();
-
-        void begin();
-        void end();
-
-        void enableDisplayOutput();
-        void disableDisplayOutput();
-        void enableSerialOutput();
-        void disableSerialOutput(); 
-
-        #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-        void print(bool b);
-        void print(int i);
-        void print(double d);
-        void print(char c);
-        #endif
-
-    private:
-        bool _serialoutput;
-        bool _displayoutput;
-};
+typedef struct {
+    uint8_t l;
+    bool bits[8];
+}byte8_t;
 
 
-#include <photometer.h>
-#include <communication.h>
+void setupINConnection(int dataPin, int clockPin);
+void setupOUTConnection(int dataPin, int clockPin);
+void read();
+bool availableByte();
+byte8_t readByte();
+bool check(byte8_t b);
+char decode(byte8_t b);
+void display(char c);
+
+void sendHighDataBit();
+void sendLowDataBit();
+void sendHighCodeBit();
+void sendLowCodeBit();
+void sendBit(bool bit);
+void sendStartCode();
+void sendEndCode();
+void sendByte(byte8_t send);
 
 
 #endif
