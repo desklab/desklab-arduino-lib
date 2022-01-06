@@ -7,6 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - run: apt-get install doxygen
     - uses: actions/setup-python@v2
     - run: pip install breathe sphinx-rtd-theme
     - uses: actions/checkout@master

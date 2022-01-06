@@ -55,10 +55,11 @@ Außerdem muss noch **Doxygen** installiert werden, bevor die Dokumentation mit 
 
 ```bash
 conda activate desklab-arduino-lib
+make clean
 make html
 ```
 
-Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/build/html/index.html) verfügbar.
+Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/) verfügbar.
 
 ### Lizenz
 

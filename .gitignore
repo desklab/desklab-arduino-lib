@@ -29,3 +29,6 @@ client/node_modules
 vendor/
 Gemfile.lock
 .bundle
+
+docs/xml/
+docs/build
