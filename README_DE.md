@@ -58,7 +58,7 @@ conda activate desklab-arduino-lib
 make html
 ```
 
-Die Dokumentation ist online unter [desklab-arduino-lib.github.io](desklab-arduino-lib.github.io) verfügbar.
+Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/build/html/index.html) verfügbar.
 
 ### Lizenz
 
