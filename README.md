@@ -1,18 +1,13 @@
 <h1 align="center"> desklab Arduino Library </h1>
 <p align="center">
 <img align="center" src="https://www.ardu-badge.com/badge/desklab.svg?">
+<br>
+<a href="./README_DE.md">zur deutschen Version dieser Datei</a>
 </p>
 
 `desklab` is an Arduino library implementing methods for the use of desklab (www.desk-lab.de) devices. It is availabe via the Arduino Library Manager and easy to use with the Arduino IDE. Originally designed to be used with desklab devices and their specific hardware it could also be used in any other preferred toolchain to build software for many boards based on Atmel-AVR-Microcontrollers.
 
-### Compatibility & Dependencies
-
-##### Arduino Library Dependencies
- - `Adafruit SSD1306`
- - `Adafruit GFX Library`
- - `Adafruit BusIO`
-
-##### Hardware Compatibility
+#### Hardware Compatibility
   - `desklab Photometer V2`
   - `desklab Photometer V3`
 
@@ -47,27 +42,46 @@ bundle exec arduino_ci.rb
 bundle exec arduino_ci.rb --skip-examples-compilation
 ```
 
+#### Docs
+
+**Sphinx** is used to build the documentation. You can install it inside a new `conda` environment with:
+
+```bash
+conda create -n desklab-arduino lib python=3.9
+pip install sphinx sphinx-rtd-theme breathe
+```
+
+You also have to install **Doxygen**. To build the docs execute the following commands inside the `docs` directory:
+
+```bash
+conda activate desklab-arduino-lib
+make clean
+make html
+```
+
+The docs are served through GitHub Pages at [desklab-arduino-lib.github.io](desklab-arduino-lib.github.io).
+
 ### License
 
 The `desklab` library is licensed under the [MIT License](https://opensource.org/licenses/MIT):
 
-Copyright 2018-2021 desklab gUG <orga@desk-lab.de>  
-
-Permission is hereby granted, free of charge, to any person obtaining a  
-copy of this software and associated documentation files  
-(the "Software"), to deal in the Software without restriction, including  
-without limitation the rights to use, copy, modify, merge, publish,  
-distribute, sublicense, and/or sell copies of the Software, and to  
-permit persons to whom the Software is furnished to do so, subject to  
-the following conditions:  
-
-The above copyright notice and this permission notice shall be included  
-in all copies or substantial portions of the Software.  
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR  
-ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF  
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE  
+> Copyright 2018-2021 desklab gUG (haftungsbeschränkt) <orga@desk-lab.de>  
+>
+> Permission is hereby granted, free of charge, to any person obtaining a  
+> copy of this software and associated documentation files  
+> (the "Software"), to deal in the Software without restriction, including  
+> without limitation the rights to use, copy, modify, merge, publish,  
+> distribute, sublicense, and/or sell copies of the Software, and to  
+> permit persons to whom the Software is furnished to do so, subject to  
+> the following conditions:  
+> 
+> The above copyright notice and this permission notice shall be included  
+> in all copies or substantial portions of the Software.  
+> 
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  
+> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR  
+> ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF  
+> CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
+> WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE  

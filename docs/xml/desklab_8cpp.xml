@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="desklab_8cpp" kind="file" language="C++">
+    <compoundname>desklab.cpp</compoundname>
+    <includes refid="desklab_8h" local="no">desklab.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp</label>
+        <link refid="desklab_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>desklab.h</label>
+        <link refid="desklab_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>photometer.h</label>
+        <link refid="photometer_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ssd1306.h</label>
+        <link refid="ssd1306_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="desklab_8cpp_1a08fe4f1365befd57f4baeda7242be757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>setupDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" line="34" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="desklab_8cpp_1ad4e0c88560cf11558cafaded5334a413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupSerial</definition>
+        <argsstring>()</argsstring>
+        <name>setupSerial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" line="38" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="desklab_8cpp_1a7d3196b88b24af3192681ce9ac3197dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unsetDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>unsetDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" line="42" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="42" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="desklab_8cpp_1aec00cc5aaaa674bce675a7faf4e088bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unsetSerial</definition>
+        <argsstring>()</argsstring>
+        <name>unsetSerial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" line="45" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>desklab-arduino-library<sp/>implementing<sp/>methods<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>use<sp/>of<sp/>desklab<sp/>(www.desk-lab.de)<sp/>devices.<sp/>It<sp/>is<sp/>availabe<sp/>via<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>the<sp/>Arduino<sp/>Library<sp/>Manager.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>See<sp/>https://github.com/desklab/desklab-arduino-lib<sp/>for<sp/>more<sp/>information.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018-2021<sp/>desklab<sp/>gUG<sp/>(haftungsbeschränkt)<sp/>&lt;orga@desk-lab.de&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;desklab.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setupDisplay(){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>SSD1306_INIT();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setupSerial(){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>Serial.begin(9600);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unsetDisplay(){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unsetSerial(){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>Serial.end();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">Core::Core(){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>this-&gt;_serialoutput<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>this-&gt;_displayoutput<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">Core::~Core(){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::begin(){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>setupDisplay();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>setupSerial();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::end(){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>unsetDisplay();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>unsetSerial();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::enableDisplayOutput(){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>_displayoutput<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::disableDisplayOutput(){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>_displayoutput<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::enableSerialOutput(){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>_serialoutput<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::disableSerialOutput(){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>_serialoutput<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::print(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>SSD1306_MODE_t<sp/>mode<sp/>=<sp/>SSD1306_OVERRIDE;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>SSD1306_COLOR_t<sp/>col<sp/>=<sp/>SSD1306_WHITE;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>SSD1306_BUFFER_CLEAR();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>SSD1306_WRITE_BOOL(0,<sp/>0,<sp/>b,<sp/>1,<sp/>col,<sp/>mode);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>SSD1306_DISPLAY_UPDATE();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::print(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>SSD1306_MODE_t<sp/>mode<sp/>=<sp/>SSD1306_OVERRIDE;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>SSD1306_COLOR_t<sp/>col<sp/>=<sp/>SSD1306_WHITE;;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>SSD1306_BUFFER_CLEAR();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>SSD1306_WRITE_INT(0,<sp/>0,<sp/>i,<sp/>1,<sp/>col,<sp/>mode);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>SSD1306_DISPLAY_UPDATE();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::print(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>SSD1306_MODE_t<sp/>mode<sp/>=<sp/>SSD1306_OVERRIDE;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>SSD1306_COLOR_t<sp/>col<sp/>=<sp/>SSD1306_WHITE;;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>SSD1306_BUFFER_CLEAR();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>SSD1306_WRITE_DOUBLE(0,<sp/>0,<sp/>d,<sp/>1,<sp/>col,<sp/>mode);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>SSD1306_DISPLAY_UPDATE();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Core::print(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c){</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>SSD1306_MODE_t<sp/>mode<sp/>=<sp/>SSD1306_OVERRIDE;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>SSD1306_COLOR_t<sp/>col<sp/>=<sp/>SSD1306_WHITE;;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>SSD1306_BUFFER_CLEAR();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>SSD1306_WRITE_CHAR(0,<sp/>0,<sp/>c,<sp/>1,<sp/>col,<sp/>mode);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>SSD1306_DISPLAY_UPDATE();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp"/>
+  </compounddef>
+</doxygen>

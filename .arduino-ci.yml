@@ -13,9 +13,6 @@ platforms:
 compile:
   # library dependencies
   libraries:
-    - "Adafruit BusIO"
-    - "Adafruit GFX Library"
-    - "Adafruit SSD1306"
 
   # platforms for testing
   platforms:

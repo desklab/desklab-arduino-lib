@@ -1,0 +1,1067 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="ssd1306_8h" kind="file" language="C++">
+    <compoundname>ssd1306.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="desklab_8h" local="no">/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h</includedby>
+    <includedby refid="photometer_8cpp" local="no">/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp</includedby>
+    <includedby refid="ssd1306_8cpp" local="no">/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h</label>
+        <link refid="ssd1306_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h</label>
+        <link refid="desklab_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h</label>
+        <link refid="photometer_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h</label>
+        <link refid="ssd1306_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_s_s_d1306__t" prot="public">SSD1306_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ssd1306_8h_1ac8c3c38872b95c3a363ee10baabd87f3" prot="public" static="no">
+        <name>SSD1306_ADDR</name>
+        <initializer>0x3C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="6" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1ae5a2aa8865dd03537b97fd1c9037371b" prot="public" static="no">
+        <name>SSD1306_WIDTH</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="7" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a4e9409448a0df95c1686670e09b457b7" prot="public" static="no">
+        <name>SSD1306_HEIGHT</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="8" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a2b89921cd78ea9de0ada22645db26efc" prot="public" static="no">
+        <name>SSD1306_BUFFER_CMD_MAX</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="10" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a91b54b84580b6ae50f7e796b7a4d0306" prot="public" static="no">
+        <name>SSD1306_BUFFER_DATA_MAX</name>
+        <initializer>(SSD1306_WIDTH * SSD1306_HEIGHT / 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="11" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1aac904fc21fc2caf74bd33fbef61929e6" prot="public" static="no">
+        <name>SSD1306_CONTROL_CMD</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="13" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a4ce0aaa5e7226315138ab468ef31f7f5" prot="public" static="no">
+        <name>SSD1306_CONTROL_DATA</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="14" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a7902c743ac2b61d783061fc4af085d0c" prot="public" static="no">
+        <name>FONT_7_10_WIDTH</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="35" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a546563384d5ab504a26750408da3ca0e" prot="public" static="no">
+        <name>FONT_7_10_HEIGHT</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="36" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a8d2c956d04f75a8111111a791f465eee" prot="public" static="no">
+        <name>FONT_11_18_WIDTH</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="37" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1a9b6e1e5d73a31e0355d1beea484b385a" prot="public" static="no">
+        <name>FONT_11_18_HEIGHT</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="38" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1abacf38e8fee9eba4e466485e9a01ba8f" prot="public" static="no">
+        <name>FONT_16_26_WIDTH</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="39" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssd1306_8h_1ad06121491e11f798194a60e99944aa67" prot="public" static="no">
+        <name>FONT_16_26_HEIGHT</name>
+        <initializer>26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="40" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ssd1306_8h_1a6382025dc8d68785ea0586eb7199c68e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SSD1306_COLOR_t</name>
+        <enumvalue id="ssd1306_8h_1a6382025dc8d68785ea0586eb7199c68ea37ee5fb2fb7198a10d3d2fd9f3d6e083" prot="public">
+          <name>SSD1306_BLACK</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssd1306_8h_1a6382025dc8d68785ea0586eb7199c68ea618bbdb707417304fa2ca89133aeecce" prot="public">
+          <name>SSD1306_WHITE</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="24" column="1" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="ssd1306_8h_1a1d89f4b0450f9e38df5cbe22004eb9d5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SSD1306_MODE_t</name>
+        <enumvalue id="ssd1306_8h_1a1d89f4b0450f9e38df5cbe22004eb9d5a2d683c9f978fc026753af86663c8148b" prot="public">
+          <name>SSD1306_OVERRIDE</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssd1306_8h_1a1d89f4b0450f9e38df5cbe22004eb9d5aab28e81f1f91aaae3182b8fc212025ed" prot="public">
+          <name>SSD1306_TRANSPARENT</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="29" column="1" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ssd1306_8h_1a60f2f8c1f883a8714188aa196e8c6246" prot="public" static="no" mutable="no">
+        <type>const uint16_t Font7x10[]</type>
+        <definition>const uint16_t Font16x26 [] PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="42" column="26" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ssd1306_8h_1accc32c7a4d874d3ab78d39867722e28a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_s_d1306__t" kindref="compound">SSD1306_t</ref></type>
+        <definition>SSD1306_t SSD1306</definition>
+        <argsstring></argsstring>
+        <name>SSD1306</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="367" column="18" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="5" bodyend="-1" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="367" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssd1306_8h_1a94f54e5bc9bdf8ec709361a1969f00f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_INIT</definition>
+        <argsstring>()</argsstring>
+        <name>SSD1306_INIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="339" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="61" bodyend="89" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="339" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a4da59090affe2a6b1d03b16201e56d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_CMD_WRITE</definition>
+        <argsstring>(uint8_t command)</argsstring>
+        <name>SSD1306_CMD_WRITE</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="341" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="23" bodyend="28" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="341" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a8f8e251b2ef26db36a739607fca29779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_CMD_WRITE</definition>
+        <argsstring>(uint8_t command, uint8_t data)</argsstring>
+        <name>SSD1306_CMD_WRITE</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="342" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="30" bodyend="36" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="342" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a374a2874b9b140d0dfd4055b0cfcc95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_CMD_WRITE</definition>
+        <argsstring>(uint8_t command, uint8_t data1, uint8_t data2)</argsstring>
+        <name>SSD1306_CMD_WRITE</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="343" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="38" bodyend="45" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="343" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1ab0fea0063b5244d9473bf491b13b5308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_DATA_WRITE</definition>
+        <argsstring>()</argsstring>
+        <name>SSD1306_DATA_WRITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="345" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="52" bodyend="59" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="345" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a5185f43bab4f060f2aa947f3a9a4da23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_DISPLAY_UPDATE</definition>
+        <argsstring>()</argsstring>
+        <name>SSD1306_DISPLAY_UPDATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="347" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="91" bodyend="95" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="347" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1aeb64ff16de3821d89657ba192bb9246a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_INVERT</definition>
+        <argsstring>()</argsstring>
+        <name>SSD1306_INVERT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="349" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="135" bodyend="137" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="349" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a7f37dde657ea169016756972c258bcd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_BUFFER_FILL</definition>
+        <argsstring>(SSD1306_COLOR_t color)</argsstring>
+        <name>SSD1306_BUFFER_FILL</name>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="353" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="125" bodyend="129" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="353" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1afae76998f9f98607cb560ea4f7ab5103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_BUFFER_CLEAR</definition>
+        <argsstring>()</argsstring>
+        <name>SSD1306_BUFFER_CLEAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="354" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="131" bodyend="133" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="354" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a5351f93292ad91f3c58d0717a4e6857e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_SET_MASK</definition>
+        <argsstring>(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)</argsstring>
+        <name>SSD1306_SET_MASK</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="356" column="6" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="356" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a55b5a78c5e0e20bb79d329a2528456b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_PIXEL</definition>
+        <argsstring>(int16_t x, int16_t y, SSD1306_COLOR_t color)</argsstring>
+        <name>SSD1306_WRITE_PIXEL</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="358" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="146" bodyend="164" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="358" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a769efb2db42201138eb2d4b50aa744b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_LINE</definition>
+        <argsstring>(int16_t x0, int16_t y0, int16_t x1, int16_t y1, SSD1306_COLOR_t color)</argsstring>
+        <name>SSD1306_WRITE_LINE</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="359" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="283" bodyend="354" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="359" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a6f94bb742386543796950340e24cae14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_CHAR</definition>
+        <argsstring>(int16_t x, int16_t y, char ch, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode)</argsstring>
+        <name>SSD1306_WRITE_CHAR</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>SSD1306_MODE_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="360" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="166" bodyend="195" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="360" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1aad21d22419b167a4229d1336a28b04b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_STRING</definition>
+        <argsstring>(int16_t x, int16_t y, const char *str, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode)</argsstring>
+        <name>SSD1306_WRITE_STRING</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>SSD1306_MODE_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="361" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="197" bodyend="233" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="361" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a239215b1093606c540cdee6daba6cc5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_DOUBLE</definition>
+        <argsstring>(int16_t x, int16_t y, double d, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode)</argsstring>
+        <name>SSD1306_WRITE_DOUBLE</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>SSD1306_MODE_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="362" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="235" bodyend="252" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="362" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a9c6b44529c2e45b9226dcebf3b90edd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_INT</definition>
+        <argsstring>(int16_t x, int16_t y, int i, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode)</argsstring>
+        <name>SSD1306_WRITE_INT</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>SSD1306_MODE_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="363" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="254" bodyend="267" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="363" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssd1306_8h_1a8cb15fc7a2929a383c390016955f5333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SSD1306_WRITE_BOOL</definition>
+        <argsstring>(int16_t x, int16_t y, bool b, uint8_t s, SSD1306_COLOR_t color, SSD1306_MODE_t mode)</argsstring>
+        <name>SSD1306_WRITE_BOOL</name>
+        <param>
+          <type>int16_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>SSD1306_COLOR_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>SSD1306_MODE_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="364" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.cpp" bodystart="269" bodyend="281" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" declline="364" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DLH_SSD1306</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DLH_SSD1306</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_ADDR<sp/><sp/><sp/><sp/><sp/><sp/>0x3C<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_WIDTH<sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_HEIGHT<sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_BUFFER_CMD_MAX<sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_BUFFER_DATA_MAX<sp/><sp/><sp/>(SSD1306_WIDTH<sp/>*<sp/>SSD1306_HEIGHT<sp/>/<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_CONTROL_CMD<sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSD1306_CONTROL_DATA<sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="struct_s_s_d1306__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>uint8_t<sp/>MASK_X_LOW;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>uint8_t<sp/>MASK_Y_LOW;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>uint8_t<sp/>MASK_X_HIGH;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>uint8_t<sp/>MASK_Y_HIGH;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>uint8_t<sp/>INVERTED;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="struct_s_s_d1306__t" kindref="compound">SSD1306_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>SSD1306_BLACK<sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>SSD1306_WHITE<sp/>=<sp/>0x01</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/>SSD1306_COLOR_t;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>SSD1306_OVERRIDE<sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>SSD1306_TRANSPARENT<sp/>=<sp/>0x01</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/>SSD1306_MODE_t;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_7_10_WIDTH<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_7_10_HEIGHT<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_11_18_WIDTH<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_11_18_HEIGHT<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_16_26_WIDTH<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT_16_26_HEIGHT<sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>Font7x10<sp/>[]<sp/>PROGMEM<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>sp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">0x2800,<sp/>0x2800,<sp/>0x2800,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">0x2400,<sp/>0x2400,<sp/>0x7C00,<sp/>0x2400,<sp/>0x4800,<sp/>0x7C00,<sp/>0x4800,<sp/>0x4800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">0x3800,<sp/>0x5400,<sp/>0x5000,<sp/>0x3800,<sp/>0x1400,<sp/>0x5400,<sp/>0x5400,<sp/>0x3800,<sp/>0x1000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">0x2000,<sp/>0x5400,<sp/>0x5800,<sp/>0x3000,<sp/>0x2800,<sp/>0x5400,<sp/>0x1400,<sp/>0x0800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">0x1000,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x3400,<sp/>0x4800,<sp/>0x4800,<sp/>0x3400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">0x0800,<sp/>0x1000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x1000,<sp/>0x0800,<sp/><sp/></highlight><highlight class="comment">//<sp/>(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">0x2000,<sp/>0x1000,<sp/>0x0800,<sp/>0x0800,<sp/>0x0800,<sp/>0x0800,<sp/>0x0800,<sp/>0x0800,<sp/>0x1000,<sp/>0x2000,<sp/><sp/></highlight><highlight class="comment">//<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">0x1000,<sp/>0x3800,<sp/>0x1000,<sp/>0x2800,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x1000,<sp/>0x7C00,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>+</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/><sp/></highlight><highlight class="comment">//<sp/>,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">0x0800,<sp/>0x0800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x2000,<sp/>0x2000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x5400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">0x1000,<sp/>0x3000,<sp/>0x5000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x0400,<sp/>0x0800,<sp/>0x1000,<sp/>0x2000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x0400,<sp/>0x1800,<sp/>0x0400,<sp/>0x0400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">0x0800,<sp/>0x1800,<sp/>0x2800,<sp/>0x2800,<sp/>0x4800,<sp/>0x7C00,<sp/>0x0800,<sp/>0x0800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">0x7C00,<sp/>0x4000,<sp/>0x4000,<sp/>0x7800,<sp/>0x0400,<sp/>0x0400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4000,<sp/>0x7800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">0x7C00,<sp/>0x0400,<sp/>0x0800,<sp/>0x1000,<sp/>0x1000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3C00,<sp/>0x0400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/><sp/></highlight><highlight class="comment">//<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x3000,<sp/>0x4000,<sp/>0x3000,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x6000,<sp/>0x1800,<sp/>0x0400,<sp/>0x1800,<sp/>0x6000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x0400,<sp/>0x0800,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4C00,<sp/>0x5400,<sp/>0x5C00,<sp/>0x4000,<sp/>0x4000,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>@</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">0x1000,<sp/>0x2800,<sp/>0x2800,<sp/>0x2800,<sp/>0x2800,<sp/>0x7C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">0x7800,<sp/>0x4400,<sp/>0x4400,<sp/>0x7800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x7800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">0x7000,<sp/>0x4800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4800,<sp/>0x7000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">0x7C00,<sp/>0x4000,<sp/>0x4000,<sp/>0x7C00,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">0x7C00,<sp/>0x4000,<sp/>0x4000,<sp/>0x7800,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4000,<sp/>0x4000,<sp/>0x5C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>G</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x7C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">0x3800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">0x0400,<sp/>0x0400,<sp/>0x0400,<sp/>0x0400,<sp/>0x0400,<sp/>0x0400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>J</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">0x4400,<sp/>0x4800,<sp/>0x5000,<sp/>0x6000,<sp/>0x5000,<sp/>0x4800,<sp/>0x4800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">0x4400,<sp/>0x6C00,<sp/>0x6C00,<sp/>0x5400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">0x4400,<sp/>0x6400,<sp/>0x6400,<sp/>0x5400,<sp/>0x5400,<sp/>0x4C00,<sp/>0x4C00,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>N</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>O</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">0x7800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x7800,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>P</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x5400,<sp/>0x3800,<sp/>0x0400,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>Q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">0x7800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x7800,<sp/>0x4800,<sp/>0x4800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>R</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">0x3800,<sp/>0x4400,<sp/>0x4000,<sp/>0x3000,<sp/>0x0800,<sp/>0x0400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">0x7C00,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>T</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x2800,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">0x4400,<sp/>0x4400,<sp/>0x5400,<sp/>0x5400,<sp/>0x5400,<sp/>0x6C00,<sp/>0x2800,<sp/>0x2800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>W</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">0x4400,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x1000,<sp/>0x2800,<sp/>0x2800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">0x4400,<sp/>0x4400,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">0x7C00,<sp/>0x0400,<sp/>0x0800,<sp/>0x1000,<sp/>0x1000,<sp/>0x2000,<sp/>0x4000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">0x1800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1800,<sp/><sp/></highlight><highlight class="comment">//<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">0x2000,<sp/>0x2000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0800,<sp/>0x0800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">/*<sp/>\<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">0x3000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x3000,<sp/><sp/></highlight><highlight class="comment">//<sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">0x1000,<sp/>0x2800,<sp/>0x2800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>^</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0xFE00,<sp/><sp/></highlight><highlight class="comment">//<sp/>_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">0x2000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x4400,<sp/>0x3C00,<sp/>0x4400,<sp/>0x4C00,<sp/>0x3400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">0x4000,<sp/>0x4000,<sp/>0x5800,<sp/>0x6400,<sp/>0x4400,<sp/>0x4400,<sp/>0x6400,<sp/>0x5800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x4400,<sp/>0x4000,<sp/>0x4000,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">0x0400,<sp/>0x0400,<sp/>0x3400,<sp/>0x4C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x4C00,<sp/>0x3400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x4400,<sp/>0x7C00,<sp/>0x4000,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">0x0C00,<sp/>0x1000,<sp/>0x7C00,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3400,<sp/>0x4C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x4C00,<sp/>0x3400,<sp/>0x0400,<sp/>0x7800,<sp/><sp/></highlight><highlight class="comment">//<sp/>g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">0x4000,<sp/>0x4000,<sp/>0x5800,<sp/>0x6400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">0x1000,<sp/>0x0000,<sp/>0x7000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">0x1000,<sp/>0x0000,<sp/>0x7000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0xE000,<sp/><sp/></highlight><highlight class="comment">//<sp/>j</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">0x4000,<sp/>0x4000,<sp/>0x4800,<sp/>0x5000,<sp/>0x6000,<sp/>0x5000,<sp/>0x4800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>k</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">0x7000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>l</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x7800,<sp/>0x5400,<sp/>0x5400,<sp/>0x5400,<sp/>0x5400,<sp/>0x5400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x5800,<sp/>0x6400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>n</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>o</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x5800,<sp/>0x6400,<sp/>0x4400,<sp/>0x4400,<sp/>0x6400,<sp/>0x5800,<sp/>0x4000,<sp/>0x4000,<sp/><sp/></highlight><highlight class="comment">//<sp/>p</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3400,<sp/>0x4C00,<sp/>0x4400,<sp/>0x4400,<sp/>0x4C00,<sp/>0x3400,<sp/>0x0400,<sp/>0x0400,<sp/><sp/></highlight><highlight class="comment">//<sp/>q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x5800,<sp/>0x6400,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x4000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x3800,<sp/>0x4400,<sp/>0x3000,<sp/>0x0800,<sp/>0x4400,<sp/>0x3800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">0x2000,<sp/>0x2000,<sp/>0x7800,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x2000,<sp/>0x1800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4400,<sp/>0x4C00,<sp/>0x3400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x4400,<sp/>0x4400,<sp/>0x2800,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x5400,<sp/>0x5400,<sp/>0x5400,<sp/>0x6C00,<sp/>0x2800,<sp/>0x2800,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>w</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x4400,<sp/>0x2800,<sp/>0x1000,<sp/>0x1000,<sp/>0x2800,<sp/>0x4400,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x4400,<sp/>0x4400,<sp/>0x2800,<sp/>0x2800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x6000,<sp/><sp/></highlight><highlight class="comment">//<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x7C00,<sp/>0x0800,<sp/>0x1000,<sp/>0x2000,<sp/>0x4000,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">0x1800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x2000,<sp/>0x2000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1800,<sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/><sp/></highlight><highlight class="comment">//<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">0x3000,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x0800,<sp/>0x0800,<sp/>0x1000,<sp/>0x1000,<sp/>0x1000,<sp/>0x3000,<sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x7400,<sp/>0x4C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/></highlight><highlight class="comment">//<sp/>~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>Font11x18<sp/>[]<sp/>PROGMEM<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">0x0000,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">0x0000,<sp/>0x1980,<sp/>0x1980,<sp/>0x1980,<sp/>0x1980,<sp/>0x7FC0,<sp/>0x7FC0,<sp/>0x1980,<sp/>0x3300,<sp/>0x7FC0,<sp/>0x7FC0,<sp/>0x3300,<sp/>0x3300,<sp/>0x3300,<sp/>0x3300,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7580,<sp/>0x6580,<sp/>0x7400,<sp/>0x3C00,<sp/>0x1E00,<sp/>0x0700,<sp/>0x0580,<sp/>0x6580,<sp/>0x6580,<sp/>0x7580,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0400,<sp/>0x0400,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">0x0000,<sp/>0x7000,<sp/>0xD800,<sp/>0xD840,<sp/>0xD8C0,<sp/>0xD980,<sp/>0x7300,<sp/>0x0600,<sp/>0x0C00,<sp/>0x1B80,<sp/>0x36C0,<sp/>0x66C0,<sp/>0x46C0,<sp/>0x06C0,<sp/>0x0380,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3300,<sp/>0x3300,<sp/>0x3300,<sp/>0x1E00,<sp/>0x0C00,<sp/>0x3CC0,<sp/>0x66C0,<sp/>0x6380,<sp/>0x6180,<sp/>0x6380,<sp/>0x3EC0,<sp/>0x1C80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">0x0080,<sp/>0x0100,<sp/>0x0300,<sp/>0x0600,<sp/>0x0600,<sp/>0x0400,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0400,<sp/>0x0600,<sp/>0x0600,<sp/>0x0300,<sp/>0x0100,<sp/>0x0080,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">0x2000,<sp/>0x1000,<sp/>0x1800,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0400,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0400,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1800,<sp/>0x1000,<sp/>0x2000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">0x0000,<sp/>0x0C00,<sp/>0x2D00,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x3300,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0xFFC0,<sp/>0xFFC0,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>+</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0400,<sp/>0x0400,<sp/>0x0800,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1E00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">0x0000,<sp/>0x0300,<sp/>0x0300,<sp/>0x0300,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3300,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6D80,<sp/>0x6D80,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x3300,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">0x0000,<sp/>0x0600,<sp/>0x0E00,<sp/>0x1E00,<sp/>0x3600,<sp/>0x2600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x0180,<sp/>0x0300,<sp/>0x0600,<sp/>0x0C00,<sp/>0x1800,<sp/>0x3000,<sp/>0x6000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">0x0000,<sp/>0x1C00,<sp/>0x3E00,<sp/>0x6300,<sp/>0x6300,<sp/>0x0300,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x0300,<sp/>0x0180,<sp/>0x0180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">0x0000,<sp/>0x0600,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x1E00,<sp/>0x1E00,<sp/>0x1600,<sp/>0x3600,<sp/>0x3600,<sp/>0x6600,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">0x0000,<sp/>0x7F00,<sp/>0x7F00,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6E00,<sp/>0x7F00,<sp/>0x6380,<sp/>0x0180,<sp/>0x0180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3380,<sp/>0x6180,<sp/>0x6000,<sp/>0x6E00,<sp/>0x7F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x3380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">0x0000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0180,<sp/>0x0300,<sp/>0x0300,<sp/>0x0600,<sp/>0x0600,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0800,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x6380,<sp/>0x6180,<sp/>0x6180,<sp/>0x2100,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7300,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F80,<sp/>0x1D80,<sp/>0x0180,<sp/>0x6180,<sp/>0x7300,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0400,<sp/>0x0400,<sp/>0x0800,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0080,<sp/>0x0380,<sp/>0x0E00,<sp/>0x3800,<sp/>0x6000,<sp/>0x3800,<sp/>0x0E00,<sp/>0x0380,<sp/>0x0080,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x4000,<sp/>0x7000,<sp/>0x1C00,<sp/>0x0700,<sp/>0x0180,<sp/>0x0700,<sp/>0x1C00,<sp/>0x7000,<sp/>0x4000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">0x0000,<sp/>0x1F00,<sp/>0x3F80,<sp/>0x71C0,<sp/>0x60C0,<sp/>0x00C0,<sp/>0x01C0,<sp/>0x0380,<sp/>0x0700,<sp/>0x0E00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3180,<sp/>0x7180,<sp/>0x6380,<sp/>0x6F80,<sp/>0x6D80,<sp/>0x6D80,<sp/>0x6F80,<sp/>0x6780,<sp/>0x6000,<sp/>0x3200,<sp/>0x3E00,<sp/>0x1C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">0x0000,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x3180,<sp/>0x3180,<sp/>0x3F80,<sp/>0x3F80,<sp/>0x3180,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">0x0000,<sp/>0x7C00,<sp/>0x7E00,<sp/>0x6300,<sp/>0x6300,<sp/>0x6300,<sp/>0x6300,<sp/>0x7E00,<sp/>0x7E00,<sp/>0x6300,<sp/>0x6180,<sp/>0x6180,<sp/>0x6380,<sp/>0x7F00,<sp/>0x7E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3180,<sp/>0x6180,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6180,<sp/>0x3180,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">0x0000,<sp/>0x7C00,<sp/>0x7F00,<sp/>0x6300,<sp/>0x6380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6300,<sp/>0x6300,<sp/>0x7E00,<sp/>0x7C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">0x0000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x7F00,<sp/>0x7F00,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">0x0000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x7F00,<sp/>0x7F00,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3180,<sp/>0x6180,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6380,<sp/>0x6380,<sp/>0x6180,<sp/>0x6180,<sp/>0x3180,<sp/>0x3F80,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>G</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">0x0000,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">0x0000,<sp/>0x3F00,<sp/>0x3F00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x3F00,<sp/>0x3F00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">0x0000,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>J</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">0x0000,<sp/>0x60C0,<sp/>0x6180,<sp/>0x6300,<sp/>0x6600,<sp/>0x6600,<sp/>0x6C00,<sp/>0x7800,<sp/>0x7C00,<sp/>0x6600,<sp/>0x6600,<sp/>0x6300,<sp/>0x6180,<sp/>0x6180,<sp/>0x60C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">0x0000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">0x0000,<sp/>0x71C0,<sp/>0x71C0,<sp/>0x7BC0,<sp/>0x7AC0,<sp/>0x6AC0,<sp/>0x6AC0,<sp/>0x6EC0,<sp/>0x64C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">0x0000,<sp/>0x7180,<sp/>0x7180,<sp/>0x7980,<sp/>0x7980,<sp/>0x7980,<sp/>0x6D80,<sp/>0x6D80,<sp/>0x6D80,<sp/>0x6580,<sp/>0x6780,<sp/>0x6780,<sp/>0x6780,<sp/>0x6380,<sp/>0x6380,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>N</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3300,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x3300,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>O</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">0x0000,<sp/>0x7E00,<sp/>0x7F00,<sp/>0x6380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6380,<sp/>0x7F00,<sp/>0x7E00,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>P</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x3300,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6580,<sp/>0x6780,<sp/>0x3300,<sp/>0x3F80,<sp/>0x1E40,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">0x0000,<sp/>0x7E00,<sp/>0x7F00,<sp/>0x6380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6380,<sp/>0x7F00,<sp/>0x7E00,<sp/>0x6600,<sp/>0x6300,<sp/>0x6300,<sp/>0x6180,<sp/>0x6180,<sp/>0x60C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>R</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">0x0000,<sp/>0x0E00,<sp/>0x1F00,<sp/>0x3180,<sp/>0x3180,<sp/>0x3000,<sp/>0x3800,<sp/>0x1E00,<sp/>0x0700,<sp/>0x0380,<sp/>0x6180,<sp/>0x6180,<sp/>0x3180,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">0x0000,<sp/>0xFFC0,<sp/>0xFFC0,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>T</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">0x0000,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">0x0000,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x60C0,<sp/>0x3180,<sp/>0x3180,<sp/>0x3180,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x0400,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal">0x0000,<sp/>0xC0C0,<sp/>0xC0C0,<sp/>0xC0C0,<sp/>0xC0C0,<sp/>0xC0C0,<sp/>0xCCC0,<sp/>0x4C80,<sp/>0x4C80,<sp/>0x5E80,<sp/>0x5280,<sp/>0x5280,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>W</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">0x0000,<sp/>0xC0C0,<sp/>0x6080,<sp/>0x6180,<sp/>0x3300,<sp/>0x3B00,<sp/>0x1E00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1E00,<sp/>0x1F00,<sp/>0x3B00,<sp/>0x7180,<sp/>0x6180,<sp/>0xC0C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">0x0000,<sp/>0xC0C0,<sp/>0x6180,<sp/>0x6180,<sp/>0x3300,<sp/>0x3300,<sp/>0x1E00,<sp/>0x1E00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">0x0000,<sp/>0x3F80,<sp/>0x3F80,<sp/>0x0180,<sp/>0x0300,<sp/>0x0300,<sp/>0x0600,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1800,<sp/>0x1800,<sp/>0x3000,<sp/>0x6000,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">0x0F00,<sp/>0x0F00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0F00,<sp/>0x0F00,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal">0x0000,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0300,<sp/>0x0300,<sp/>0x0300,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>\<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">0x1E00,<sp/>0x1E00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x1E00,<sp/>0x1E00,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">0x0000,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1E00,<sp/>0x1200,<sp/>0x3300,<sp/>0x3300,<sp/>0x6180,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>^</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0xFFE0,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">0x0000,<sp/>0x3800,<sp/>0x1800,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1F00,<sp/>0x3F80,<sp/>0x6180,<sp/>0x0180,<sp/>0x1F80,<sp/>0x3F80,<sp/>0x6180,<sp/>0x6380,<sp/>0x7F80,<sp/>0x38C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">0x0000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6E00,<sp/>0x7F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x7F00,<sp/>0x6E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6000,<sp/>0x6000,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">0x0000,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x1D80,<sp/>0x3F80,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F80,<sp/>0x1D80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7300,<sp/>0x6180,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x6000,<sp/>0x7180,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">0x0000,<sp/>0x07C0,<sp/>0x0FC0,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x7F80,<sp/>0x7F80,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1D80,<sp/>0x3F80,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F80,<sp/>0x1D80,<sp/>0x0180,<sp/>0x6380,<sp/>0x7F00,<sp/>0x3E00,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">0x0000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6F00,<sp/>0x7F80,<sp/>0x7180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">0x0000,<sp/>0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x3E00,<sp/>0x3E00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x3E00,<sp/>0x3E00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x4600,<sp/>0x7E00,<sp/>0x3C00,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>j</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">0x0000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6180,<sp/>0x6300,<sp/>0x6600,<sp/>0x6C00,<sp/>0x7C00,<sp/>0x7600,<sp/>0x6300,<sp/>0x6300,<sp/>0x6180,<sp/>0x60C0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>k</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal">0x0000,<sp/>0x3E00,<sp/>0x3E00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>l</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0xDD80,<sp/>0xFFC0,<sp/>0xCEC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0xCCC0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6F00,<sp/>0x7F80,<sp/>0x7180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>n</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1E00,<sp/>0x3F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>o</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6E00,<sp/>0x7F00,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x7F00,<sp/>0x6E00,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/>0x6000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1D80,<sp/>0x3F80,<sp/>0x7380,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x7380,<sp/>0x3F80,<sp/>0x1D80,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/>0x0180,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6700,<sp/>0x3F80,<sp/>0x3900,<sp/>0x3000,<sp/>0x3000,<sp/>0x3000,<sp/>0x3000,<sp/>0x3000,<sp/>0x3000,<sp/>0x3000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x1E00,<sp/>0x3F80,<sp/>0x6180,<sp/>0x6000,<sp/>0x7F00,<sp/>0x3F80,<sp/>0x0180,<sp/>0x6180,<sp/>0x7F00,<sp/>0x1E00,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0800,<sp/>0x1800,<sp/>0x1800,<sp/>0x7F00,<sp/>0x7F00,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x1800,<sp/>0x1F80,<sp/>0x0F80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6180,<sp/>0x6380,<sp/>0x7F80,<sp/>0x3D80,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x60C0,<sp/>0x3180,<sp/>0x3180,<sp/>0x3180,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x0600,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0xDD80,<sp/>0xDD80,<sp/>0xDD80,<sp/>0x5500,<sp/>0x5500,<sp/>0x5500,<sp/>0x7700,<sp/>0x7700,<sp/>0x2200,<sp/>0x2200,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>w</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6180,<sp/>0x3300,<sp/>0x3300,<sp/>0x1E00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x1E00,<sp/>0x3300,<sp/>0x3300,<sp/>0x6180,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x6180,<sp/>0x6180,<sp/>0x3180,<sp/>0x3300,<sp/>0x3300,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x1B00,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x0E00,<sp/>0x1C00,<sp/>0x7C00,<sp/>0x7000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x7FC0,<sp/>0x7FC0,<sp/>0x0180,<sp/>0x0300,<sp/>0x0600,<sp/>0x0C00,<sp/>0x1800,<sp/>0x3000,<sp/>0x7FC0,<sp/>0x7FC0,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">0x0380,<sp/>0x0780,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0E00,<sp/>0x1C00,<sp/>0x1C00,<sp/>0x0E00,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0780,<sp/>0x0380,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/>0x0600,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">0x3800,<sp/>0x3C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0E00,<sp/>0x0700,<sp/>0x0700,<sp/>0x0E00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x0C00,<sp/>0x3C00,<sp/>0x3800,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x3880,<sp/>0x7F80,<sp/>0x4700,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/>0x0000,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>Font16x26<sp/>[]<sp/>PROGMEM<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>sp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03C0,0x03C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">0x1E3C,0x1E3C,0x1E3C,0x1E3C,0x1E3C,0x1E3C,0x1E3C,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal">0x01CE,0x03CE,0x03DE,0x039E,0x039C,0x079C,0x3FFF,0x7FFF,0x0738,0x0F38,0x0F78,0x0F78,0x0E78,0xFFFF,0xFFFF,0x1EF0,0x1CF0,0x1CE0,0x3CE0,0x3DE0,0x39E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal">0x03FC,0x0FFE,0x1FEE,0x1EE0,0x1EE0,0x1EE0,0x1EE0,0x1FE0,0x0FE0,0x07E0,0x03F0,0x01FC,0x01FE,0x01FE,0x01FE,0x01FE,0x01FE,0x01FE,0x3DFE,0x3FFC,0x0FF0,0x01E0,0x01E0,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal">0x3E03,0xF707,0xE78F,0xE78E,0xE39E,0xE3BC,0xE7B8,0xE7F8,0xF7F0,0x3FE0,0x01C0,0x03FF,0x07FF,0x07F3,0x0FF3,0x1EF3,0x3CF3,0x38F3,0x78F3,0xF07F,0xE03F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">0x07E0,0x0FF8,0x0F78,0x1F78,0x1F78,0x1F78,0x0F78,0x0FF0,0x0FE0,0x1F80,0x7FC3,0xFBC3,0xF3E7,0xF1F7,0xF0F7,0xF0FF,0xF07F,0xF83E,0x7C7F,0x3FFF,0x1FEF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03C0,0x01C0,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">0x003F,0x007C,0x01F0,0x01E0,0x03C0,0x07C0,0x0780,0x0780,0x0F80,0x0F00,0x0F00,0x0F00,0x0F00,0x0F00,0x0F00,0x0F80,0x0780,0x0780,0x07C0,0x03C0,0x01E0,0x01F0,0x007C,0x003F,0x000F,0x0000,<sp/></highlight><highlight class="comment">//<sp/>(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">0x7E00,0x1F00,0x07C0,0x03C0,0x01E0,0x01F0,0x00F0,0x00F0,0x00F8,0x0078,0x0078,0x0078,0x0078,0x0078,0x0078,0x00F8,0x00F0,0x00F0,0x01F0,0x01E0,0x03C0,0x07C0,0x1F00,0x7E00,0x7800,0x0000,<sp/></highlight><highlight class="comment">//<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">0x03E0,0x03C0,0x01C0,0x39CE,0x3FFF,0x3F7F,0x0320,0x0370,0x07F8,0x0F78,0x1F3C,0x0638,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0xFFFF,0xFFFF,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>+</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x01E0,0x01E0,0x01E0,0x01C0,0x0380,<sp/></highlight><highlight class="comment">//<sp/>,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3FFE,0x3FFE,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">0x000F,0x000F,0x001E,0x001E,0x003C,0x003C,0x0078,0x0078,0x00F0,0x00F0,0x01E0,0x01E0,0x03C0,0x03C0,0x0780,0x0780,0x0F00,0x0F00,0x1E00,0x1E00,0x3C00,0x3C00,0x7800,0x7800,0xF000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">0x07F0,0x0FF8,0x1F7C,0x3E3E,0x3C1E,0x7C1F,0x7C1F,0x780F,0x780F,0x780F,0x780F,0x780F,0x780F,0x780F,0x7C1F,0x7C1F,0x3C1E,0x3E3E,0x1F7C,0x0FF8,0x07F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">0x00F0,0x07F0,0x3FF0,0x3FF0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x3FFF,0x3FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">0x0FE0,0x3FF8,0x3C7C,0x003C,0x003E,0x003E,0x003E,0x003C,0x003C,0x007C,0x00F8,0x01F0,0x03E0,0x07C0,0x0780,0x0F00,0x1E00,0x3E00,0x3C00,0x3FFE,0x3FFE,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">0x0FF0,0x1FF8,0x1C7C,0x003E,0x003E,0x003E,0x003C,0x003C,0x00F8,0x0FF0,0x0FF8,0x007C,0x003E,0x001E,0x001E,0x001E,0x001E,0x003E,0x1C7C,0x1FF8,0x1FE0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">0x0078,0x00F8,0x00F8,0x01F8,0x03F8,0x07F8,0x07F8,0x0F78,0x1E78,0x1E78,0x3C78,0x7878,0x7878,0xFFFF,0xFFFF,0x0078,0x0078,0x0078,0x0078,0x0078,0x0078,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal">0x1FFC,0x1FFC,0x1FFC,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1FE0,0x1FF8,0x00FC,0x007C,0x003E,0x003E,0x001E,0x003E,0x003E,0x003C,0x1C7C,0x1FF8,0x1FE0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">0x01FC,0x07FE,0x0F8E,0x1F00,0x1E00,0x3E00,0x3C00,0x3C00,0x3DF8,0x3FFC,0x7F3E,0x7E1F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3E0F,0x1E1F,0x1F3E,0x0FFC,0x03F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal">0x3FFF,0x3FFF,0x3FFF,0x000F,0x001E,0x001E,0x003C,0x0038,0x0078,0x00F0,0x00F0,0x01E0,0x01E0,0x03C0,0x03C0,0x0780,0x0F80,0x0F80,0x0F00,0x1F00,0x1F00,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">0x07F8,0x0FFC,0x1F3E,0x1E1E,0x3E1E,0x3E1E,0x1E1E,0x1F3C,0x0FF8,0x07F0,0x0FF8,0x1EFC,0x3E3E,0x3C1F,0x7C1F,0x7C0F,0x7C0F,0x3C1F,0x3F3E,0x1FFC,0x07F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal">0x07F0,0x0FF8,0x1E7C,0x3C3E,0x3C1E,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x3C1F,0x3E3F,0x1FFF,0x07EF,0x001F,0x001E,0x001E,0x003E,0x003C,0x38F8,0x3FF0,0x1FE0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03E0,0x03E0,0x03E0,0x03E0,0x01E0,0x01E0,0x01E0,0x03C0,0x0380,<sp/></highlight><highlight class="comment">//<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0003,0x000F,0x003F,0x00FC,0x03F0,0x0FC0,0x3F00,0xFE00,0x3F00,0x0FC0,0x03F0,0x00FC,0x003F,0x000F,0x0003,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>&lt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xFFFF,0xFFFF,0x0000,0x0000,0x0000,0xFFFF,0xFFFF,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xE000,0xF800,0x7E00,0x1F80,0x07E0,0x01F8,0x007E,0x001F,0x007E,0x01F8,0x07E0,0x1F80,0x7E00,0xF800,0xE000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">0x1FF0,0x3FFC,0x383E,0x381F,0x381F,0x001E,0x001E,0x003C,0x0078,0x00F0,0x01E0,0x03C0,0x03C0,0x07C0,0x07C0,0x0000,0x0000,0x0000,0x07C0,0x07C0,0x07C0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal">0x03F8,0x0FFE,0x1F1E,0x3E0F,0x3C7F,0x78FF,0x79EF,0x73C7,0xF3C7,0xF38F,0xF38F,0xF38F,0xF39F,0xF39F,0x73FF,0x7BFF,0x79F7,0x3C00,0x1F1C,0x0FFC,0x03F8,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>@</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal">0x0000,0x0000,0x0000,0x03E0,0x03E0,0x07F0,0x07F0,0x07F0,0x0F78,0x0F78,0x0E7C,0x1E3C,0x1E3C,0x3C3E,0x3FFE,0x3FFF,0x781F,0x780F,0xF00F,0xF007,0xF007,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal">0x0000,0x0000,0x0000,0x3FF8,0x3FFC,0x3C3E,0x3C1E,0x3C1E,0x3C1E,0x3C3E,0x3C7C,0x3FF0,0x3FF8,0x3C7E,0x3C1F,0x3C1F,0x3C0F,0x3C0F,0x3C1F,0x3FFE,0x3FF8,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">0x0000,0x0000,0x0000,0x01FF,0x07FF,0x1F87,0x3E00,0x3C00,0x7C00,0x7800,0x7800,0x7800,0x7800,0x7800,0x7C00,0x7C00,0x3E00,0x3F00,0x1F83,0x07FF,0x01FF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">0x0000,0x0000,0x0000,0x7FF0,0x7FFC,0x787E,0x781F,0x781F,0x780F,0x780F,0x780F,0x780F,0x780F,0x780F,0x780F,0x780F,0x781F,0x781E,0x787E,0x7FF8,0x7FE0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal">0x0000,0x0000,0x0000,0x3FFF,0x3FFF,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3FFE,0x3FFE,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3FFF,0x3FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">0x0000,0x0000,0x0000,0x1FFF,0x1FFF,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1FFF,0x1FFF,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x1E00,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal">0x0000,0x0000,0x0000,0x03FE,0x0FFF,0x1F87,0x3E00,0x7C00,0x7C00,0x7800,0xF800,0xF800,0xF87F,0xF87F,0x780F,0x7C0F,0x7C0F,0x3E0F,0x1F8F,0x0FFF,0x03FE,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>G</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal">0x0000,0x0000,0x0000,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7FFF,0x7FFF,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x7C1F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal">0x0000,0x0000,0x0000,0x3FFF,0x3FFF,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x3FFF,0x3FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">0x0000,0x0000,0x0000,0x1FFC,0x1FFC,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x007C,0x0078,0x0078,0x38F8,0x3FF0,0x3FC0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>J</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">0x0000,0x0000,0x0000,0x3C1F,0x3C1E,0x3C3C,0x3C78,0x3CF0,0x3DE0,0x3FE0,0x3FC0,0x3F80,0x3FC0,0x3FE0,0x3DF0,0x3CF0,0x3C78,0x3C7C,0x3C3E,0x3C1F,0x3C0F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">0x0000,0x0000,0x0000,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3FFF,0x3FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal">0x0000,0x0000,0x0000,0xF81F,0xFC1F,0xFC1F,0xFE3F,0xFE3F,0xFE3F,0xFF7F,0xFF77,0xFF77,0xF7F7,0xF7E7,0xF3E7,0xF3E7,0xF3C7,0xF007,0xF007,0xF007,0xF007,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">0x0000,0x0000,0x0000,0x7C0F,0x7C0F,0x7E0F,0x7F0F,0x7F0F,0x7F8F,0x7F8F,0x7FCF,0x7BEF,0x79EF,0x79FF,0x78FF,0x78FF,0x787F,0x783F,0x783F,0x781F,0x781F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>N</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal">0x0000,0x0000,0x0000,0x07F0,0x1FFC,0x3E3E,0x7C1F,0x780F,0x780F,0xF80F,0xF80F,0xF80F,0xF80F,0xF80F,0xF80F,0x780F,0x780F,0x7C1F,0x3E3E,0x1FFC,0x07F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>O</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal">0x0000,0x0000,0x0000,0x3FFC,0x3FFF,0x3E1F,0x3E0F,0x3E0F,0x3E0F,0x3E0F,0x3E1F,0x3E3F,0x3FFC,0x3FF0,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x3E00,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>P</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal">0x0000,0x0000,0x0000,0x07F0,0x1FFC,0x3E3E,0x7C1F,0x780F,0x780F,0xF80F,0xF80F,0xF80F,0xF80F,0xF80F,0xF80F,0x780F,0x780F,0x7C1F,0x3E3E,0x1FFC,0x07F8,0x007C,0x003F,0x000F,0x0003,0x0000,<sp/></highlight><highlight class="comment">//<sp/>Q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">0x0000,0x0000,0x0000,0x3FF0,0x3FFC,0x3C7E,0x3C3E,0x3C1E,0x3C1E,0x3C3E,0x3C3C,0x3CFC,0x3FF0,0x3FE0,0x3DF0,0x3CF8,0x3C7C,0x3C3E,0x3C1E,0x3C1F,0x3C0F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>R</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">0x0000,0x0000,0x0000,0x07FC,0x1FFE,0x3E0E,0x3C00,0x3C00,0x3C00,0x3E00,0x1FC0,0x0FF8,0x03FE,0x007F,0x001F,0x000F,0x000F,0x201F,0x3C3E,0x3FFC,0x1FF0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal">0x0000,0x0000,0x0000,0xFFFF,0xFFFF,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>T</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal">0x0000,0x0000,0x0000,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x7C0F,0x3C1E,0x3C1E,0x3E3E,0x1FFC,0x07F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">0x0000,0x0000,0x0000,0xF007,0xF007,0xF807,0x780F,0x7C0F,0x3C1E,0x3C1E,0x3E1E,0x1E3C,0x1F3C,0x1F78,0x0F78,0x0FF8,0x07F0,0x07F0,0x07F0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">0x0000,0x0000,0x0000,0xE003,0xF003,0xF003,0xF007,0xF3E7,0xF3E7,0xF3E7,0x73E7,0x7BF7,0x7FF7,0x7FFF,0x7F7F,0x7F7F,0x7F7E,0x3F7E,0x3E3E,0x3E3E,0x3E3E,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>W</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">0x0000,0x0000,0x0000,0xF807,0x7C0F,0x3E1E,0x3E3E,0x1F3C,0x0FF8,0x07F0,0x07E0,0x03E0,0x03E0,0x07F0,0x0FF8,0x0F7C,0x1E7C,0x3C3E,0x781F,0x780F,0xF00F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">0x0000,0x0000,0x0000,0xF807,0x7807,0x7C0F,0x3C1E,0x3E1E,0x1F3C,0x0F78,0x0FF8,0x07F0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">0x0000,0x0000,0x0000,0x7FFF,0x7FFF,0x000F,0x001F,0x003E,0x007C,0x00F8,0x00F0,0x01E0,0x03E0,0x07C0,0x0F80,0x0F00,0x1E00,0x3E00,0x7C00,0x7FFF,0x7FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal">0x07FF,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x07FF,0x07FF,0x0000,<sp/></highlight><highlight class="comment">//<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal">0x7800,0x7800,0x3C00,0x3C00,0x1E00,0x1E00,0x0F00,0x0F00,0x0780,0x0780,0x03C0,0x03C0,0x01E0,0x01E0,0x00F0,0x00F0,0x0078,0x0078,0x003C,0x003C,0x001E,0x001E,0x000F,0x000F,0x0007,0x0000,<sp/><sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">0x7FF0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x00F0,0x7FF0,0x7FF0,0x0000,<sp/></highlight><highlight class="comment">//<sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal">0x00C0,0x01C0,0x01C0,0x03E0,0x03E0,0x07F0,0x07F0,0x0778,0x0F78,0x0F38,0x1E3C,0x1E3C,0x3C1E,0x3C1E,0x380F,0x780F,0x7807,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>^</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xFFFF,0xFFFF,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal">0x00F0,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0FF8,0x3FFC,0x3C7C,0x003E,0x003E,0x003E,0x07FE,0x1FFE,0x3E3E,0x7C3E,0x783E,0x7C3E,0x7C7E,0x3FFF,0x1FCF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal">0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3DF8,0x3FFE,0x3F3E,0x3E1F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C1F,0x3C1E,0x3F3E,0x3FFC,0x3BF0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03FE,0x0FFF,0x1F87,0x3E00,0x3E00,0x3C00,0x7C00,0x7C00,0x7C00,0x3C00,0x3E00,0x3E00,0x1F87,0x0FFF,0x03FE,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal">0x001F,0x001F,0x001F,0x001F,0x001F,0x001F,0x07FF,0x1FFF,0x3E3F,0x3C1F,0x7C1F,0x7C1F,0x7C1F,0x781F,0x781F,0x7C1F,0x7C1F,0x3C3F,0x3E7F,0x1FFF,0x0FDF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x03F8,0x0FFC,0x1F3E,0x3E1E,0x3C1F,0x7C1F,0x7FFF,0x7FFF,0x7C00,0x7C00,0x3C00,0x3E00,0x1F07,0x0FFF,0x03FE,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal">0x01FF,0x03E1,0x03C0,0x07C0,0x07C0,0x07C0,0x7FFF,0x7FFF,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x07C0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x07EF,0x1FFF,0x3E7F,0x3C1F,0x7C1F,0x7C1F,0x781F,0x781F,0x781F,0x7C1F,0x7C1F,0x3C3F,0x3E7F,0x1FFF,0x0FDF,0x001E,0x001E,0x001E,0x387C,0x3FF8,<sp/></highlight><highlight class="comment">//<sp/>g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal">0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3DFC,0x3FFE,0x3F9E,0x3F1F,0x3E1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal">0x01F0,0x01F0,0x0000,0x0000,0x0000,0x0000,0x7FE0,0x7FE0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal">0x00F8,0x00F8,0x0000,0x0000,0x0000,0x0000,0x3FF8,0x3FF8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F8,0x00F0,0x71F0,0x7FE0,<sp/></highlight><highlight class="comment">//<sp/>j</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal">0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,0x3C1F,0x3C3E,0x3C7C,0x3CF8,0x3DF0,0x3DE0,0x3FC0,0x3FC0,0x3FE0,0x3DF0,0x3CF8,0x3C7C,0x3C3E,0x3C1F,0x3C1F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>k</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal">0x7FF0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x01F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>l</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xF79E,0xFFFF,0xFFFF,0xFFFF,0xFBE7,0xF9E7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0xF1C7,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3DFC,0x3FFE,0x3F9E,0x3F1F,0x3E1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x3C1F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>n</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x07F0,0x1FFC,0x3E3E,0x3C1F,0x7C1F,0x780F,0x780F,0x780F,0x780F,0x780F,0x7C1F,0x3C1F,0x3E3E,0x1FFC,0x07F0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>o</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3DF8,0x3FFE,0x3F3E,0x3E1F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C0F,0x3C1F,0x3E1E,0x3F3E,0x3FFC,0x3FF8,0x3C00,0x3C00,0x3C00,0x3C00,0x3C00,<sp/></highlight><highlight class="comment">//<sp/>p</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x07EE,0x1FFE,0x3E7E,0x3C1E,0x7C1E,0x781E,0x781E,0x781E,0x781E,0x781E,0x7C1E,0x7C3E,0x3E7E,0x1FFE,0x0FDE,0x001E,0x001E,0x001E,0x001E,0x001E,<sp/></highlight><highlight class="comment">//<sp/>q</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x1F7F,0x1FFF,0x1FE7,0x1FC7,0x1F87,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x1F00,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x07FC,0x1FFE,0x1E0E,0x3E00,0x3E00,0x3F00,0x1FE0,0x07FC,0x00FE,0x003E,0x001E,0x001E,0x3C3E,0x3FFC,0x1FF0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal">0x0000,0x0000,0x0000,0x0780,0x0780,0x0780,0x7FFF,0x7FFF,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x0780,0x07C0,0x03FF,0x01FF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C1E,0x3C3E,0x3C7E,0x3EFE,0x1FFE,0x0FDE,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xF007,0x780F,0x780F,0x3C1E,0x3C1E,0x3E1E,0x1E3C,0x1E3C,0x0F78,0x0F78,0x0FF0,0x07F0,0x07F0,0x03E0,0x03E0,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xF003,0xF1E3,0xF3E3,0xF3E7,0xF3F7,0xF3F7,0x7FF7,0x7F77,0x7F7F,0x7F7F,0x7F7F,0x3E3E,0x3E3E,0x3E3E,0x3E3E,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>w</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x7C0F,0x3E1E,0x3E3C,0x1F3C,0x0FF8,0x07F0,0x07F0,0x03E0,0x07F0,0x07F8,0x0FF8,0x1E7C,0x3E3E,0x3C1F,0x781F,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0xF807,0x780F,0x7C0F,0x3C1E,0x3C1E,0x1E3C,0x1E3C,0x1F3C,0x0F78,0x0FF8,0x07F0,0x07F0,0x03E0,0x03E0,0x03C0,0x03C0,0x03C0,0x0780,0x0F80,0x7F00,<sp/></highlight><highlight class="comment">//<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3FFF,0x3FFF,0x001F,0x003E,0x007C,0x00F8,0x01F0,0x03E0,0x07C0,0x0F80,0x1F00,0x1E00,0x3C00,0x7FFF,0x7FFF,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal">0x01FE,0x03E0,0x03C0,0x03C0,0x03C0,0x03C0,0x01E0,0x01E0,0x01E0,0x01C0,0x03C0,0x3F80,0x3F80,0x03C0,0x01C0,0x01E0,0x01E0,0x01E0,0x03C0,0x03C0,0x03C0,0x03C0,0x03E0,0x01FE,0x007E,0x0000,<sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal">0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x01C0,0x0000,<sp/></highlight><highlight class="comment">//<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal">0x3FC0,0x03E0,0x01E0,0x01E0,0x01E0,0x01E0,0x01C0,0x03C0,0x03C0,0x01C0,0x01E0,0x00FE,0x00FE,0x01E0,0x01C0,0x03C0,0x03C0,0x01C0,0x01E0,0x01E0,0x01E0,0x01E0,0x03E0,0x3FC0,0x3F00,0x0000,<sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal">0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x3F07,0x7FC7,0x73E7,0xF1FF,0xF07E,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,<sp/></highlight><highlight class="comment">//<sp/>~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_INIT();</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_CMD_WRITE(uint8_t<sp/>command);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_CMD_WRITE(uint8_t<sp/>command,<sp/>uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_CMD_WRITE(uint8_t<sp/>command,<sp/>uint8_t<sp/>data1,<sp/>uint8_t<sp/>data2);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_DATA_WRITE();</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_DISPLAY_UPDATE();</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_INVERT();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_BUFFER_FILL(SSD1306_COLOR_t<sp/>color);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_BUFFER_CLEAR();</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_SET_MASK(uint8_t<sp/>x1,<sp/>uint8_t<sp/>y1,<sp/>uint8_t<sp/>x2,<sp/>uint8_t<sp/>y2);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_PIXEL(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/>SSD1306_COLOR_t<sp/>color);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_LINE(int16_t<sp/>x0,<sp/>int16_t<sp/>y0,<sp/>int16_t<sp/>x1,<sp/>int16_t<sp/>y1,<sp/>SSD1306_COLOR_t<sp/>color);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_CHAR(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch,<sp/>uint8_t<sp/>s,<sp/>SSD1306_COLOR_t<sp/>color,<sp/>SSD1306_MODE_t<sp/>mode);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_STRING(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str,<sp/>uint8_t<sp/>s,<sp/>SSD1306_COLOR_t<sp/>color,<sp/>SSD1306_MODE_t<sp/>mode);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_DOUBLE(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d,<sp/>uint8_t<sp/>s,<sp/>SSD1306_COLOR_t<sp/>color,<sp/>SSD1306_MODE_t<sp/>mode);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_INT(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>uint8_t<sp/>s,<sp/>SSD1306_COLOR_t<sp/>color,<sp/>SSD1306_MODE_t<sp/>mode);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SSD1306_WRITE_BOOL(int16_t<sp/>x,<sp/>int16_t<sp/>y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b,<sp/>uint8_t<sp/>s,<sp/>SSD1306_COLOR_t<sp/>color,<sp/>SSD1306_MODE_t<sp/>mode);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Export<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_s_s_d1306__t" kindref="compound">SSD1306_t</ref><sp/>SSD1306;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DLH_SSD1306</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h"/>
+  </compounddef>
+</doxygen>

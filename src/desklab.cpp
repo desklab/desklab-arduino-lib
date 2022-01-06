@@ -1,12 +1,10 @@
-/*
- * desklab.cpp
- * ===========
+/* This file is part of the desklab-arduino-library implementing methods 
+ * for the use of desklab (www.desk-lab.de) devices. It is availabe via 
+ * the Arduino Library Manager.
  *
- * Bibliothek zur Nutzung mit Geräten von desklab (www.desk-lab.de).
+ * See https://github.com/desklab/desklab-arduino-lib for more information.
  *
- * Zur Verfügung gestellt durch die desklab gUG (haftungsbeschränkt).
- *
- * Copyright 2018-2021 desklab gUG <orga@desk-lab.de>
+ * Copyright 2018-2021 desklab gUG (haftungsbeschränkt) <orga@desk-lab.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files
@@ -31,117 +29,95 @@
 #include <desklab.h>
 #include <Arduino.h>
 
-double PhotometerSensorAuslesen(int SensorPin){
-  double sensorValue = 0;
-  double meanSensorValue = 0;
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
-  for (int i = 1; i<51; i++){
-    sensorValue = sensorValue+ (analogRead(SensorPin));
-    delay(5);
-  }
-  meanSensorValue = sensorValue/50;
-
-  return meanSensorValue;
+void setupDisplay(){
+  SSD1306_INIT();
 }
 
-
-double PhotometerBerechnung(double sensorValue){
-  double opticalDensity = 0;
-
-  opticalDensity = 1.42909711 - 0.00258627252 * sensorValue + 1.12076970 / 1000000 * pow(sensorValue,2);
-  if (sensorValue > 925){
-    opticalDensity = opticalDensity-(pow(sensorValue-925,2)/80000);
-  }
-  if ((opticalDensity < 0) & (opticalDensity > -0.01)){
-    opticalDensity = 0.00;
-  }
-  if (opticalDensity < -0.05 || opticalDensity > 1.20){
-    opticalDensity = NAN;
-  }
-
-  return opticalDensity;
+void setupSerial(){
+  Serial.begin(9600);
 }
 
-
-double PhotometerMessung(int sensorPin){
-  double sensorValue = 0;
-  double opticalDensity = 0;
-
-  sensorValue = PhotometerSensorAuslesen(sensorPin);
-  opticalDensity = PhotometerBerechnung(sensorValue);
-
-  return opticalDensity;
+void unsetDisplay(){
 }
+
+void unsetSerial(){
+  Serial.end();
+}
+
+#endif
+
+Core::Core(){
+  this->_serialoutput = false;
+  this->_displayoutput = true;
+}
+
+Core::~Core(){
+}
+
+void Core::begin(){
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+  setupDisplay();
+  setupSerial();
+  #endif
+}
+
+void Core::end(){
+  #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+  unsetDisplay();
+  unsetSerial();
+  #endif
+}
+
+void Core::enableDisplayOutput(){
+  _displayoutput = true;
+}
+
+void Core::disableDisplayOutput(){
+  _displayoutput = false;
+}
+
+void Core::enableSerialOutput(){
+  _serialoutput = true;
+}
+
+void Core::disableSerialOutput(){
+  _serialoutput = false;
+}  
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-void StarteDisplay(){
 
-  oleddisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
-  oleddisplay.clearDisplay();
-
-  oleddisplay.drawBitmap(
-    (oleddisplay.width()  - LOGO_WIDTH ) / 2,
-    (oleddisplay.height() - LOGO_HEIGHT) / 2,
-    dl_Logo, LOGO_WIDTH, LOGO_HEIGHT, 1);
-  oleddisplay.display();
-  delay(1500);
-
-  oleddisplay.clearDisplay();
-  oleddisplay.display();
-
-  oleddisplay.setTextColor(WHITE, BLACK);
-  oleddisplay.setCursor(0,0);
-  oleddisplay.setTextSize(1);
-
-  oleddisplay.println("Hinweis: ");
-  oleddisplay.println("Mikrocontroller und");
-  oleddisplay.println("Display erfolgreich");
-  oleddisplay.println("gestartet!");
-  oleddisplay.display();
-
-  delay(2000);
-
-  oleddisplay.clearDisplay();
-  oleddisplay.display();
+void Core::print(bool b){
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;
+  SSD1306_BUFFER_CLEAR();
+  SSD1306_WRITE_BOOL(0, 0, b, 1, col, mode);
+  SSD1306_DISPLAY_UPDATE();
 }
 
-
-void PhotometerAusgabe(double opticalDensity){
-
-  oleddisplay.clearDisplay();
-  oleddisplay.setTextSize(1);
-  oleddisplay.setCursor(0,0);
-  if (!(isnan(opticalDensity))){
-    oleddisplay.println("Optische Dichte:");
-    oleddisplay.println("");
-    oleddisplay.setTextSize(2);
-    oleddisplay.print(opticalDensity);
-  } else {
-    oleddisplay.println("Warnung:");
-    oleddisplay.println("Wert nicht im");
-    oleddisplay.println("Messbereich oder");
-    oleddisplay.println("Kalibrierung falsch!");
-  }
-  oleddisplay.display();
+void Core::print(int i){
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
+  SSD1306_BUFFER_CLEAR();
+  SSD1306_WRITE_INT(0, 0, i, 1, col, mode);
+  SSD1306_DISPLAY_UPDATE();
 }
 
-void TextAusgabe(String printMessage, int printSize){
-
-  oleddisplay.clearDisplay();
-  oleddisplay.setTextSize(printSize);
-  oleddisplay.setCursor(0,0);
-
-  oleddisplay.println(printMessage);
-  oleddisplay.display();
+void Core::print(double d){
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
+  SSD1306_BUFFER_CLEAR();
+  SSD1306_WRITE_DOUBLE(0, 0, d, 1, col, mode);
+  SSD1306_DISPLAY_UPDATE();
 }
 
-void Drehen(int drehen) {
-  oleddisplay.setRotation(drehen);
-}
-
-Adafruit_SSD1306 Display() {
-  return oleddisplay;
+void Core::print(char c){
+  SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+  SSD1306_COLOR_t col = SSD1306_WHITE;;
+  SSD1306_BUFFER_CLEAR();
+  SSD1306_WRITE_CHAR(0, 0, c, 1, col, mode);
+  SSD1306_DISPLAY_UPDATE();
 }
 
 #endif
