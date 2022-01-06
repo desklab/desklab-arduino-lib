@@ -55,11 +55,10 @@ You also have to install **Doxygen**. To build the docs execute the following co
 
 ```bash
 conda activate desklab-arduino-lib
-make clean
 make html
 ```
 
-The docs are served through GitHub Pages at [desklab-arduino-lib.github.io](desklab-arduino-lib.github.io).
+The docs are served through GitHub Pages at [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/build/html/index.html).
 
 ### License
 
