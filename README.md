@@ -55,7 +55,6 @@ You also have to install **Doxygen**. To build the docs execute the following co
 
 ```bash
 conda activate desklab-arduino-lib
-make clean
 make html
 ```
 

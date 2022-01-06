@@ -55,7 +55,6 @@ Außerdem muss noch **Doxygen** installiert werden, bevor die Dokumentation mit 
 
 ```bash
 conda activate desklab-arduino-lib
-make clean
 make html
 ```
 
