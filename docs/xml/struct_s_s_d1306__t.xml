@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="struct_s_s_d1306__t" kind="struct" language="C++" prot="public">
+    <compoundname>SSD1306_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_s_d1306__t_1aeddcec550d7a78fbf3fd862f62958ead" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SSD1306_t::MASK_X_LOW</definition>
+        <argsstring></argsstring>
+        <name>MASK_X_LOW</name>
+        <qualifiedname>SSD1306_t::MASK_X_LOW</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="17" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_s_d1306__t_1aab0e6e4f898f839868182378f373c451" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SSD1306_t::MASK_Y_LOW</definition>
+        <argsstring></argsstring>
+        <name>MASK_Y_LOW</name>
+        <qualifiedname>SSD1306_t::MASK_Y_LOW</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="18" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_s_d1306__t_1a9b32f38ad74664587fcd537dc83cdf33" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SSD1306_t::MASK_X_HIGH</definition>
+        <argsstring></argsstring>
+        <name>MASK_X_HIGH</name>
+        <qualifiedname>SSD1306_t::MASK_X_HIGH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="19" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_s_d1306__t_1a9605cbabb92cb024fa3e3fb7b8322d54" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SSD1306_t::MASK_Y_HIGH</definition>
+        <argsstring></argsstring>
+        <name>MASK_Y_HIGH</name>
+        <qualifiedname>SSD1306_t::MASK_Y_HIGH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="20" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_s_d1306__t_1a6ad67e47a58d7f6720a1cdb32a0d4bc4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SSD1306_t::INVERTED</definition>
+        <argsstring></argsstring>
+        <name>INVERTED</name>
+        <qualifiedname>SSD1306_t::INVERTED</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="21" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" line="16" column="1" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/ssd1306.h" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="struct_s_s_d1306__t_1a6ad67e47a58d7f6720a1cdb32a0d4bc4" prot="public" virt="non-virtual"><scope>SSD1306_t</scope><name>INVERTED</name></member>
+      <member refid="struct_s_s_d1306__t_1a9b32f38ad74664587fcd537dc83cdf33" prot="public" virt="non-virtual"><scope>SSD1306_t</scope><name>MASK_X_HIGH</name></member>
+      <member refid="struct_s_s_d1306__t_1aeddcec550d7a78fbf3fd862f62958ead" prot="public" virt="non-virtual"><scope>SSD1306_t</scope><name>MASK_X_LOW</name></member>
+      <member refid="struct_s_s_d1306__t_1a9605cbabb92cb024fa3e3fb7b8322d54" prot="public" virt="non-virtual"><scope>SSD1306_t</scope><name>MASK_Y_HIGH</name></member>
+      <member refid="struct_s_s_d1306__t_1aab0e6e4f898f839868182378f373c451" prot="public" virt="non-virtual"><scope>SSD1306_t</scope><name>MASK_Y_LOW</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

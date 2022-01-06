@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="photometer_8h" kind="file" language="C++">
+    <compoundname>photometer.h</compoundname>
+    <includes refid="desklab_8h" local="no">desklab.h</includes>
+    <includedby refid="desklab_8h" local="no">/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h</includedby>
+    <includedby refid="photometer_8cpp" local="no">/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>desklab.h</label>
+        <link refid="desklab_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h</label>
+        <link refid="photometer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ssd1306.h</label>
+        <link refid="ssd1306_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h</label>
+        <link refid="desklab_8h_source"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h</label>
+        <link refid="photometer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_photometer" prot="public">Photometer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="photometer_8h_1a7c90a5fffbe319106f76922de544f54c" prot="public" static="no">
+        <name>PhotometerSensorAuslesen</name>
+        <initializer>photometerReadRaw</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="89" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="photometer_8h_1a5fde65ad0e24faedd0ac5256d8aca402" prot="public" static="no">
+        <name>PhotometerBerechnung</name>
+        <initializer>photometerConversion</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="90" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="photometer_8h_1a1f12b00e54312a02cdece7390688c1da" prot="public" static="no">
+        <name>PhotometerMessung</name>
+        <initializer>photometerMeasureOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="91" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="photometer_8h_1a7fdece3434eaee9581e00ff03598167c" prot="public" static="no">
+        <name>PhotometerAusgabe</name>
+        <initializer>photometerPrint</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="94" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="photometer_8h_1a1a9402d4cff14cbdc8fbcb3119ba58cf" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A</name>
+        <initializer>= 1.42909711</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="34" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="photometer_8h_1a1dd5c4bb999690f9af0edd7dc9a9f790" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B</name>
+        <initializer>= -0.00258627252</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="35" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="photometer_8h_1a61a54ab48a680ef807cb59d51e823a4c" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PHOTOMETER_CALIBRATION_DEFAULT_PARAM_C</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_C</name>
+        <initializer>= 1.12076970/1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="36" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="photometer_8h_1a3c3603875205a28b64b8ed0d0f034605" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PHOTOMETER_CALIBRATION_UPPER_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_UPPER_LIMIT</name>
+        <initializer>= 1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="37" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="photometer_8h_1ac782ec25067c0a6a2d7e539c9e772d84" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PHOTOMETER_CALIBRATION_LOWER_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_LOWER_LIMIT</name>
+        <initializer>= -0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="38" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="photometer_8h_1a05ba29f671db4276573e90e18b6bbd3b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int PHOTOMETER_CALIBRATION_ZERO_CUTOFF</definition>
+        <argsstring></argsstring>
+        <name>PHOTOMETER_CALIBRATION_ZERO_CUTOFF</name>
+        <initializer>= 925</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="39" column="11" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="photometer_8h_1a3c1680a7eedd99b9509eab996c0fd422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void photometerSetupDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>photometerSetupDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="41" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="35" bodyend="37" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1ac3099621f07518f59f2537f33f081ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void photometerSetupSerial</definition>
+        <argsstring>()</argsstring>
+        <name>photometerSetupSerial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="42" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="39" bodyend="41" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1a8588323fecbd2804ed38cd341c722bc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void photometerPrintOD</definition>
+        <argsstring>(double od)</argsstring>
+        <name>photometerPrintOD</name>
+        <param>
+          <type>double</type>
+          <declname>od</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="44" column="6" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="43" bodyend="59" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1ab023100f7a06882914ad8cc99399a6a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double photometerReadRaw</definition>
+        <argsstring>(int Pin)</argsstring>
+        <name>photometerReadRaw</name>
+        <param>
+          <type>int</type>
+          <declname>Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="46" column="8" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="63" bodyend="75" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="46" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1ade0714a0aa9e1fffaca57e4714c0e74e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double photometerConversion</definition>
+        <argsstring>(double analogSensorValue)</argsstring>
+        <name>photometerConversion</name>
+        <param>
+          <type>double</type>
+          <declname>analogSensorValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="47" column="8" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="77" bodyend="84" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="47" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1a8be5c59d2cf7b83548d4e5374c5b9f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double photometerConversion</definition>
+        <argsstring>(double analogSensorValue, double calibration_param_A, double calibration_param_B, double calibration_param_C)</argsstring>
+        <name>photometerConversion</name>
+        <param>
+          <type>double</type>
+          <declname>analogSensorValue</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>calibration_param_A</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>calibration_param_B</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>calibration_param_C</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="48" column="8" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="86" bodyend="101" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="48" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="photometer_8h_1a54c3aea56377d7c973a6c6470c037663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double photometerMeasureOD</definition>
+        <argsstring>(int Pin)</argsstring>
+        <name>photometerMeasureOD</name>
+        <param>
+          <type>int</type>
+          <declname>Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" line="49" column="8" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.cpp" bodystart="103" bodyend="108" declfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h" declline="49" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>desklab-arduino-library<sp/>implementing<sp/>methods<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>use<sp/>of<sp/>desklab<sp/>(www.desk-lab.de)<sp/>devices.<sp/>It<sp/>is<sp/>availabe<sp/>via<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>the<sp/>Arduino<sp/>Library<sp/>Manager.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>See<sp/>https://github.com/desklab/desklab-arduino-lib<sp/>for<sp/>more<sp/>information.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018-2021<sp/>desklab<sp/>gUG<sp/>(haftungsbeschränkt)<sp/>&lt;orga@desk-lab.de&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DLH_PHOTOMETER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DLH_PHOTOMETER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;desklab.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_A<sp/>=<sp/>1.42909711;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_B<sp/>=<sp/>-0.00258627252;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_DEFAULT_PARAM_C<sp/>=<sp/>1.12076970/1000000;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_UPPER_LIMIT<sp/>=<sp/>1.2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_LOWER_LIMIT<sp/>=<sp/>-0.05;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PHOTOMETER_CALIBRATION_ZERO_CUTOFF<sp/>=<sp/>925;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>photometerSetupDisplay();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>photometerSetupSerial();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>photometerPrintOD(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>od);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>photometerReadRaw(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pin);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>photometerConversion(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>analogSensorValue);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>photometerConversion(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>analogSensorValue,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_B,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_C);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>photometerMeasureOD(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pin);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_photometer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_photometer" kindref="compound">Photometer</ref><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_photometer" kindref="compound">Photometer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_photometer" kindref="compound">~Photometer</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>end();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCalibration(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_A,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_B,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>calibration_param_C);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>enableDisplayOutput();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disableDisplayOutput();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>enableSerialOutput();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disableSerialOutput();<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>measureOD();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readSensor();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>convertSensorvalueToOD();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getSensorvalue();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getOD();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>printOD();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_pin;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_serialoutput;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_displayoutput;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_calibration_A;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_calibration_B;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_calibration_C;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_sensorvalue;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_od;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEPRECATED<sp/>METHOD<sp/>ALIASES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PhotometerSensorAuslesen<sp/>photometerReadRaw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PhotometerBerechnung<sp/>photometerConversion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PhotometerMessung<sp/>photometerMeasureOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARDUINO_CI_UNITTEST_ACTIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PhotometerAusgabe<sp/>photometerPrint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>END<sp/>OF<sp/>DEPRECATED<sp/>METHOD<sp/>ALIASES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/photometer.h"/>
+  </compounddef>
+</doxygen>

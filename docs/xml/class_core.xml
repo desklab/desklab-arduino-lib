@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="class_core" kind="class" language="C++" prot="public">
+    <compoundname>Core</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_core_1a332e348d78427495890faf6d7d054585" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core::_serialoutput</definition>
+        <argsstring></argsstring>
+        <name>_serialoutput</name>
+        <qualifiedname>Core::_serialoutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="66" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1aff81336adff93101e6acb84a860da25f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core::_displayoutput</definition>
+        <argsstring></argsstring>
+        <name>_displayoutput</name>
+        <qualifiedname>Core::_displayoutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="67" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_core_1a14e63188e0aa7c4a6f72d5501384d1f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Core::Core</definition>
+        <argsstring>()</argsstring>
+        <name>Core</name>
+        <qualifiedname>Core::Core</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="47" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a776f8c46504b14183883c6273f93eaed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Core::~Core</definition>
+        <argsstring>()</argsstring>
+        <name>~Core</name>
+        <qualifiedname>Core::~Core</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="48" column="9" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="56" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1af6a50e12b6ee2f2776f44b350531f40c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>Core::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="50" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a11f54e804295e648c7c4d3ffc6858cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>Core::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="51" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a38532b1d5df5abf61a57312764e702bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::enableDisplayOutput</definition>
+        <argsstring>()</argsstring>
+        <name>enableDisplayOutput</name>
+        <qualifiedname>Core::enableDisplayOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="53" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a459502d754d59d3a656e87c2332b92d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::disableDisplayOutput</definition>
+        <argsstring>()</argsstring>
+        <name>disableDisplayOutput</name>
+        <qualifiedname>Core::disableDisplayOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="54" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a7c03f0aa8047ff13ed0f316c703e3c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::enableSerialOutput</definition>
+        <argsstring>()</argsstring>
+        <name>enableSerialOutput</name>
+        <qualifiedname>Core::enableSerialOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="55" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ac8bced289b885a055297346db4c6284e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::disableSerialOutput</definition>
+        <argsstring>()</argsstring>
+        <name>disableSerialOutput</name>
+        <qualifiedname>Core::disableSerialOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="56" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a651aa3ccc6e4cb1984c13ba4bae58e87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::print</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>print</name>
+        <qualifiedname>Core::print</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="59" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a758360d8f41efc44b2f942818149f919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::print</definition>
+        <argsstring>(int i)</argsstring>
+        <name>print</name>
+        <qualifiedname>Core::print</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="60" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a1feaf509459bbed40fa3320d619ff9e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::print</definition>
+        <argsstring>(double d)</argsstring>
+        <name>print</name>
+        <qualifiedname>Core::print</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="61" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ad0d74dd469d76be99e595bf6d8acd50d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::print</definition>
+        <argsstring>(char c)</argsstring>
+        <name>print</name>
+        <qualifiedname>Core::print</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="62" column="14" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.cpp" bodystart="115" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" line="45" column="1" bodyfile="/Users/axel/dev/arduino/desklab-arduino-lib/src/desklab.h" bodystart="45" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_core_1aff81336adff93101e6acb84a860da25f" prot="private" virt="non-virtual"><scope>Core</scope><name>_displayoutput</name></member>
+      <member refid="class_core_1a332e348d78427495890faf6d7d054585" prot="private" virt="non-virtual"><scope>Core</scope><name>_serialoutput</name></member>
+      <member refid="class_core_1af6a50e12b6ee2f2776f44b350531f40c" prot="public" virt="non-virtual"><scope>Core</scope><name>begin</name></member>
+      <member refid="class_core_1a14e63188e0aa7c4a6f72d5501384d1f9" prot="public" virt="non-virtual"><scope>Core</scope><name>Core</name></member>
+      <member refid="class_core_1a459502d754d59d3a656e87c2332b92d3" prot="public" virt="non-virtual"><scope>Core</scope><name>disableDisplayOutput</name></member>
+      <member refid="class_core_1ac8bced289b885a055297346db4c6284e" prot="public" virt="non-virtual"><scope>Core</scope><name>disableSerialOutput</name></member>
+      <member refid="class_core_1a38532b1d5df5abf61a57312764e702bc" prot="public" virt="non-virtual"><scope>Core</scope><name>enableDisplayOutput</name></member>
+      <member refid="class_core_1a7c03f0aa8047ff13ed0f316c703e3c28" prot="public" virt="non-virtual"><scope>Core</scope><name>enableSerialOutput</name></member>
+      <member refid="class_core_1a11f54e804295e648c7c4d3ffc6858cc6" prot="public" virt="non-virtual"><scope>Core</scope><name>end</name></member>
+      <member refid="class_core_1a651aa3ccc6e4cb1984c13ba4bae58e87" prot="public" virt="non-virtual"><scope>Core</scope><name>print</name></member>
+      <member refid="class_core_1a758360d8f41efc44b2f942818149f919" prot="public" virt="non-virtual"><scope>Core</scope><name>print</name></member>
+      <member refid="class_core_1a1feaf509459bbed40fa3320d619ff9e3" prot="public" virt="non-virtual"><scope>Core</scope><name>print</name></member>
+      <member refid="class_core_1ad0d74dd469d76be99e595bf6d8acd50d" prot="public" virt="non-virtual"><scope>Core</scope><name>print</name></member>
+      <member refid="class_core_1a776f8c46504b14183883c6273f93eaed" prot="public" virt="non-virtual"><scope>Core</scope><name>~Core</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
