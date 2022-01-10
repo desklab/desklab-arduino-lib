@@ -340,6 +340,8 @@ void sendByte(byte8_t send) {
 
 }
 
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+
 void sendByte(byte8_t send, bool print) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
@@ -372,5 +374,6 @@ void sendByte(byte8_t send, bool print) {
         Serial.println("");   
     }
     delay(tb);
-
 }
+
+#endif
