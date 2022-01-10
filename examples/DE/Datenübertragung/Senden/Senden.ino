@@ -9,22 +9,26 @@ void setup() {
 
 
 void loop() {
-  byte8_t bH = encode('H');
-  byte8_t bHp = parity(bH);    
-  sendByte(bHp);
+  byte8_t H;
+  H = encode('H');
+  H = parity(H);
+  sendByte(H, true);
 
-  byte8_t bE = encode('E');
-  byte8_t bEp = parity(bE);   
-  sendByte(bEp);
+  byte8_t E;
+  E = encode('E');
+  E = parity(E);   
+  sendByte(E, true);
+  
+  byte8_t L;
+  L = encode('L');
+  L = parity(L); 
+  sendByte(L, true);
+  sendByte(L, true);
 
-  byte8_t bL = encode('L');
-  byte8_t bLp = parity(bL); 
-  sendByte(bLp);
-  sendByte(bLp);
-
-  byte8_t bO = encode('O');
-  byte8_t bOp = parity(bO); 
-  sendByte(bOp);
+  byte8_t O;
+  O = encode('O');
+  O = parity(O);
+  sendByte(O, true);
 
   delay(4000);
 }

@@ -20,7 +20,10 @@ int cPin = 0;
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void setupINConnection(int dataPin, int clockPin){
-    attachInterrupt(digitalPinToInterrupt(clockPin), read, RISING);    
+    attachInterrupt(digitalPinToInterrupt(clockPin), read, RISING);   
+
+    Serial.begin(9600);
+
     dPin = dataPin;
     cPin = clockPin;
 
@@ -194,8 +197,8 @@ byte8_t parity(byte8_t b){
 void display(char c){
     int i = c;
     if(i != 0){
-        Serial.print("Display: ");
-        Serial.println(c);
+        //Serial.print("Display: ");
+        //Serial.println(c);
         SSD1306_MODE_t mode = SSD1306_OVERRIDE;
         SSD1306_COLOR_t col = SSD1306_WHITE;
         SSD1306_BUFFER_CLEAR();
@@ -204,10 +207,24 @@ void display(char c){
     }
 }
 
+void display(byte8_t b){
+    SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+    SSD1306_COLOR_t col = SSD1306_WHITE;
+    SSD1306_BUFFER_CLEAR();  
+    for (int i = 0; i<b.l; i++){
+        if (b.bits[i]){
+            SSD1306_WRITE_CHAR(i*10, 0, '1', 2, col, mode);
+        } else {
+            SSD1306_WRITE_CHAR(i*10, 0, '0', 2, col, mode);
+        }
+    }
+    SSD1306_DISPLAY_UPDATE();
+}
+
 #endif
 
 
-int tc = 100;         // [ms] one (internal) clock cycle (400->0.1/s, 40-> 1/s, 4->10/s)
+int tc = 100;        // [ms] one (internal) clock cycle (400->0.1/s, 40-> 1/s, 4->10/s)
 int tw = tc/4;       // [ms] wait for data line to get pulled
 int tp = tc-(2*tw);  // [ms] duration of clock pulse
 int tr = tc-tp;      // [ms] time available for reading
@@ -319,6 +336,41 @@ void sendByte(byte8_t send) {
     }
     sendEndCode();
     //Serial.println("");
+    delay(tb);
+
+}
+
+void sendByte(byte8_t send, bool print) {
+    SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+    SSD1306_COLOR_t col = SSD1306_WHITE;
+    if(print){
+        Serial.print("sending data: ");
+        SSD1306_BUFFER_CLEAR();
+        SSD1306_WRITE_CHAR(0, 0, decode(send), 2, col, mode);
+        SSD1306_WRITE_CHAR(10, 0, ':', 2, col, mode);
+        SSD1306_DISPLAY_UPDATE(); 
+    }
+    
+    sendStartCode();
+    for (int i = 0; i<send.l; i++)
+    {
+        if(print){
+            if (send.bits[i]){
+                Serial.print("1");
+                SSD1306_WRITE_CHAR(24+i*10, 0, '1', 2, col, mode);
+                SSD1306_DISPLAY_UPDATE(); 
+            } else {
+                Serial.print("0");
+                SSD1306_WRITE_CHAR(24+i*10, 0, '0', 2, col, mode);
+                SSD1306_DISPLAY_UPDATE(); 
+            }
+        }
+        sendBit(send.bits[i]);
+    }
+    sendEndCode();
+    if(print){
+        Serial.println("");   
+    }
     delay(tb);
 
 }

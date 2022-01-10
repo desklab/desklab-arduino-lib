@@ -47,6 +47,8 @@ char decode(byte8_t b);
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void display(char c);
+void display(byte8_t b);
+void sendByte(byte8_t send, bool print);
 #endif
 
 void sendHighDataBit();
