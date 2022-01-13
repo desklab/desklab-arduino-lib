@@ -14,6 +14,12 @@ void loop() {
         if(check(byte)){
             char data = decode(byte);
             display(data);
+            delay(1000);
+            clearDisplay();
+        } else {
+            display('?');
+            delay(1000);
+            clearDisplay();
         }
     }
 }

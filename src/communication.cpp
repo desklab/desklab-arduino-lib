@@ -17,6 +17,9 @@ bool processed = false;
 int dPin = 0;
 int cPin = 0;
 
+int dispX = 0;
+int dispY = 0;
+
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void setupINConnection(int dataPin, int clockPin){
@@ -151,11 +154,6 @@ char decode(byte8_t b)
 
     char c = i;
     
-    //if(i != 0){
-    //    Serial.print("decoded to: ");
-    //    Serial.println(c);
-    //}
-
     return c;
 }
 
@@ -197,12 +195,10 @@ byte8_t parity(byte8_t b){
 void display(char c){
     int i = c;
     if(i != 0){
-        //Serial.print("Display: ");
-        //Serial.println(c);
         SSD1306_MODE_t mode = SSD1306_OVERRIDE;
         SSD1306_COLOR_t col = SSD1306_WHITE;
-        SSD1306_BUFFER_CLEAR();
-        SSD1306_WRITE_CHAR(0, 0, c, 2, col, mode);
+        SSD1306_WRITE_CHAR(dispX, dispY, c, 2, col, mode);
+        dispX = dispX + 10;
         SSD1306_DISPLAY_UPDATE();
     }
 }
@@ -210,14 +206,30 @@ void display(char c){
 void display(byte8_t b){
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
-    SSD1306_BUFFER_CLEAR();  
     for (int i = 0; i<b.l; i++){
         if (b.bits[i]){
-            SSD1306_WRITE_CHAR(i*10, 0, '1', 2, col, mode);
+            SSD1306_WRITE_CHAR(dispX + i*10, dispY, '1', 2, col, mode);
         } else {
-            SSD1306_WRITE_CHAR(i*10, 0, '0', 2, col, mode);
+            SSD1306_WRITE_CHAR(dispX + i*10, dispY, '0', 2, col, mode);
         }
     }
+    dispX = dispX + 70;
+    SSD1306_DISPLAY_UPDATE();
+}
+
+
+void display(const char* s){
+    SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+    SSD1306_COLOR_t col = SSD1306_WHITE;;
+    SSD1306_WRITE_STRING(dispX, dispY, s, 2, col, mode);
+    dispX = dispX + 10*strlen(s);
+    SSD1306_DISPLAY_UPDATE(); 
+}
+
+void clearDisplay(){
+    dispX = 0;
+    dispY = 0;
+    SSD1306_BUFFER_CLEAR();
     SSD1306_DISPLAY_UPDATE();
 }
 
@@ -323,21 +335,13 @@ void sendEndCode() { // 0101000 [fast]
 }
 
 void sendByte(byte8_t send) {
-    //Serial.print("sending data: ");
     sendStartCode();
     for (int i = 0; i<send.l; i++)
     {
-        //if (send.bits[i]){
-        //    Serial.print("1");
-        //} else {
-        //    Serial.print("0");
-        //}
         sendBit(send.bits[i]);
     }
     sendEndCode();
-    //Serial.println("");
     delay(tb);
-
 }
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
@@ -346,11 +350,7 @@ void sendByte(byte8_t send, bool print) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(print){
-        Serial.print("sending data: ");
-        SSD1306_BUFFER_CLEAR();
-        SSD1306_WRITE_CHAR(0, 0, decode(send), 2, col, mode);
-        SSD1306_WRITE_CHAR(10, 0, ':', 2, col, mode);
-        SSD1306_DISPLAY_UPDATE(); 
+        Serial.print("sending data: "); 
     }
     
     sendStartCode();
@@ -359,15 +359,52 @@ void sendByte(byte8_t send, bool print) {
         if(print){
             if (send.bits[i]){
                 Serial.print("1");
-                SSD1306_WRITE_CHAR(24+i*10, 0, '1', 2, col, mode);
+                SSD1306_WRITE_CHAR(dispX+i*10, 0, '1', 2, col, mode);
                 SSD1306_DISPLAY_UPDATE(); 
             } else {
                 Serial.print("0");
-                SSD1306_WRITE_CHAR(24+i*10, 0, '0', 2, col, mode);
+                SSD1306_WRITE_CHAR(dispX+i*10, 0, '0', 2, col, mode);
                 SSD1306_DISPLAY_UPDATE(); 
             }
         }
         sendBit(send.bits[i]);
+    }
+    sendEndCode();
+    if(print){
+        Serial.println("");   
+    }
+    delay(tb);
+}
+
+void sendByte(byte8_t send, bool print, int error) {
+    SSD1306_MODE_t mode = SSD1306_OVERRIDE;
+    SSD1306_COLOR_t col = SSD1306_WHITE;
+    if(print){
+        Serial.print("sending data: "); 
+    }
+    
+    sendStartCode();
+    for (int i = 0; i<send.l; i++)
+    {
+        if(print){
+            if (send.bits[i]){
+                Serial.print("1");
+                SSD1306_WRITE_CHAR(dispX+i*10, 0, '1', 2, col, mode);
+                SSD1306_DISPLAY_UPDATE(); 
+            } else {
+                Serial.print("0");
+                SSD1306_WRITE_CHAR(dispX+i*10, 0, '0', 2, col, mode);
+                SSD1306_DISPLAY_UPDATE(); 
+            }
+        }
+        int r = random(100);
+        Serial.println(r);
+        Serial.println(error);
+        if(r>error){
+            sendBit(send.bits[i]);
+        } else {
+            sendBit(!send.bits[i]);
+        }
     }
     sendEndCode();
     if(print){
