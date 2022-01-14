@@ -46,6 +46,13 @@ bool check(byte8_t b);
 char decode(byte8_t b);
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+bool check(byte8_t b, bool debug);
+char decode(byte8_t b, bool debug);
+byte8_t encode(char c, bool debug);
+byte8_t parity(byte8_t b, bool debug);
+#endif
+
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 void clearDisplay();
 void display(char c);
 void display(const char* s);

@@ -414,3 +414,134 @@ void sendByte(byte8_t send, bool print, int error) {
 }
 
 #endif
+
+
+#ifndef ARDUINO_CI_UNITTEST_ACTIVE
+bool check(byte8_t b, bool debug){
+    if(debug){
+        Serial.println("DEBUG: check(byte8_t)");
+        bool check = false;
+        uint8_t highBits = 0;
+
+        for(uint8_t i = 0; i < b.l; i++){
+            if(b.bits[i]){
+                highBits++;            
+            }
+        }
+
+        Serial.print("number of high bits: ");
+        Serial.println(highBits);
+
+        if((highBits % 2) == 0){
+            check = true;
+            Serial.println("parity check: TRUE");
+        } else {
+            Serial.println("parity check: FALSE");
+        }
+
+        return check;
+    } else {
+        return check(b);
+    }
+    
+}
+
+char decode(byte8_t b, bool debug){
+    if(debug){
+        Serial.println("DEBUG: decode(byte8_t)");
+        int i = 0;
+
+        Serial.print("bit sequence to decode: ")
+        
+        for (int k=0; k < 7; k++){
+            if(b.bits[k]){
+                Serial.print("1");
+            } else {
+                Serial.print("0");
+            }
+            if (b.bits[6-k]){
+                i = i + round(pow(2,k));
+            }   
+        }
+
+        char c = i;
+
+        Serial.println("");
+        Serial.print("converted to integer: ");
+        Serial.println(i);
+        Serial.print("decoded to char: ");
+        Serial.println(c);
+        
+        return c;
+    } else {
+        return decode(b);
+    }
+}
+
+byte8_t encode(char c, bool debug){
+    if(debug){
+        Serial.println("DEBUG: encode(char)");
+        byte8_t b = {8,{false,false,false,false,false,false,false,false}};
+        int i = c;
+
+        Serial.print("char to decode: ");
+        Serial.println(c);
+        Serial.print("converted to integer: ");
+        Serial.println(i);
+
+        for(int n = 6; n>=0; n--){
+            if(i >= round(pow(2,n))){
+                int r = i - round(pow(2,n));
+                i = r;
+                b.bits[6-n] = true;
+                if(i == 0){
+                    return b;
+                }
+            }
+        }
+
+        Serial.print("encoded to bit sequence: ")
+        for (int i = 0; i<7; i++) {
+            if (send.bits[i]){
+                Serial.print("1");
+            } else {
+                Serial.print("0");
+            }
+        }
+        Serial.println("");
+
+    } else {
+        return encode(c);
+    }
+}
+
+byte8_t parity(byte8_t b, bool debug){
+    if(debug){
+        Serial.println("DEBUG: parity(byte8_t)");
+        uint8_t highBits = 0;
+
+        for(uint8_t i = 0; i < (b.l-1); i++){
+            if(b.bits[i]){
+                highBits++;            
+            }
+        }
+
+        Serial.print("number of high bits: ");
+        Serial.println(highBits);
+
+        if((highBits % 2) == 0){
+            b.bits[b.l-1] = false;
+            Serial.println("set parity bit to FALSE");
+        } else {
+            b.bits[b.l-1] = true;
+            Serial.println("set parity bit to TRUE");
+        }
+
+        return b;
+    } else {
+        return parity(b);
+    }
+
+}
+
+#endif
