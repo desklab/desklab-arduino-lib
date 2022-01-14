@@ -451,7 +451,7 @@ char decode(byte8_t b, bool debug){
         Serial.println("DEBUG: decode(byte8_t)");
         int i = 0;
 
-        Serial.print("bit sequence to decode: ")
+        Serial.print("bit sequence to decode: ");
         
         for (int k=0; k < 7; k++){
             if(b.bits[k]){
@@ -500,7 +500,7 @@ byte8_t encode(char c, bool debug){
             }
         }
 
-        Serial.print("encoded to bit sequence: ")
+        Serial.print("encoded to bit sequence: ");
         for (int i = 0; i<7; i++) {
             if (send.bits[i]){
                 Serial.print("1");
