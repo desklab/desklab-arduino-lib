@@ -502,7 +502,7 @@ byte8_t encode(char c, bool debug){
 
         Serial.print("encoded to bit sequence: ");
         for (int i = 0; i<7; i++) {
-            if (send.bits[i]){
+            if (b.bits[i]){
                 Serial.print("1");
             } else {
                 Serial.print("0");
