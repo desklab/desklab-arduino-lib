@@ -20,6 +20,12 @@ int cPin = 0;
 int dispX = 0;
 int dispY = 0;
 
+int tc = 100;        // [ms] one (internal) clock cycle (400->0.1/s, 40-> 1/s, 4->10/s)
+int tw = tc/4;       // [ms] wait for data line to get pulled
+int tp = tc-(2*tw);  // [ms] duration of clock pulse
+int tr = tc-tp;      // [ms] time available for reading
+int tb = 20*tc;      // [ms] duration to wait after sending a byte   
+
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
 void setupINConnection(int dataPin, int clockPin){
@@ -56,7 +62,7 @@ void setupOUTConnection(int dataPin, int clockPin){
     delay(100);
 }
 
-#endif
+#endif //ARDUINO_CI_UNITTEST_ACTIVE
 
 void read() {
     locked = true;
@@ -245,14 +251,8 @@ void clearDisplay(){
     SSD1306_DISPLAY_UPDATE();
 }
 
-#endif
+#endif // ARDUINO_CI_UNITTEST_ACTIVE
 
-
-int tc = 100;        // [ms] one (internal) clock cycle (400->0.1/s, 40-> 1/s, 4->10/s)
-int tw = tc/4;       // [ms] wait for data line to get pulled
-int tp = tc-(2*tw);  // [ms] duration of clock pulse
-int tr = tc-tp;      // [ms] time available for reading
-int tb = 20*tc;      // [ms] duration to wait after sending a byte      
 
 void sendHighDataBit() { //send slow 1
   digitalWrite(dPin, HIGH);
@@ -425,10 +425,6 @@ void sendByte(byte8_t send, bool print, int error) {
     delay(tb);
 }
 
-#endif
-
-
-#ifndef ARDUINO_CI_UNITTEST_ACTIVE
 bool check(byte8_t b, bool debug){
     if(debug){
         Serial.println("DEBUG: check(byte8_t)");
@@ -556,4 +552,4 @@ byte8_t parity(byte8_t b, bool debug){
 
 }
 
-#endif
+#endif // ARDUINO_CI_UNITTEST_ACTIVE
