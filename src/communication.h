@@ -57,6 +57,7 @@ void clearDisplay();
 void display(char c);
 void display(const char* s);
 void display(byte8_t b);
+void display(bool b);
 void sendByte(byte8_t send, bool print);
 void sendByte(byte8_t send, bool print, int error);
 #endif
