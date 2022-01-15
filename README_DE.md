@@ -64,7 +64,7 @@ Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](htt
 
 Die `desklab` Bibliothek ist unter der [MIT License](https://opensource.org/licenses/MIT) lizensiert:
 
-> Copyright 2018-2021 desklab gUG (haftungsbeschränkt) <orga@desk-lab.de>  
+> Copyright 2018-2022 desklab gUG (haftungsbeschränkt) <orga@desk-lab.de>  
 >
 > Permission is hereby granted, free of charge, to any person obtaining a  
 > copy of this software and associated documentation files  
