@@ -358,10 +358,76 @@ void sendByte(byte8_t send) {
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
+bool availableByte(bool debug){
+    if(debug){
+        bool flag = true;
+        if (!locked) {
+            Serial.print("DEBUG: availableByte() -> buffer: ");
+            for (size_t i = 0; i<32; i++){
+                if (buffer[i]){
+                    Serial.print("1");
+                } else {
+                    Serial.print("0");
+                }
+            }
+            Serial.println("");
+            
+            for (size_t i = 0; i<8; i++){
+                if (buffer[i] != startcode[i]){
+                    flag = false;
+                    processed = false;
+                }  
+            }
+            for (size_t i = 0; i<8; i++){
+                if (buffer[24+i] != endcode[i]){
+                    flag = false;
+                    processed = false;
+                }  
+            }
+        }
+
+        bool available = false;
+        if (flag && !processed){
+            available = true;
+        }
+
+        return available;
+    } else {
+        return availableByte();
+    }
+}
+
+byte8_t readByte(bool debug){
+    if(debug){
+        byte8_t in = {8,{false,false,false,false,false,false,false,false}};
+        for (size_t i = 0; i<8; i++) {
+            in.bits[i] = buffer[8+(2*i)];
+        }
+
+        Serial.println("DEBUG: readByte()");
+        Serial.print("received data: ");
+        
+        for (size_t i = 0; i<8; i++){
+            if (in.bits[i]){
+                Serial.print("1");
+            } else {
+                Serial.print("0");
+            }
+        }
+        Serial.println("");
+
+        processed = true;
+        return in;
+    } else {
+        return readByte();
+    }
+}
+
 void sendByte(byte8_t send, bool print) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(print){
+        Serial.println("DEBUG: sendByte(byte8_t)");
         Serial.print("sending data: "); 
     }
     
@@ -392,6 +458,7 @@ void sendByte(byte8_t send, bool print, int error) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(print){
+        Serial.println("DEBUG: sendByte(byte8_t)");
         Serial.print("sending data: "); 
     }
     

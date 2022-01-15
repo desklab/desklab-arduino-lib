@@ -58,6 +58,9 @@ bool check(byte8_t b);
 char decode(byte8_t b);
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
+bool availableByte(bool debug);
+byte8_t readByte(bool debug);
+
 bool check(byte8_t b, bool debug);
 char decode(byte8_t b, bool debug);
 byte8_t encode(char c, bool debug);
