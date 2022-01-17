@@ -35,8 +35,8 @@ typedef struct {
 }byte8_t;
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
-void setupINConnection(int dataPin, int clockPin);
-void setupOUTConnection(int dataPin, int clockPin);
+void setupReadConnection(int dataPin, int clockPin);
+void setupWriteConnection(int dataPin, int clockPin);
 #endif
 
 void sendHighDataBit();
@@ -46,7 +46,7 @@ void sendLowCodeBit();
 void sendBit(bool bit);
 void sendStartCode();
 void sendEndCode();
-void sendByte(byte8_t send);
+void writeByte(byte8_t send);
 
 void read();
 bool availableByte();
@@ -66,8 +66,8 @@ char decode(byte8_t b, bool debug);
 byte8_t encode(char c, bool debug);
 byte8_t parity(byte8_t b, bool debug);
 
-void sendByte(byte8_t send, bool print);
-void sendByte(byte8_t send, bool print, int error);
+void writeByte(byte8_t send, bool print);
+void writeByte(byte8_t send, bool print, int error);
 
 void clearDisplay();
 void display(char c);

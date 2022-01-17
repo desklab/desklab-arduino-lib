@@ -4,7 +4,7 @@ const int clockPin = 3;
 const int dataPin = 4;
 
 void setup() {
-    setupINConnection(dataPin, clockPin);
+    setupReadConnection(dataPin, clockPin);
 }
 
 void loop() {

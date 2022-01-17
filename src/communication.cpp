@@ -28,7 +28,7 @@ int tb = 20*tc;      // [ms] duration to wait after sending a byte
 
 #ifndef ARDUINO_CI_UNITTEST_ACTIVE
 
-void setupINConnection(int dataPin, int clockPin){
+void setupReadConnection(int dataPin, int clockPin){
     attachInterrupt(digitalPinToInterrupt(clockPin), read, RISING);   
 
     Serial.begin(9600);
@@ -43,7 +43,7 @@ void setupINConnection(int dataPin, int clockPin){
     delay(100);
 }
 
-void setupOUTConnection(int dataPin, int clockPin){
+void setupWriteConnection(int dataPin, int clockPin){
     Serial.begin(9600);
 
     pinMode(LED_BUILTIN, OUTPUT);
@@ -346,7 +346,7 @@ void sendEndCode() { // 0101000 [fast]
   sendLowCodeBit();
 }
 
-void sendByte(byte8_t send) {
+void writeByte(byte8_t send) {
     sendStartCode();
     for (int i = 0; i<send.l; i++)
     {
@@ -423,11 +423,11 @@ byte8_t readByte(bool debug){
     }
 }
 
-void sendByte(byte8_t send, bool print) {
+void writeByte(byte8_t send, bool print) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(print){
-        Serial.println("DEBUG: sendByte(byte8_t)");
+        Serial.println("DEBUG: writeByte(byte8_t)");
         Serial.print("sending data: "); 
     }
     
@@ -454,11 +454,11 @@ void sendByte(byte8_t send, bool print) {
     delay(tb);
 }
 
-void sendByte(byte8_t send, bool print, int error) {
+void writeByte(byte8_t send, bool print, int error) {
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(print){
-        Serial.println("DEBUG: sendByte(byte8_t)");
+        Serial.println("DEBUG: writeByte(byte8_t)");
         Serial.print("sending data: "); 
     }
     

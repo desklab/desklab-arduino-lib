@@ -4,7 +4,7 @@ const int clockPin = 3;
 const int dataPin = 4;
 
 void setup() {
-  setupOUTConnection(dataPin, clockPin);
+  setupWriteConnection(dataPin, clockPin);
 }
 
 
@@ -14,7 +14,7 @@ void loop() {
   bitsequence = encode(input);
   bitsequence = parity(bitsequence);
   display("H: ");
-  sendByte(bitsequence, true);
+  writeByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
@@ -23,7 +23,7 @@ void loop() {
   bitsequence = encode(input);
   bitsequence  = parity(bitsequence);
   display("E: ");
-  sendByte(bitsequence, true);
+  writeByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
@@ -32,12 +32,12 @@ void loop() {
   bitsequence = encode(input);
   bitsequence = parity(bitsequence);
   display("L: ");
-  sendByte(bitsequence, true);
+  writeByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
   display("L: ");
-  sendByte(bitsequence, true);
+  writeByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
@@ -46,7 +46,7 @@ void loop() {
   bitsequence = encode(input);
   bitsequence = parity(bitsequence);
   display("O: ");
-  sendByte(bitsequence, true);
+  writeByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
