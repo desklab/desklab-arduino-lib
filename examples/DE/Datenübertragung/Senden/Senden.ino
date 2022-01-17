@@ -10,46 +10,43 @@ void setup() {
 
 void loop() {
   char input = 'H';
-  byte8_t H;
-  H = encode(input);
-  H = parity(H);
+  byte8_t bitsequence;
+  bitsequence = encode(input);
+  bitsequence = parity(bitsequence);
   display("H: ");
-  sendByte(H, true);
+  sendByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
 
   input = 'E';
-  byte8_t E;
-  E = encode(input);
-  E = parity(E);
+  bitsequence = encode(input);
+  bitsequence  = parity(bitsequence);
   display("E: ");
-  sendByte(E, true);
+  sendByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
   
   input = 'L';
-  byte8_t L;
-  L = encode(input);
-  L = parity(L);
+  bitsequence = encode(input);
+  bitsequence = parity(bitsequence);
   display("L: ");
-  sendByte(L, true);
+  sendByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
   display("L: ");
-  sendByte(L, true);
+  sendByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);
 
   input = 'O';
-  byte8_t O;
-  O = encode(input);
-  O = parity(O);
+  bitsequence = encode(input);
+  bitsequence = parity(bitsequence);
   display("O: ");
-  sendByte(O, true);
+  sendByte(bitsequence, true);
   delay(1000);
   clearDisplay();
   delay(1000);

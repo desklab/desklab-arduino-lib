@@ -4,16 +4,22 @@ const int clockPin = 3;
 const int dataPin = 4;
 
 void setup() {
-    Serial.begin(9600);
     setupINConnection(dataPin, clockPin);
 }
 
 void loop() {
     if(availableByte()){
-        byte8_t byte = readByte();
+        byte8_t bitsequence;
+        bitsequence = readByte();
         if(check(byte)){
-            char data = decode(byte);
-            display(data);
+            char output = decode(bitsequence);
+            display(output);
+            delay(1000);
+            clearDisplay();
+        } else {
+            display('?');
+            delay(1000);
+            clearDisplay();
         }
     }
 }

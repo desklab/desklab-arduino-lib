@@ -9,11 +9,11 @@ void setup() {
 
 void loop() {
     if(availableByte()){
-        byte8_t byte;
-        byte = readByte();
+        byte8_t bitsequence;
+        bitsequence = readByte();
         if(check(byte)){
-            char data = decode(byte);
-            display(data);
+            char output = decode(bitsequence);
+            display(output);
             delay(1000);
             clearDisplay();
         } else {
