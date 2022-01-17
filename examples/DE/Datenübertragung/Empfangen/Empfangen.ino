@@ -11,7 +11,7 @@ void loop() {
     if(availableByte()){
         byte8_t bitsequence;
         bitsequence = readByte();
-        if(check(byte)){
+        if(check(bitsequence)){
             char output = decode(bitsequence);
             display(output);
             delay(1000);
