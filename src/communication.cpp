@@ -231,7 +231,7 @@ void display(byte8_t b){
             SSD1306_WRITE_CHAR(dispX + i*10, dispY, '0', 2, col, mode);
         }
     }
-    dispX = dispX + 70;
+    dispX = dispX + 80;
     SSD1306_DISPLAY_UPDATE();
 }
 
