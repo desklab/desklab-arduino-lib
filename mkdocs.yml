@@ -20,6 +20,7 @@ nav:
   - datenuebertragung/index.md
   - Senden: datenuebertragung/senden.md
   - Empfangen: datenuebertragung/empfangen.md
+  - API: datenuebertragung/api.md
 
 extra:
   version:
