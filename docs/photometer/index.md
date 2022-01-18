@@ -4,3 +4,8 @@ hide:
 ---
 
 # Photometer
+
+benötigte Module:
+- Mikrocontroller
+- Steckbrett
+- Photometer-Messkammer

@@ -5,7 +5,7 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   palette:
-    primary: indigo
+    primary: 
   features:
     - navigation.tabs
     - navigation.tracking

@@ -4,3 +4,6 @@ hide:
 ---
 
 # Datenübertragung
+
+benötigte Module:
+- Mikrocontroller (2x)

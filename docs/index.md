@@ -5,4 +5,4 @@ hide:
 
 # Startseite
 
-Update v0.1
+Diese Seite wird gerade überarbeitet. Weitere Informationen sind in Kürze verfügbar.
