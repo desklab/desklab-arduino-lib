@@ -13,7 +13,7 @@
     
     
       
-        <title>API (Dokumentation der Funktionen) - desklab Arduino Bibliothek</title>
+        <title>API - desklab Arduino Bibliothek</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API (Dokumentation der Funktionen)
+              API
             
           </span>
         </div>
@@ -189,13 +189,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Datenübertragung
       </a>
     </li>
@@ -337,18 +339,22 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
         
           
             
+          
+        
           
         
           
@@ -405,6 +411,102 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    encode
+  </a>
+  
+    <nav class="md-nav" aria-label="encode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    Beschreibung
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckgabewert" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiele" class="md-nav__link">
+    Beispiele
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -433,6 +535,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    encode
+  </a>
+  
+    <nav class="md-nav" aria-label="encode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    Beschreibung
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckgabewert" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiele" class="md-nav__link">
+    Beispiele
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -445,6 +603,21 @@
                 
 
 <h1 id="api-dokumentation-der-funktionen">API (Dokumentation der Funktionen)</h1>
+<h3 id="encode">encode</h3>
+<h5 id="beschreibung">Beschreibung</h5>
+<p>Die Funktion codiert einen Buchstaben, wandelt ihn also in eine Bitfolge (7 Bit) um.</p>
+<h5 id="syntax">Syntax</h5>
+<pre><code>encode(x)
+</code></pre>
+<h5 id="parameter">Parameter</h5>
+<p>x: Buchstabe im Datentyp char.</p>
+<h5 id="ruckgabewert">Rückgabewert</h5>
+<p>Eine Bitfolge vom Datentyp byte8_t.</p>
+<h5 id="beispiele">Beispiele</h5>
+<p>````
+byte8_t bitsequence;
+bitsequence = encode('H');
+display(bitsequence); // Das Display zeigt '10010000'</p>
 
               
             </article>
@@ -454,6 +627,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../empfangen/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Empfangen" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Empfangen
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
