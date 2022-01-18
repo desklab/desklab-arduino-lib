@@ -5,7 +5,7 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   palette:
-    primary: 
+    primary: blue grey
   features:
     - navigation.tabs
     - navigation.tracking
@@ -32,7 +32,14 @@ extra:
   version:
     provider: mike
     default: stable
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:post@desk-lab.de
+    - icon: fontawesome/brands/github
+      link: https://github.com/desklab
 
 repo_url: https://github.com/desklab/desklab-arduino-lib
 repo_name: desklab/desklab-arduino-lib
 edit_uri: ""
+
+copyright: Copyright &copy; 2018 - 2022 desklab gUG (haftungsbeschränkt)
