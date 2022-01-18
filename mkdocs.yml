@@ -1,0 +1,23 @@
+site_name: desklab Arduino Bibliothek
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+
+nav:
+- Startseite: index.md
+- Test: 
+  - test/index.md
+  - Sub1: test/sub1.md
+  - Sub2: test/sub.md
+
+extra:
+  version:
+    provider: mike
+    default: stable

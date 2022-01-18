@@ -29,3 +29,4 @@ client/node_modules
 vendor/
 Gemfile.lock
 .bundle
+site/

@@ -1,0 +1,17 @@
+name: Build and Deploy Docs
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Python
+      uses: actions/setup-python@v2
+    - name: Checkout Repository
+      uses: actions/checkout@master    
+    - name: Install python requirements
+      run: pip install -r requirements.txt
+    - name: Build and Commit
+      run: mkdocs gh-deploy

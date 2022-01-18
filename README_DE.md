@@ -44,18 +44,18 @@ bundle exec arduino_ci.rb --skip-examples-compilation
 
 #### Dokumentation
 
-Zum Erstellen der Dokumentation wird **Sphinx** genutzt. Mit den folgenden befehlen wird Sphinx in einer neuen `conda` Umgebung installiert:
+Zum Erstellen der Dokumentation wird **MkDocs** genutzt. Mit den folgenden befehlen wird MkDocs in einer neuen `conda` Umgebung installiert:
 
 ```bash
 conda create -n desklab-arduino lib python=3.9
-pip install sphinx sphinx-rtd-theme breathe
+pip install -r requirements.txt
 ```
 
-Außerdem muss noch **Doxygen** installiert werden, bevor die Dokumentation mit den folgenden Befehlen im `docs`-Ordner erstellt werden kann:
+Die Dokumentation kann mit dem folgenden Befehlen erstellt werden:
 
 ```bash
 conda activate desklab-arduino-lib
-make html
+mkdocs build
 ```
 
 Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/build/html/index.html) verfügbar.
