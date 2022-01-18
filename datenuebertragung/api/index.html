@@ -498,6 +498,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decode" class="md-nav__link">
+    decode
+  </a>
+  
+    <nav class="md-nav" aria-label="decode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_1" class="md-nav__link">
+    Beschreibung
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax_1" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter_1" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckgabewert_1" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiele_1" class="md-nav__link">
+    Beispiele
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -589,6 +637,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decode" class="md-nav__link">
+    decode
+  </a>
+  
+    <nav class="md-nav" aria-label="decode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_1" class="md-nav__link">
+    Beschreibung
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax_1" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter_1" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckgabewert_1" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiele_1" class="md-nav__link">
+    Beispiele
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -603,21 +699,38 @@
                 
 
 <h1 id="api-dokumentation-der-funktionen">API (Dokumentation der Funktionen)</h1>
-<h3 id="encode">encode</h3>
+<h2 id="encode">encode</h2>
 <h5 id="beschreibung">Beschreibung</h5>
 <p>Die Funktion codiert einen Buchstaben, wandelt ihn also in eine Bitfolge (7 Bit) um.</p>
 <h5 id="syntax">Syntax</h5>
-<pre><code>encode(x)
+<pre><code class="language-C++">encode(x)
 </code></pre>
 <h5 id="parameter">Parameter</h5>
-<p>x: Buchstabe im Datentyp char.</p>
+<p>x: Buchstabe im Datentyp <code>char</code>.</p>
 <h5 id="ruckgabewert">Rückgabewert</h5>
-<p>Eine Bitfolge vom Datentyp byte8_t.</p>
+<p>Eine Bitfolge vom Datentyp <code>byte8_t</code>.</p>
 <h5 id="beispiele">Beispiele</h5>
-<p>````
-byte8_t bitsequence;
+<pre><code class="language-C++">byte8_t bitsequence;
 bitsequence = encode('H');
-display(bitsequence); // Das Display zeigt '10010000'</p>
+display(bitsequence); // Das Display zeigt '10010000'
+</code></pre>
+<h2 id="decode">decode</h2>
+<h5 id="beschreibung_1">Beschreibung</h5>
+<p>Die Funktion decodiert eine Bitfolge, wandelt sie also in einen Buchstaben um.</p>
+<h5 id="syntax_1">Syntax</h5>
+<pre><code class="language-C++">decode(x)
+</code></pre>
+<h5 id="parameter_1">Parameter</h5>
+<p>x: Bitfolge vom Datentyp <code>byte8_t</code>.</p>
+<h5 id="ruckgabewert_1">Rückgabewert</h5>
+<p>Ein Buchstabe vom Datentyp <code>char</code>.</p>
+<h5 id="beispiele_1">Beispiele</h5>
+<pre><code class="language-C++">byte8_t bitsequence;
+bitsequence = encode('H');
+char output;
+output = decode (bitsequence);
+display(output); // Das Display zeigt 'H'
+</code></pre>
 
               
             </article>
