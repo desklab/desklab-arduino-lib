@@ -21,6 +21,10 @@ nav:
   - Senden: datenuebertragung/senden.md
   - Empfangen: datenuebertragung/empfangen.md
   - API: datenuebertragung/api.md
+- Development:
+  - development/index.md
+  - Changelog: development/changelog.md
+  - Release: development/release.md
 
 extra:
   version:
