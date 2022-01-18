@@ -12,10 +12,14 @@ theme:
 
 nav:
 - Startseite: index.md
-- Test: 
-  - test/index.md
-  - Sub1: test/sub1.md
-  - Sub2: test/sub.md
+- Photometer: 
+  - photometer/index.md
+  - Aufbau der Schaltung: photometer/aufbau-schaltung.md
+  - Programmcode: photometer/programmcode.md
+- Datenübertragung: 
+  - datenuebertragung/index.md
+  - Senden: datenuebertragung/senden.md
+  - Empfangen: datenuebertragung/empfangen.md
 
 extra:
   version:
