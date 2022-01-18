@@ -2,6 +2,8 @@ site_name: desklab Arduino Bibliothek
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/git-alt
   palette:
     primary: indigo
   features:
@@ -30,3 +32,6 @@ extra:
   version:
     provider: mike
     default: stable
+
+repo_url: https://github.com/desklab/desklab-arduino-lib
+repo_name: desklab/desklab-arduino-lib
