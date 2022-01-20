@@ -13,7 +13,9 @@ theme:
     - navigation.indexes
 
 nav:
-- Startseite: index.md
+- Erste Schritte: 
+  - index.md
+  - Installation: start/installation.md
 - Photometer: 
   - photometer/index.md
   - Aufbau der Schaltung: photometer/aufbau-schaltung.md
