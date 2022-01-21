@@ -213,9 +213,9 @@ void display(bool b){
     SSD1306_MODE_t mode = SSD1306_OVERRIDE;
     SSD1306_COLOR_t col = SSD1306_WHITE;
     if(b){
-        SSD1306_WRITE_CHAR(dispX, dispY, "T", 2, col, mode);
+        SSD1306_WRITE_CHAR(dispX, dispY, 'T', 2, col, mode);
     } else {
-        SSD1306_WRITE_CHAR(dispX, dispY, "F", 2, col, mode);
+        SSD1306_WRITE_CHAR(dispX, dispY, 'F', 2, col, mode);
     }
     dispX = dispX + 10;
     SSD1306_DISPLAY_UPDATE();
