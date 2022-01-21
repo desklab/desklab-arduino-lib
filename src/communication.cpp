@@ -335,7 +335,7 @@ void sendStartCode() { // 01011111 [fast]
   sendHighCodeBit();
 }
 
-void sendEndCode() { // 0101000 [fast]
+void sendEndCode() { // 01010000 [fast]
   sendLowCodeBit();
   sendHighCodeBit();
   sendLowCodeBit();

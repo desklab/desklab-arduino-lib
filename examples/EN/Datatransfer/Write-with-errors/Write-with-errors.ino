@@ -9,8 +9,10 @@ void setup() {
 
 
 void loop() {
-  char input = 'H';
+  char input;
   byte8_t bitsequence;
+
+  input = 'H';
   bitsequence = encode(input);
   bitsequence = parity(bitsequence);
   clearDisplay();

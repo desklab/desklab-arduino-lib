@@ -12,7 +12,7 @@ void loop() {
   char input;
   byte8_t bitsequence;
 
-  input = = 'H';
+  input = 'H';
   bitsequence = encode(input);
   bitsequence = parity(bitsequence);
   clearDisplay();
