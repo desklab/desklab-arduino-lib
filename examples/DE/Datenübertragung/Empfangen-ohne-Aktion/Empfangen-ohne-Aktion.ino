@@ -9,7 +9,11 @@ void setup() {
 
 void loop() {
     if(availableByte()){
-        // Programmcode zum Verarbeiten des 
-        // empfangenen Bytes hier ergänzen 
+        // Ergänze deinen Programmcode zum Verarbeiten des 
+        // empfangenen Bytes hier. Du solltest darauf achten,
+        // dass er möglichst schnell ausgeführt werden kann.
+        // Verwende daher wenn möglich keine Aufrufe der 
+        // delay() - Funktion, da sonst Fehler beim Empfangen
+        // des Bytes auftreten können.
     }
 }

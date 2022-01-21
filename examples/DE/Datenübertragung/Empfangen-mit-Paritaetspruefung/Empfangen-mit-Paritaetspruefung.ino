@@ -13,13 +13,11 @@ void loop() {
         bitsequence = readByte();
         if(check(bitsequence)){
             char output = decode(bitsequence);
+            clearDisplay();
             display(output);
-            delay(1000);
-            clearDisplay();
         } else {
-            display('?');
-            delay(1000);
             clearDisplay();
+            display('?');
         }
     }
 }

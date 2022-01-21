@@ -9,6 +9,9 @@ void setup() {
 
 void loop() {
     if(availableByte()){
-        // Add your code to process the received byte here 
+        // Add your code to process the received byte here.
+        // Make sure that its execution time is minimized.
+        // Therefore you should avoid calls to delay(), otherwise
+        // errors when receiving the byte may occur.
     }
 }
