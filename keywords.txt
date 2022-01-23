@@ -20,3 +20,14 @@ readSensor	KEYWORD2
 getSensorValue	KEYWORD2
 getOD	KEYWORD2
 print	KEYWORD2
+display	KEYWORD2
+clearDisplay	KEYWORD2
+setupReadConnection	KEYWORD2
+setupWriteConnection	KEYWORD2
+availableByte	KEYWORD2
+writeByte	KEYWORD2
+readByte	KEYWORD2
+encode	KEYWORD2
+decode	KEYWORD2
+parity	KEYWORD2
+check	KEYWORD2
