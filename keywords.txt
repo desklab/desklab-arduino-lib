@@ -31,4 +31,4 @@ encode	KEYWORD2
 decode	KEYWORD2
 parity	KEYWORD2
 check	KEYWORD2
-byte8_t	KEYWORD3
+byte8_t	LITERAL1
