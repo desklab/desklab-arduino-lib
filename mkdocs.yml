@@ -4,13 +4,14 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/git-alt
-  palette:
-    primary: blue grey
   features:
     - navigation.tabs
     - navigation.tracking
     - navigation.sections
     - navigation.indexes
+
+extra_css:
+  - stylesheets/style.css
 
 nav:
 - Erste Schritte: 
