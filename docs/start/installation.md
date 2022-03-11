@@ -10,6 +10,7 @@ In diesem Artikel wird beschrieben, wie die Geräte von desklab zusammen mit der
 Bei Fragen oder Problemen, auf die Sie in den Hilfe-Artikeln dieser Seite keine Lösung finden, können Sie uns gerne über das Kontaktformular auf unserer [Homepage](www.desk-lab.de) kontaktieren.
 
 ### Übersicht
+
 1. Installation des Mikrocontroller-Treibers
 2. Installation der Arduino Entwicklungsumgebung
 3. Installation der benötigten Bibliotheken
@@ -21,6 +22,7 @@ Bei Fragen oder Problemen, auf die Sie in den Hilfe-Artikeln dieser Seite keine 
 Um den in den Geräten der desklab gUG verbauten Mikrocontroller mit der Arduino-Entwicklungsumgebung programmieren zu können, benötigen Sie den Treiber CH341SER. Die zur Installation benötigten Dateien können Sie von unserer Homepage herunterladen. Sie benötigen dazu die Login-Daten, die Sie zusammen mit der Lieferung oder per E-Mail erhalten haben.
 
 Führen Sie zur Installation des Treibers die folgenden Schritte durch:
+
 1. Trennen Sie per USB angeschlossene desklab-Geräte von Ihrem Computer.
 2. Laden Sie die Installationsdatei mc_treiber_CH341SER.zip ([Downloadlink](https://desk-lab.de/documents/66/mc-treiber_CH341SER.zip))von unserer Website herunter.
 3. Speichern und Entpacken Sie die heruntergeladene Datei.
@@ -39,13 +41,10 @@ Die Kompatibilität der desklab-Bibliothek (s.u.) mit allen Versionen der Arduin
 
 In der desklab Arduino Bibliothek werden Funktionen zur Nutzung und Programmierung der Geräte der desklab gUG bereitgestellt. Die Bibliothek kann in der Bibliotheksverwaltung der Arduino-Entwicklungsumgebung installiert werden. Führen Sie zur Installation der Arduino-Bibliothek die folgenden Schritte durch:
 
-1) Trennen Sie per USB angeschlossene desklab-Geräte von IhremComputer.
-
-2) Öffnen Sie die Arduino-Entwicklungsumgebung.
-
-3) Öffnen Sie die Bibliotheksverwaltung über die Menüleiste der Entwicklungsumgebung.
-
-4) Suchen Sie nach 'desklab' und installieren Sie die neueste Version der Bibliothek.
+1. Trennen Sie per USB angeschlossene desklab-Geräte von IhremComputer.
+2. Öffnen Sie die Arduino-Entwicklungsumgebung.
+3. Öffnen Sie die Bibliotheksverwaltung über die Menüleiste der Entwicklungsumgebung.
+4. Suchen Sie nach 'desklab' und installieren Sie die neueste Version der Bibliothek.
 
 
 ### 4. Upload eines Beispiel-Programms
