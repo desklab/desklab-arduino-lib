@@ -59,7 +59,7 @@ make clean
 make html
 ```
 
-The docs are served through GitHub Pages at [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/).
+The docs are served through GitHub Pages at [support.desk-lab.de](https://support.desk-lab.de).
 
 ### License
 

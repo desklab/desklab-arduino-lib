@@ -59,7 +59,7 @@ make clean
 make html
 ```
 
-Die Dokumentation ist online unter [support.desk-lab.de/desklab-arduino-lib](https://support.desk-lab.de/desklab-arduino-lib/) verfügbar.
+Die Dokumentation ist online unter [support.desk-lab.de](https://support.desk-lab.de) verfügbar.
 
 ### Lizenz
 
